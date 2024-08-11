@@ -1,7 +1,7 @@
 import './App.css';
 import styled from 'styled-components';
 import MainPic from '../public/main.jpg';
-import MainWebp from '../public/main.webp';
+import MainWebp from '../public/main2.webp';
 import CalendarPic from '../public/calendar.png';
 import FloatingBar from './components/FloatingBar';
 import { useEffect, useRef, useState } from 'react';
