@@ -36,17 +36,6 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   //   });
   // }, []);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(window.location.href).then(
-      () => {
-        alert('주소가 복사되었습니다.😉😉');
-      },
-      () => {
-        alert('주소 복사에 실패했습니다.🥲🥲');
-      }
-    );
-  };
-
   const handleCount = () => {
     void jsConfetti.addConfetti({ emojis });
 
@@ -58,9 +47,6 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   };
 
   const jsConfetti = new JSConfetti();
-  const handleScroll = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <Nav isVisible={isVisible}>
