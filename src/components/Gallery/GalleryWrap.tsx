@@ -49,8 +49,8 @@ const WhiteGradientOverlay = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    rgba(255, 255, 255, 0) 0%,
-    rgb(255, 255, 255) 90%
+    rgba(255, 255, 255, 0) 20%,
+    rgb(255, 255, 255, 0.7) 90%
   );
 `;
 

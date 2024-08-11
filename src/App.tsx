@@ -1,6 +1,7 @@
 import './App.css';
 import styled from 'styled-components';
 import MainPic from '../public/main.jpg';
+import MainWebp from '../public/main.webp';
 import CalendarPic from '../public/calendar.png';
 import FloatingBar from './components/FloatingBar';
 import { useEffect, useRef, useState } from 'react';
@@ -33,7 +34,10 @@ function App() {
   return (
     <Wrappper>
       <ContentWrapper>
-        <MainImage src={MainPic} alt="메인사진"></MainImage>
+        <picture>
+          <source srcSet="../public/main.webp" type="image/webp" />
+          <MainImage src={MainPic} alt="메인사진"></MainImage>
+        </picture>
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
           <Description
             style={{
@@ -101,7 +105,7 @@ function App() {
           <Title>CALENDAR </Title>
           <img src={CalendarPic} alt="캘린더" style={{ width: '80%' }} />
         </DescriptionWrapper>
-        <DescriptionWrapper>
+        <DescriptionWrapper style={{ padding: '40px 0' }}>
           <Title>GALLERY </Title>
           <GalleryWrap />
         </DescriptionWrapper>
