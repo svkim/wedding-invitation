@@ -6,6 +6,7 @@ const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
     objectFit: 'cover',
+    minWidth: '33%',
     width: '100px',
     height: '150px',
   };
@@ -27,7 +28,7 @@ const PhotoGallery = () => {
               key={index}
               cropped
               original={image.source}
-              thumbnail={image.source}
+              thumbnail={image.thumbnail}
               width={image.width}
               height={image.height}
             >

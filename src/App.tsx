@@ -103,7 +103,11 @@ function App() {
         </DescriptionWrapper>
         <DescriptionWrapper>
           <Title>CALENDAR </Title>
-          <img src={CalendarPic} alt="캘린더" style={{ width: '80%' }} />
+          <img
+            src={CalendarPic}
+            alt="캘린더"
+            style={{ width: '80%', maxWidth: '300px' }}
+          />
         </DescriptionWrapper>
         <DescriptionWrapper style={{ padding: '40px 0' }}>
           <Title>GALLERY </Title>
