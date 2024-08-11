@@ -5,7 +5,7 @@ import FloatingBar from './components/FloatingBar';
 import { useEffect, useRef, useState } from 'react';
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [, setIsVisible] = useState(false);
   const refEl = useRef(null);
 
   useEffect(() => {
