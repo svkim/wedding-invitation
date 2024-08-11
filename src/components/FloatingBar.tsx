@@ -49,7 +49,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   const jsConfetti = new JSConfetti();
 
   return (
-    <Nav isVisible={isVisible}>
+    <Nav $isVisible={isVisible}>
       <button onClick={handleCount}>❤️</button>
     </Nav>
   );
@@ -57,7 +57,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
 
 export default FloatingBar;
 
-const Nav = styled.nav<{ isVisible: boolean }>`
+const Nav = styled.nav<{ $isVisible: boolean }>`
   min-width: 280px;
   position: fixed;
   bottom: 30px;
@@ -66,5 +66,5 @@ const Nav = styled.nav<{ isVisible: boolean }>`
   align-items: center;
   justify-content: center;
   gap: 5px;
-  display: ${({ isVisible }) => (isVisible ? 'flex' : 'none')};
+  display: ${({ $isVisible }) => ($isVisible ? 'flex' : 'none')};
 `;

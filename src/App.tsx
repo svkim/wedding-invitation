@@ -1,11 +1,13 @@
 import './App.css';
 import styled from 'styled-components';
 import MainPic from '../public/main.jpg';
+import CalendarPic from '../public/calendar.png';
 import FloatingBar from './components/FloatingBar';
 import { useEffect, useRef, useState } from 'react';
+import GalleryWrap from './components/Gallery/GalleryWrap';
 
 function App() {
-  const [, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const refEl = useRef(null);
 
   useEffect(() => {
@@ -32,11 +34,11 @@ function App() {
     <Wrappper>
       <ContentWrapper>
         <MainImage src={MainPic} alt="메인사진"></MainImage>
-        <DescriptionWrapper>
+        <DescriptionWrapper style={{ padding: '50px 20px' }}>
           <Description
             style={{
               fontSize: '24px',
-              marginBottom: '10px',
+              marginBottom: '40px',
               fontWeight: 500,
             }}
           >
@@ -46,16 +48,14 @@ function App() {
           <Description>서울숲 갤러리아포레 G층 보테가마지오</Description>
         </DescriptionWrapper>
         <DescriptionWrapper
-          ref={refEl}
           style={{
             backgroundColor: '#F4F4F4',
             gap: '30px',
-            padding: '40px 20px',
-            height: '260px',
           }}
         >
           <Title>INVITATION </Title>
           <Description
+            ref={refEl}
             style={{
               fontWeight: 200,
               lineHeight: '28px',
@@ -70,9 +70,43 @@ function App() {
             주시면 감사하겠습니다.
           </Description>
         </DescriptionWrapper>
-        <DescriptionWrapper></DescriptionWrapper>
+        <DescriptionWrapper>
+          <HR />
+          <Description style={{ lineHeight: '28px', fontSize: '14px' }}>
+            <span>김은수 • 곽숙견 의 장남</span>
+            <span
+              style={{
+                fontWeight: 500,
+                fontSize: '16px',
+                marginLeft: '8px',
+              }}
+            >
+              태현
+            </span>
+            <br />
+            <span>이혁선 • 이화순 의 차녀</span>
+            <span
+              style={{
+                fontWeight: 500,
+                fontSize: '16px',
+                marginLeft: '8px',
+              }}
+            >
+              상경
+            </span>
+          </Description>
+          <HR />
+        </DescriptionWrapper>
+        <DescriptionWrapper>
+          <Title>CALENDAR </Title>
+          <img src={CalendarPic} alt="캘린더" style={{ width: '80%' }} />
+        </DescriptionWrapper>
+        <DescriptionWrapper>
+          <Title>GALLERY </Title>
+          <GalleryWrap />
+        </DescriptionWrapper>
       </ContentWrapper>
-      <FloatingBar isVisible={true} />
+      <FloatingBar isVisible={isVisible} />
     </Wrappper>
   );
 }
@@ -90,7 +124,7 @@ const ContentWrapper = styled.div`
   background-color: white;
   width: 100%;
   max-width: 600px;
-  height: 200vh;
+  line-height: 1.4rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -102,13 +136,11 @@ const MainImage = styled.img`
 
 const DescriptionWrapper = styled.div`
   width: 100%;
-  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  padding: 10px;
+  padding: 40px 20px;
 `;
 
 const Description = styled.p`
@@ -122,4 +154,13 @@ const Title = styled.p`
   font-weight: 400;
   color: #555555;
   font-style: italic;
+`;
+
+const HR = styled.hr`
+  width: 50%;
+  border: 0;
+  height: 1px;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #e4e4e4;
 `;
