@@ -1,8 +1,33 @@
 import './App.css';
 import styled from 'styled-components';
 import MainPic from '../public/main.jpg';
+import FloatingBar from './components/FloatingBar';
+import { useEffect, useRef, useState } from 'react';
 
 function App() {
+  const [isVisible, setIsVisible] = useState(false);
+  const refEl = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkScrollPosition);
+    return () => {
+      window.removeEventListener('scroll', checkScrollPosition);
+    };
+  }, []);
+
+  const checkScrollPosition = () => {
+    if (refEl.current) {
+      const { offsetTop } = refEl.current;
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition >= offsetTop) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    }
+  };
+
   return (
     <Wrappper>
       <ContentWrapper>
@@ -21,6 +46,7 @@ function App() {
           <Description>서울숲 갤러리아포레 G층 보테가마지오</Description>
         </DescriptionWrapper>
         <DescriptionWrapper
+          ref={refEl}
           style={{
             backgroundColor: '#F4F4F4',
             gap: '30px',
@@ -46,6 +72,7 @@ function App() {
         </DescriptionWrapper>
         <DescriptionWrapper></DescriptionWrapper>
       </ContentWrapper>
+      <FloatingBar isVisible={true} />
     </Wrappper>
   );
 }
