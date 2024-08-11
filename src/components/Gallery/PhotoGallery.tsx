@@ -6,20 +6,26 @@ const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
     objectFit: 'cover',
-    minWidth: '33%',
-    width: '100px',
-    height: '150px',
+    width: '100%',
+    aspectRatio: '3/4',
   };
 
   return (
     <Gallery
-      options={{ zoom: false, counter: false, arrowKeys: true, loop: true }}
+      options={{
+        zoom: false,
+        counter: false,
+        arrowKeys: true,
+        loop: true,
+        clickToCloseNonZoomable: true,
+        bgClickAction: 'close',
+      }}
     >
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 0fr)',
-          gridGap: 2,
+          gridTemplateColumns: 'repeat(3, 32.7%)',
+          gridGap: '1%',
         }}
       >
         {images.map((image, index) => {

@@ -109,7 +109,7 @@ function App() {
             style={{ width: '80%', maxWidth: '300px' }}
           />
         </DescriptionWrapper>
-        <DescriptionWrapper style={{ padding: '40px 0' }}>
+        <DescriptionWrapper>
           <Title>GALLERY </Title>
           <GalleryWrap />
         </DescriptionWrapper>
@@ -125,7 +125,7 @@ const Wrappper = styled.div`
   background-color: #e4e4e4;
   width: 100vw;
   min-height: 100vh;
-  height: 100%;
+  height: 500vh;
 `;
 
 const ContentWrapper = styled.div`

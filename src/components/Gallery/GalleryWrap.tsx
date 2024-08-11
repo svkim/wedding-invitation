@@ -10,7 +10,7 @@ const GalleryWrap = () => {
   };
 
   return (
-    <ContentsWrap>
+    <ContentsWrap $isMoreView={isMoreView}>
       <ImageMoreWrap $isMoreView={isMoreView}>
         {!isMoreView && <WhiteGradientOverlay />}
         <PhotoGallery />
@@ -24,10 +24,9 @@ const GalleryWrap = () => {
 
 export default GalleryWrap;
 
-const ContentsWrap = styled.div`
-  margin: 30px 0;
+const ContentsWrap = styled.div<{ $isMoreView: boolean }>`
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: ${(props) => (props.$isMoreView ? 'visible' : 'hidden')};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +38,7 @@ const ImageMoreWrap = styled.div<{ $isMoreView: boolean }>`
     props.$isMoreView
       ? ''
       : '60vh'}; /* isMoreView 상태가 true일 때는 높이 제한 없이, false일 때는 195px로 작게 보이도록 */
-  overflow: hidden;
+  overflow: ${(props) => (props.$isMoreView ? 'visible' : 'hidden')};
 `;
 
 const WhiteGradientOverlay = styled.div`
