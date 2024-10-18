@@ -161,6 +161,7 @@ function Main() {
         </DescriptionWrapper>
 
         <DescriptionWrapper>
+          <EnglishSubTitle>WEDDING DAY</EnglishSubTitle>
           <Title>날짜 </Title>
           <img
             src={CalendarPic}
@@ -169,7 +170,8 @@ function Main() {
           />
         </DescriptionWrapper>
         <DescriptionWrapper>
-          <Title>갤러리 </Title>
+          <EnglishSubTitle>GALLERY</EnglishSubTitle>
+          <Title>우리의 소중한 순간</Title>
           {/* <GalleryWrap /> */}
         </DescriptionWrapper>
       </ContentWrapper>
@@ -238,6 +240,7 @@ const Description = styled.p`
   font-weight: bold;
   position: relative;
   animation: fade_up 0.8s;
+  font-weight: 200;
 `;
 
 const Title = styled.p`
