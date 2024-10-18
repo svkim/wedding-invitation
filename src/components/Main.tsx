@@ -45,12 +45,13 @@ function Main() {
   return (
     <Wrappper>
       <ContentWrapper>
-        <TitleImageTitle>
-          We're Getting
-          <br />
-          Married!{innerHeight}
-        </TitleImageTitle>
-        <MainImage ref={mainImageRef}></MainImage>
+        <MainImage ref={mainImageRef}>
+          <TitleImageTitle>
+            We're Getting
+            <br />
+            Married!
+          </TitleImageTitle>
+        </MainImage>
 
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
           <Description
@@ -207,6 +208,7 @@ const ContentWrapper = styled.div`
 `;
 
 const MainImage = styled.div`
+  position: relative;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -214,7 +216,6 @@ const MainImage = styled.div`
   min-height: 450px;
 
   @supports (background-image: -webkit-image-set(url('/images/main.webp') 1x)) {
-    border: 1px solid blue;
     background-image: -webkit-image-set(url('/images/main.webp') 1x);
   }
 
