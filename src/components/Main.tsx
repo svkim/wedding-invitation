@@ -426,7 +426,7 @@ const Title = styled.p`
 const EnglishSubTitle = styled.p`
   font-family: MaruburiLight;
   font-size: 11px;
-  color: #c6c6c6;
+  color: #b2b2b2;
   letter-spacing: 3px;
   text-align: center;
   padding-bottom: 4px;
