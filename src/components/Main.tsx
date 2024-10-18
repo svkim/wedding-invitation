@@ -24,7 +24,7 @@ function Main() {
 
   useEffect(() => {
     if (mainImageRef.current) {
-      mainImageRef.current.style.height = `${innerHeight - 180}px`;
+      mainImageRef.current.style.height = `${innerHeight - 200}px`;
     }
   }, []);
 
@@ -59,7 +59,7 @@ function Main() {
           </TitleImageTitle>
         </MainImage>
 
-        <DescriptionWrapper style={{ padding: '50px 20px', height: 180 }}>
+        <DescriptionWrapper style={{ padding: '50px 20px', height: 200 }}>
           <Description
             style={{
               fontSize: '22px',
