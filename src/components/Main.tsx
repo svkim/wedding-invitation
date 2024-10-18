@@ -208,18 +208,17 @@ const ContentWrapper = styled.div`
 `;
 
 const MainImage = styled.img`
-  position: relative;
-  object-fit: cover;
   width: 100%;
+  object-fit: cover;
+  object-position: center;
   height: calc(100vh - 200px);
+  height: calc(100svh - 200px);
   min-height: 400px;
-  border: 1px solid blue;
 
-  @supports (-webkit-touch-callout: none) {
+  /* @supports (-webkit-touch-callout: none) {
     height: calc(-webkit-fill-available - 200px);
     height: calc(fill-available - 200px);
-    border: 1px solid red;
-  }
+  } */
 `;
 
 const DescriptionWrapper = styled.div`
