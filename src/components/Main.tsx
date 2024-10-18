@@ -226,7 +226,7 @@ const MainImage = styled.div`
   @supports (
     background-image: -webkit-image-set(url('/src/assets/images/main.webp') 1x)
   ) {
-    border: 1px solid red;
+    border: 1px solid blue;
     background-image: -webkit-image-set(url('/src/assets/images/main.webp') 1x);
   }
 
