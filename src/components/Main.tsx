@@ -86,12 +86,12 @@ function Main() {
             speed={[0.2, 1]}
             style={{ opacity: 0.2 }}
           />
-          {/* <Title>INVITATION </Title> */}
+
           <span>🌻</span>
 
           <div>
             <>
-              <EnglishSubTitle>Invitation</EnglishSubTitle>
+              <EnglishSubTitle>INVITATION</EnglishSubTitle>
               {dear ? (
                 <>
                   <Title>소중한 {dear}님</Title>
