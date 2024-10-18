@@ -81,6 +81,7 @@
    License: none (public domain)
 */
 
+*,
 html,
 body,
 div,
@@ -173,6 +174,7 @@ video {
   color: #333333;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  pointer-events: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,

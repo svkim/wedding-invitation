@@ -169,6 +169,7 @@ function Main() {
                 position: 'relative',
                 width: 'calc(100vw - 70px)',
                 aspectRatio: '1/1',
+                pointerEvents: 'auto',
               }}
               onClick={(e) => {
                 e.preventDefault();
@@ -208,6 +209,7 @@ function Main() {
                 position: 'relative',
                 width: 'calc(100vw - 70px)',
                 aspectRatio: '1/1',
+                pointerEvents: 'auto',
               }}
               onClick={(e) => {
                 e.preventDefault();
@@ -255,7 +257,7 @@ function Main() {
             <div
               style={{
                 position: 'relative',
-                width: 'calc(100vw - 70px)',
+                width: 'calc(100vw - 60px)',
               }}
             >
               <p style={{ textAlign: 'center', marginBottom: 10 }}>
@@ -270,16 +272,21 @@ function Main() {
                 style={{
                   fontSize: 10,
                   lineHeight: 1.7,
+                  textAlign: 'center',
+                  whiteSpace: 'nowrap',
                 }}
               >
-                노는걸 좋아하고 장난꾸러기였던 신랑은 신중하고 점잖은 어른으로
-                자라 쾌활하고 발랄한 신부의 모습이 마음에 쏙 들었다고 합니다.
+                노는걸 좋아하고 장난꾸러기였던
+                <br />
+                신랑은 자상하고 신중한 어른으로 자라 <br />
+                예쁘고 사려깊은 신부의 모습이 <br />
+                마음에 쏙 들었다고 합니다.
               </p>
             </div>
             <div
               style={{
                 position: 'relative',
-                width: 'calc(100vw - 70px)',
+                width: 'calc(100vw - 60px)',
               }}
             >
               <p
@@ -299,10 +306,16 @@ function Main() {
                 style={{
                   fontSize: 10,
                   lineHeight: 1.7,
+                  textAlign: 'center',
+                  whiteSpace: 'nowrap',
                 }}
               >
-                조용하고 수줍었던 신부는 긍정적이고 사교적인 어른이 되어 언제나
-                차분함을 유지하는 신랑의 모습에 반했다고 합니다.
+                큰 눈이 유달리 반짝였던 신부는
+                <br />
+                씩씩하고 야무진 어른이 되어 <br />
+                다정하면서도 배울점이 많은
+                <br />
+                신랑의 모습에 반했다고 합니다.
               </p>
             </div>
           </div>
