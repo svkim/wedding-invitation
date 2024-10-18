@@ -213,9 +213,6 @@ const MainImage = styled.img`
   width: 100%;
   height: calc(100vh - 200px);
   min-height: 400px;
-
-  height: -webkit-fill-available;
-  height: fill-available;
 `;
 
 const DescriptionWrapper = styled.div`
