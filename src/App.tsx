@@ -1,7 +1,7 @@
 import './App.css';
 import styled from 'styled-components';
-import MainPic from '../public/main.jpg';
-import MainWebp from '../public/main.webp';
+// import MainPic from '../src/assets/images/image08.jpg';
+// import MainWebp from '../public/main2.webp';
 import CalendarPic from '../public/calendar.png';
 import FloatingBar from './components/FloatingBar';
 import { useEffect, useRef, useState } from 'react';
@@ -34,10 +34,18 @@ function App() {
   return (
     <Wrappper>
       <ContentWrapper>
-        <picture>
-          <source srcSet={MainWebp} type="image/webp" />
-          <MainImage src={MainPic} alt="메인사진"></MainImage>
-        </picture>
+        {/* <picture>
+          <source srcSet={MainWebp} type="image/webp" /> 
+         <MainImage src={MainPic} alt="메인사진" height={500}></MainImage> 
+        </picture> */}
+        <MainImage
+          style={{
+            backgroundImage: `url(../src/assets/images/image08.jpg)`,
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+          }}
+        ></MainImage>
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
           <Description
             style={{
@@ -46,7 +54,7 @@ function App() {
               fontWeight: 500,
             }}
           >
-            김태현 & 이상경
+            김태현 | 이상경
           </Description>
           <Description>2025. 02. 09. 일 PM 2:00</Description>
           <Description>서울숲 갤러리아포레 G층 보테가마지오</Description>
@@ -63,18 +71,18 @@ function App() {
             style={{
               fontWeight: 200,
               lineHeight: '28px',
-              fontSize: '14px',
+              fontSize: '15px',
             }}
           >
-            서로가 마주보며 다져온 사랑을
+            계절이 6번 돌아오는 동안
             <br />
-            이제 함께 한 곳을 바라보며 <br />
-            걸어갈 수 있는 큰 사랑으로 키우고자 합니다. <br />
-            저희 두 사람이 사랑의 이름으로 지켜나갈 수 있게 <br /> 앞날을 축복해
-            주시면 감사하겠습니다.
+            함께 행복했던 기억이 차곡차곡 쌓였습니다. <br />
+            힘들 때마다 큰 위로가
+            <br /> 되어주리라는 마음으로 <br />
+            평생을 약속했습니다. <br /> 저희의 새로운 시작의 날에
+            <br /> 축하와 온기로 함께해 주세요.
           </Description>
-        </DescriptionWrapper>
-        <DescriptionWrapper>
+
           <HR />
           <Description style={{ lineHeight: '28px', fontSize: '14px' }}>
             <span>김은수 • 곽숙견 의 장남</span>
@@ -101,6 +109,7 @@ function App() {
           </Description>
           <HR />
         </DescriptionWrapper>
+        <DescriptionWrapper></DescriptionWrapper>
         <DescriptionWrapper>
           <Title>CALENDAR </Title>
           <img
@@ -138,8 +147,13 @@ const ContentWrapper = styled.div`
   flex-direction: column;
 `;
 
-const MainImage = styled.img`
+// const MainImage = styled.img`
+//   width: 100%;
+// `;
+
+const MainImage = styled.div`
   width: 100%;
+  height: calc(100vh - 200px);
 `;
 
 const DescriptionWrapper = styled.div`
