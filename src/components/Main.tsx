@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 // import MainPic from '../../src/assets/images/image08.jpg';
-// import MainWebp from '../../public/main2.webp';
-import CalendarPic from '../../public/calendar.png';
-import BabyPic from '../../public/baby.png';
+import MainWebp from '../assets/images/main.webp';
+import CalendarPic from '../assets/images/calendar.png';
+import BabyPic from '../assets/images/baby.png';
 import FloatingBar from './../components/FloatingBar';
 import { useEffect, useRef, useState } from 'react';
 
@@ -42,24 +42,23 @@ function Main() {
   return (
     <Wrappper>
       <ContentWrapper>
-        {/* <picture>
-          <source srcSet={MainWebp} type="image/webp" /> 
-         <MainImage src={MainPic} alt="메인사진" height={500}></MainImage> 
-        </picture> */}
-        <MainImage
-          style={{
-            backgroundImage: `url(../src/assets/images/image08.jpg)`,
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-          }}
-        >
-          <TitleImageTitle>
-            We're Getting
-            <br />
-            Married!
-          </TitleImageTitle>
-        </MainImage>
+        <picture>
+          <source srcSet={MainWebp} type="image/webp" />
+          <MainImage
+            style={{
+              backgroundImage: `url(../src/assets/images/image08.jpg)`,
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+            }}
+          >
+            <TitleImageTitle>
+              We're Getting
+              <br />
+              Married!
+            </TitleImageTitle>
+          </MainImage>
+        </picture>
 
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
           <Description
