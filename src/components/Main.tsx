@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import MainPic from '../../src/assets/images/image08.jpg';
+import MainPic from '../assets/images/main.jpg';
 import MainWebp from '../assets/images/main.webp';
 import CalendarPic from '../assets/images/calendar.png';
 import BabyPic from '../assets/images/baby.png';
@@ -8,9 +8,6 @@ import { useEffect, useRef, useState } from 'react';
 
 import { useSearchParams } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
-
-const image = document.createElement('img');
-image.src = '../public/main.jpg';
 
 function Main() {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,21 +40,18 @@ function Main() {
     <Wrappper>
       <ContentWrapper>
         <picture>
-          <source srcSet={MainWebp} type="image/webp" />
-          <MainImage
-            style={{
-              backgroundImage: `url(../src/assets/images/image08.jpg)`,
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          >
-            <TitleImageTitle>
-              We're Getting
-              <br />
-              Married!
-            </TitleImageTitle>
-          </MainImage>
+          <source
+            width={500}
+            height={500}
+            srcSet={MainWebp}
+            type="image/webp"
+          />
+          <TitleImageTitle>
+            We're Getting
+            <br />
+            Married!
+          </TitleImageTitle>
+          <MainImage src={MainPic} alt="main"></MainImage>
         </picture>
 
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
@@ -214,14 +208,11 @@ const ContentWrapper = styled.div`
   flex-direction: column;
 `;
 
-// const MainImage = styled.img`
-//   width: 100%;
-// `;
-
-const MainImage = styled.div`
-  width: 100%;
+const MainImage = styled.img`
   height: calc(100vh - 200px);
   position: relative;
+  object-fit: cover;
+  width: 100%;
 `;
 
 const DescriptionWrapper = styled.div`
