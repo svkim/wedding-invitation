@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import MainPic from '../assets/images/main.jpg';
+// import MainPic from '../assets/images/main.jpg';
 import MainWebp from '../assets/images/main.webp';
 import CalendarPic from '../assets/images/calendar.png';
 import BabyPic from '../assets/images/baby.png';
