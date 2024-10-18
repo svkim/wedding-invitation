@@ -5,7 +5,6 @@ import CalendarPic from '../assets/images/calendar.png';
 import BabyPic from '../assets/images/baby.png';
 import FloatingBar from './../components/FloatingBar';
 import { useEffect, useRef, useState } from 'react';
-
 import { useSearchParams } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
 
@@ -51,7 +50,11 @@ function Main() {
             <br />
             Married!
           </TitleImageTitle>
-          <MainImage src={MainPic} alt="main"></MainImage>
+          <MainImage
+            src={MainPic}
+            alt="main"
+            style={{ height: `calc(${window.innerHeight}px - 200px)` }}
+          ></MainImage>
         </picture>
 
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
@@ -209,7 +212,6 @@ const ContentWrapper = styled.div`
 `;
 
 const MainImage = styled.img`
-  height: calc(100vh - 200px);
   position: relative;
   object-fit: cover;
   width: 100%;
