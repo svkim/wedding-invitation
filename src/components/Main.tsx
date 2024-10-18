@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-// import MainPic from '../assets/images/main.jpg';
-import CalendarPic from '../assets/images/calendar.png';
-import BabyPic from '../assets/images/baby.png';
+import CalendarPic from '../../public/images/calendar.png';
+import BabyPic from '../../public/images/baby.png';
 // import FloatingBar from './../components/FloatingBar';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
@@ -214,12 +213,12 @@ const MainImage = styled.div`
   background-size: cover;
   min-height: 450px;
 
-  @supports (background-image: -webkit-image-set(url('public/main.webp') 1x)) {
+  @supports (background-image: -webkit-image-set(url('/images/main.webp') 1x)) {
     border: 1px solid blue;
-    background-image: -webkit-image-set(url('public/main.webp') 1x);
+    background-image: -webkit-image-set(url('/images/main.webp') 1x);
   }
 
-  background-image: url('public/main.jpg');
+  background-image: url('/images/main.jpg');
 `;
 
 const DescriptionWrapper = styled.div`
