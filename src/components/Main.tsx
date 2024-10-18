@@ -5,8 +5,14 @@ import BabyPic from '../../public/images/baby.png';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
+import BoyPic from '../../public/images/boy.png';
+import GirlPic from '../../public/images/girl.png';
+import ManPic from '../../public/images/man.jpg';
+import WomanPic from '../../public/images/woman.jpg';
 
 function Main() {
+  const [isboy, setIsBoy] = useState(true);
+  const [isGirl, setIsGirl] = useState(true);
   const [, setIsVisible] = useState(false);
   const refEl = useRef(null);
   const mainImageRef = useRef<HTMLDivElement>(null);
@@ -79,11 +85,11 @@ function Main() {
         >
           <Snowfall
             color="gold"
-            snowflakeCount={20}
+            snowflakeCount={30}
             radius={[1, 4]}
             // images={['🌻']}
             speed={[0.2, 1]}
-            style={{ opacity: 0.2 }}
+            style={{ opacity: 0.3 }}
           />
 
           <span>🌻</span>
@@ -149,7 +155,157 @@ function Main() {
         <DescriptionWrapper>
           <EnglishSubTitle>GROOM & BRIDE</EnglishSubTitle>
           <Title>신랑 신부는요,</Title>
-          <img src={BabyPic} style={{ width: '100%' }}></img>
+          <div
+            style={{
+              paddingTop: 30,
+              display: 'flex',
+              gap: 'min(25px, 5%)',
+              width: '100%',
+              justifyContent: 'center',
+            }}
+          >
+            <div
+              style={{
+                position: 'relative',
+                width: 'calc(100vw - 70px)',
+                aspectRatio: '1/1',
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                setIsBoy(!isboy);
+              }}
+            >
+              <img
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  borderRadius: '20%',
+                  width: '100%',
+                  height: '100%',
+                  cursor: 'pointer',
+                  transition: 'opacity 2s',
+                  opacity: isboy ? 1 : 0,
+                }}
+                src={BoyPic}
+              />
+              <img
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  borderRadius: '20%',
+                  width: '100%',
+                  height: '100%',
+                  cursor: 'pointer',
+                  opacity: isboy ? 0 : 1,
+                  transition: 'opacity 2s',
+                  objectFit: 'cover',
+                }}
+                src={ManPic}
+              />
+            </div>
+            <div
+              style={{
+                position: 'relative',
+                width: 'calc(100vw - 70px)',
+                aspectRatio: '1/1',
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                setIsGirl(!isGirl);
+              }}
+            >
+              <img
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  borderRadius: '20%',
+                  width: '100%',
+                  height: '100%',
+                  cursor: 'pointer',
+                  opacity: isGirl ? 1 : 0,
+                  transition: 'opacity 3s',
+                }}
+                src={GirlPic}
+              />
+              <img
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  borderRadius: '20%',
+                  width: '100%',
+                  height: '100%',
+                  cursor: 'pointer',
+                  opacity: isGirl ? 0 : 1,
+                  transition: 'opacity 3s',
+                  objectFit: 'cover',
+                }}
+                src={WomanPic}
+              />
+            </div>
+          </div>
+          <div
+            style={{
+              paddingTop: 30,
+              display: 'flex',
+              gap: 'min(25px, 5%)',
+              width: '100%',
+              justifyContent: 'center',
+            }}
+          >
+            <div
+              style={{
+                position: 'relative',
+                width: 'calc(100vw - 70px)',
+              }}
+            >
+              <p style={{ textAlign: 'center', marginBottom: 10 }}>
+                <span
+                  style={{ fontSize: 10, marginRight: 6, color: '#15527e' }}
+                >
+                  신랑
+                </span>{' '}
+                김태현
+              </p>
+              <p
+                style={{
+                  fontSize: 10,
+                  lineHeight: 1.7,
+                }}
+              >
+                노는걸 좋아하고 장난꾸러기였던 신랑은 신중하고 점잖은 어른으로
+                자라 쾌활하고 발랄한 신부의 모습이 마음에 쏙 들었다고 합니다.
+              </p>
+            </div>
+            <div
+              style={{
+                position: 'relative',
+                width: 'calc(100vw - 70px)',
+              }}
+            >
+              <p
+                style={{
+                  textAlign: 'center',
+                  marginBottom: 10,
+                }}
+              >
+                <span
+                  style={{ fontSize: 10, marginRight: 6, color: '#e05068' }}
+                >
+                  신부
+                </span>{' '}
+                이상경
+              </p>
+              <p
+                style={{
+                  fontSize: 10,
+                  lineHeight: 1.7,
+                }}
+              >
+                조용하고 수줍었던 신부는 긍정적이고 사교적인 어른이 되어 언제나
+                차분함을 유지하는 신랑의 모습에 반했다고 합니다.
+              </p>
+            </div>
+          </div>
         </DescriptionWrapper>
 
         <DescriptionWrapper>
@@ -251,7 +407,7 @@ const Title = styled.p`
 const EnglishSubTitle = styled.p`
   font-family: MaruburiLight;
   font-size: 11px;
-  color: #cfcfcf;
+  color: #c6c6c6;
   letter-spacing: 3px;
   text-align: center;
   padding-bottom: 4px;

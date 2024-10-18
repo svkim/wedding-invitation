@@ -172,6 +172,7 @@ video {
   letter-spacing: -0.1px;
   color: #333333;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 /* HTML5 display-role reset for older browsers */
 article,
