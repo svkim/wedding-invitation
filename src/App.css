@@ -220,8 +220,3 @@ table {
     transform: translateZ(0);
   }
 }
-
-@supports (-webkit-touch-callout: none) {
-  height: -webkit-fill-available;
-  height: fill-available;
-}

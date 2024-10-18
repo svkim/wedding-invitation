@@ -213,6 +213,13 @@ const MainImage = styled.img`
   width: 100%;
   height: calc(100vh - 200px);
   min-height: 400px;
+  border: 1px solid blue;
+
+  @supports (-webkit-touch-callout: none) {
+    height: calc(-webkit-fill-available - 200px);
+    height: calc(fill-available - 200px);
+    border: 1px solid red;
+  }
 `;
 
 const DescriptionWrapper = styled.div`
