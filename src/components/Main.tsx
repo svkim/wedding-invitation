@@ -321,13 +321,20 @@ function Main() {
           </div>
         </DescriptionWrapper>
 
-        <DescriptionWrapper>
+        <DescriptionWrapper
+          style={{
+            backgroundImage: `url(/images/calendarBackground.jpg)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
           <EnglishSubTitle>WEDDING DAY</EnglishSubTitle>
           <Title>날짜 </Title>
           <img
             src={CalendarPic}
             alt="캘린더"
-            style={{ width: '80%', maxWidth: '300px' }}
+            style={{ width: '80%', maxWidth: '300px', marginTop: '35px' }}
           />
         </DescriptionWrapper>
         <DescriptionWrapper>
@@ -362,8 +369,6 @@ const TitleImageTitle = styled.div`
 const Wrappper = styled.div`
   background-color: #e4e4e4;
   width: 100vw;
-  min-height: 100vh;
-  height: 500vh;
 `;
 
 const ContentWrapper = styled.div`
@@ -397,7 +402,7 @@ const DescriptionWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 45px 20px;
 `;
 
 const Description = styled.p`
@@ -414,6 +419,7 @@ const Title = styled.p`
   font-size: 18px;
   font-weight: 400;
   color: #555555;
+
   /* font-style: italic; */
 `;
 
