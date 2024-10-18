@@ -11,7 +11,7 @@ import Snowfall from 'react-snowfall';
 function Main() {
   const [, setIsVisible] = useState(false);
   const refEl = useRef(null);
-  const mainImageRef = useRef<HTMLImageElement>(null);
+  const mainImageRef = useRef<HTMLDivElement>(null);
 
   const [searchParams] = useSearchParams();
   const dear = searchParams.get('dear'); // 받는사람 성명
@@ -59,7 +59,7 @@ function Main() {
             <br />
             Married!{innerHeight}
           </TitleImageTitle>
-          <MainImage ref={mainImageRef} src={MainPic} alt="main"></MainImage>
+          <MainImage ref={mainImageRef}></MainImage>
         </picture>
 
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
@@ -216,18 +216,21 @@ const ContentWrapper = styled.div`
   flex-direction: column;
 `;
 
-const MainImage = styled.img`
+const MainImage = styled.div`
   width: 100%;
-  object-fit: cover;
-  object-position: center;
-  height: calc(100vh - 200px);
-  height: calc(100svh - 200px);
-  min-height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 450px;
 
-  /* @supports (-webkit-touch-callout: none) {
-    height: calc(-webkit-fill-available - 200px);
-    height: calc(fill-available - 200px);
-  } */
+  @supports (
+    background-image: -webkit-image-set(url('/src/assets/images/main.webp') 1x)
+  ) {
+    border: 1px solid red;
+    background-image: -webkit-image-set(url('/src/assets/images/main.webp') 1x);
+  }
+
+  background-image: url('/src/assets/images/main.jpg');
 `;
 
 const DescriptionWrapper = styled.div`
