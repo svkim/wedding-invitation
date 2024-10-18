@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import CalendarPic from '../../public/images/calendar.png';
-import BabyPic from '../../public/images/baby.png';
+
 // import FloatingBar from './../components/FloatingBar';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
