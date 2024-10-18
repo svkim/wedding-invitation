@@ -11,11 +11,19 @@ import Snowfall from 'react-snowfall';
 function Main() {
   const [, setIsVisible] = useState(false);
   const refEl = useRef(null);
+  const mainImageRef = useRef<HTMLImageElement>(null);
 
   const [searchParams] = useSearchParams();
   const dear = searchParams.get('dear'); // 받는사람 성명
 
   const innerHeight = window.innerHeight;
+
+  useEffect(() => {
+    if (mainImageRef.current) {
+      mainImageRef.current.style.height = `${innerHeight - 200}px`;
+      alert(mainImageRef.current.style.height);
+    }
+  }, [mainImageRef, innerHeight]);
 
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
@@ -52,7 +60,7 @@ function Main() {
             <br />
             Married!{innerHeight}
           </TitleImageTitle>
-          <MainImage src={MainPic} alt="main"></MainImage>
+          <MainImage ref={mainImageRef} src={MainPic} alt="main"></MainImage>
         </picture>
 
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
