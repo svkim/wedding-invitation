@@ -35,6 +35,8 @@ function Main() {
     }
   };
 
+  const innerHeight = window.innerHeight;
+
   return (
     <Wrappper>
       <ContentWrapper>
@@ -50,7 +52,11 @@ function Main() {
             <br />
             Married!
           </TitleImageTitle>
-          <MainImage src={MainPic} alt="main"></MainImage>
+          <MainImage
+            src={MainPic}
+            alt="main"
+            style={{ height: `calc(${innerHeight}px - 200px)` }}
+          ></MainImage>
         </picture>
 
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
@@ -212,7 +218,6 @@ const MainImage = styled.img`
   object-fit: cover;
   width: 100%;
   min-height: 400px;
-  height: calc(100lvh - 200px);
 `;
 
 const DescriptionWrapper = styled.div`
