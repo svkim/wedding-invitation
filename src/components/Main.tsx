@@ -12,6 +12,8 @@ function Main() {
   const [isVisible, setIsVisible] = useState(false);
   const refEl = useRef(null);
 
+  const innerHeight = window.innerHeight;
+  console.log(innerHeight);
   const [searchParams] = useSearchParams();
   const dear = searchParams.get('dear'); // 받는사람 성명
 
@@ -53,7 +55,7 @@ function Main() {
           <MainImage
             src={MainPic}
             alt="main"
-            style={{ height: `calc(${window.innerHeight}px - 200px)` }}
+            style={{ height: `calc(${innerHeight}px - 200px)` }}
           ></MainImage>
         </picture>
 
@@ -215,6 +217,7 @@ const MainImage = styled.img`
   position: relative;
   object-fit: cover;
   width: 100%;
+  min-height: 400px;
 `;
 
 const DescriptionWrapper = styled.div`
