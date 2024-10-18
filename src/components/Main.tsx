@@ -212,7 +212,7 @@ const MainImage = styled.img`
   object-fit: cover;
   width: 100%;
   min-height: 400px;
-  height: calc(100svh - 200px);
+  height: calc(100lvh - 200px);
 `;
 
 const DescriptionWrapper = styled.div`
