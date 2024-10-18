@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 // import MainPic from '../assets/images/main.jpg';
-import MainWebp from '../assets/images/main.webp';
 import CalendarPic from '../assets/images/calendar.png';
 import BabyPic from '../assets/images/baby.png';
 // import FloatingBar from './../components/FloatingBar';
@@ -47,20 +46,12 @@ function Main() {
   return (
     <Wrappper>
       <ContentWrapper>
-        <picture>
-          <source
-            width={500}
-            height={500}
-            srcSet={MainWebp}
-            type="image/webp"
-          />
-          <TitleImageTitle>
-            We're Getting
-            <br />
-            Married!{innerHeight}
-          </TitleImageTitle>
-          <MainImage ref={mainImageRef}></MainImage>
-        </picture>
+        <TitleImageTitle>
+          We're Getting
+          <br />
+          Married!{innerHeight}
+        </TitleImageTitle>
+        <MainImage ref={mainImageRef}></MainImage>
 
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
           <Description
@@ -223,14 +214,12 @@ const MainImage = styled.div`
   background-size: cover;
   min-height: 450px;
 
-  @supports (
-    background-image: -webkit-image-set(url('/src/assets/images/main.webp') 1x)
-  ) {
+  @supports (background-image: -webkit-image-set(url('public/main.webp') 1x)) {
     border: 1px solid blue;
-    background-image: -webkit-image-set(url('/src/assets/images/main.webp') 1x);
+    background-image: -webkit-image-set(url('public/main.webp') 1x);
   }
 
-  background-image: url('/src/assets/images/main.jpg');
+  background-image: url('public/main.jpg');
 `;
 
 const DescriptionWrapper = styled.div`
