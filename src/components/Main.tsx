@@ -12,8 +12,6 @@ function Main() {
   const [isVisible, setIsVisible] = useState(false);
   const refEl = useRef(null);
 
-  const innerHeight = window.innerHeight;
-  console.log(innerHeight);
   const [searchParams] = useSearchParams();
   const dear = searchParams.get('dear'); // 받는사람 성명
 
@@ -52,11 +50,7 @@ function Main() {
             <br />
             Married!
           </TitleImageTitle>
-          <MainImage
-            src={MainPic}
-            alt="main"
-            style={{ height: `calc(${innerHeight}px - 200px)` }}
-          ></MainImage>
+          <MainImage src={MainPic} alt="main"></MainImage>
         </picture>
 
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
@@ -218,6 +212,7 @@ const MainImage = styled.img`
   object-fit: cover;
   width: 100%;
   min-height: 400px;
+  height: calc(100svh - 200px);
 `;
 
 const DescriptionWrapper = styled.div`
