@@ -3,13 +3,13 @@ import MainPic from '../assets/images/main.jpg';
 import MainWebp from '../assets/images/main.webp';
 import CalendarPic from '../assets/images/calendar.png';
 import BabyPic from '../assets/images/baby.png';
-import FloatingBar from './../components/FloatingBar';
+// import FloatingBar from './../components/FloatingBar';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
 
 function Main() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [, setIsVisible] = useState(false);
   const refEl = useRef(null);
 
   const [searchParams] = useSearchParams();
@@ -35,8 +35,6 @@ function Main() {
     }
   };
 
-  const innerHeight = window.innerHeight;
-
   return (
     <Wrappper>
       <ContentWrapper>
@@ -52,11 +50,7 @@ function Main() {
             <br />
             Married!
           </TitleImageTitle>
-          <MainImage
-            src={MainPic}
-            alt="main"
-            style={{ height: `calc(${innerHeight}px - 200px)` }}
-          ></MainImage>
+          <MainImage src={MainPic} alt="main"></MainImage>
         </picture>
 
         <DescriptionWrapper style={{ padding: '50px 20px' }}>
@@ -173,7 +167,7 @@ function Main() {
           {/* <GalleryWrap /> */}
         </DescriptionWrapper>
       </ContentWrapper>
-      <FloatingBar isVisible={isVisible} />
+      {/* <FloatingBar isVisible={isVisible} /> */}
     </Wrappper>
   );
 }
@@ -217,7 +211,11 @@ const MainImage = styled.img`
   position: relative;
   object-fit: cover;
   width: 100%;
+  height: calc(100vh - 200px);
   min-height: 400px;
+
+  height: -webkit-fill-available;
+  height: fill-available;
 `;
 
 const DescriptionWrapper = styled.div`
