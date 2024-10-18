@@ -24,7 +24,7 @@ function Main() {
 
   useEffect(() => {
     if (mainImageRef.current) {
-      mainImageRef.current.style.height = `${innerHeight - 200}px`;
+      mainImageRef.current.style.height = `${innerHeight - 180}px`;
     }
   }, []);
 
@@ -59,7 +59,7 @@ function Main() {
           </TitleImageTitle>
         </MainImage>
 
-        <DescriptionWrapper style={{ padding: '50px 20px' }}>
+        <DescriptionWrapper style={{ padding: '50px 20px', height: 180 }}>
           <Description
             style={{
               fontSize: '22px',
@@ -70,7 +70,7 @@ function Main() {
             김태현 🌻 이상경
           </Description>
           <Description style={{ letterSpacing: '0.2px' }}>
-            2025. 02. 09. 일 PM 2:00
+            2025. 02. 09. 일요일 PM 2:00
           </Description>
           <Description style={{ letterSpacing: '0.2px' }}>
             서울숲 갤러리아포레 G층 보테가마지오
@@ -353,7 +353,7 @@ export default Main;
 const TitleImageTitle = styled.div`
   font-family: Cafe24Behappy;
   color: #ffffff;
-  font-size: 60px;
+  font-size: 62px;
   position: absolute;
   z-index: 5;
   top: 10%;
@@ -402,7 +402,7 @@ const DescriptionWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 45px 20px;
+  padding: 55px 20px 60px 20px;
 `;
 
 const Description = styled.p`
