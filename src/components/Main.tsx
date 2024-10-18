@@ -15,6 +15,8 @@ function Main() {
   const [searchParams] = useSearchParams();
   const dear = searchParams.get('dear'); // 받는사람 성명
 
+  const innerHeight = window.innerHeight;
+
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
     return () => {
@@ -48,7 +50,7 @@ function Main() {
           <TitleImageTitle>
             We're Getting
             <br />
-            Married!
+            Married!{innerHeight}
           </TitleImageTitle>
           <MainImage src={MainPic} alt="main"></MainImage>
         </picture>
