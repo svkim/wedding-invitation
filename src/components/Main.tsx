@@ -21,9 +21,8 @@ function Main() {
   useEffect(() => {
     if (mainImageRef.current) {
       mainImageRef.current.style.height = `${innerHeight - 200}px`;
-      alert(mainImageRef.current.style.height);
     }
-  }, [mainImageRef, innerHeight]);
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
