@@ -9,6 +9,7 @@ import BoyPic from '../../public/images/boy.png';
 import GirlPic from '../../public/images/girl.png';
 import ManPic from '../../public/images/man.jpg';
 import WomanPic from '../../public/images/woman.jpg';
+import PhotoGallery from './Gallery/PhotoGallery';
 
 function Main() {
   const [isboy, setIsBoy] = useState(true);
@@ -340,10 +341,12 @@ function Main() {
         <DescriptionWrapper>
           <EnglishSubTitle>GALLERY</EnglishSubTitle>
           <Title>우리의 소중한 순간</Title>
-          {/* <GalleryWrap /> */}
+
+          <PhotoGallery />
         </DescriptionWrapper>
       </ContentWrapper>
       {/* <FloatingBar isVisible={isVisible} /> */}
+      {/* {툴팁 추가할까?하단에 좋아요 배;치하고 놓치지않게 } */}
     </Wrappper>
   );
 }
@@ -439,4 +442,26 @@ const HR = styled.hr`
   border-width: 1px 0 0 0;
   border-style: solid;
   border-color: #e4e4e4;
+`;
+
+const Gallery = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3개의 열 */
+  grid-template-rows: repeat(8, 1fr); /* 8개의 행 */
+  gap: 10px; /* 이미지 사이 간격 */
+  max-width: 100%; /* 가로 크기 제한 */
+  margin: 0 auto; /* 가운데 정렬 */
+`;
+
+const GalleryItem = styled.div`
+  border: 2px solid #ddd; /* 이미지를 감싸는 테두리 */
+  border-radius: 8px; /* 테두리 둥글게 처리 */
+  overflow: hidden;
+`;
+
+const GalleryItemImg = styled.img`
+  width: 100%; /* 이미지가 갤러리 아이템에 꽉 차도록 설정 */
+  height: 100%; /* 이미지 높이도 꽉 차도록 설정 */
+  object-fit: cover; /* 이미지 크기 맞추기 */
+  display: block; /* 이미지 아래 공백 제거 */
 `;

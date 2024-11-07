@@ -8,6 +8,7 @@ const PhotoGallery = () => {
     objectFit: 'cover',
     width: '100%',
     aspectRatio: '3/4',
+    pointerEvents: 'auto',
   };
 
   return (
@@ -26,6 +27,7 @@ const PhotoGallery = () => {
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 32.7%)',
           gridGap: '1%',
+          pointerEvents: 'auto',
         }}
       >
         {images.map((image, index) => {

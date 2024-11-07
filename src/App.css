@@ -174,7 +174,7 @@ video {
   color: #333333;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  pointer-events: none;
+  /* pointer-events: none;  @TODO*/
 }
 /* HTML5 display-role reset for older browsers */
 article,
