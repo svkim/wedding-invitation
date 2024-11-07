@@ -20,9 +20,6 @@ const PhotoGallery = () => {
         loop: true,
         close: true,
         clickToCloseNonZoomable: true,
-        bgClickAction: (e) => {
-          console.log('---click', e);
-        },
       }}
     >
       <div
