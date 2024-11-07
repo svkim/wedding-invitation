@@ -9,24 +9,14 @@ const GalleryWrap = () => {
     setIsMoreView(!isMoreView);
   };
 
-  return (
-    <ContentsWrap $isMoreView={isMoreView}>
-      <ImageMoreWrap $isMoreView={isMoreView}>
-        {!isMoreView && <WhiteGradientOverlay />}
-        <PhotoGallery />
-      </ImageMoreWrap>
-      {!isMoreView && (
-        <PlusButton onClick={onClickImageMoreViewButton}>더보기</PlusButton>
-      )}
-    </ContentsWrap>
-  );
+  return <PhotoGallery />;
 };
 
 export default GalleryWrap;
 
-const ContentsWrap = styled.div<{ $isMoreView: boolean }>`
+const ContentsWrap = styled.div`
   box-sizing: border-box;
-  overflow: ${(props) => (props.$isMoreView ? 'visible' : 'hidden')};
+  overflow: 'visible';
   display: flex;
   flex-direction: column;
   align-items: center;

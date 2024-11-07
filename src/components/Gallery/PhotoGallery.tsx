@@ -40,8 +40,7 @@ const PhotoGallery = () => {
               cropped
               original={image.source}
               thumbnail={image.thumbnail}
-              width={image.width}
-              height={image.height}
+              width="100%"
             >
               {({ ref, open }) => (
                 <img
