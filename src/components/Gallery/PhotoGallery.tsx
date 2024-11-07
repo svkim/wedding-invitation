@@ -6,9 +6,8 @@ const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
     objectFit: 'cover',
-    width: '100%',
-    aspectRatio: '3/4',
-    pointerEvents: 'auto',
+    width: '32vw',
+    height: '32vw',
   };
 
   return (
@@ -25,8 +24,8 @@ const PhotoGallery = () => {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 32.7%)',
-          gridGap: '1%',
+          gridTemplateColumns: 'repeat(3, 32vw)',
+          gridGap: '1vw',
           pointerEvents: 'auto',
         }}
       >
@@ -37,7 +36,8 @@ const PhotoGallery = () => {
               cropped
               original={image.source}
               thumbnail={image.thumbnail}
-              width="100%"
+              width={image.width}
+              height={image.height}
             >
               {({ ref, open }) => (
                 <img
