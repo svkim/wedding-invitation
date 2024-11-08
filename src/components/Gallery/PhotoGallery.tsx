@@ -6,8 +6,8 @@ const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
     objectFit: 'cover',
-    width: '32vw',
-    height: '32vw',
+    width: 'min(32vw, 190px)',
+    height: 'min(32vw, 190px)',
   };
 
   return (
@@ -24,8 +24,8 @@ const PhotoGallery = () => {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 32vw)',
-          gridGap: '1vw',
+          gridTemplateColumns: 'repeat(3, min(32vw, 190px))',
+          gridGap: 'min(8px, 1vw)',
           pointerEvents: 'auto',
         }}
       >

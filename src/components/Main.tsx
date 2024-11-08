@@ -7,8 +7,8 @@ import { useSearchParams } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
 import BoyPic from '../../public/images/boy.png';
 import GirlPic from '../../public/images/girl.png';
-import ManPic from '../../public/images/man.jpg';
-import WomanPic from '../../public/images/woman.jpg';
+import ManPic from '../../public/images/image20.jpg';
+import WomanPic from '../../public/images/image08.jpg';
 import PhotoGallery from './Gallery/PhotoGallery';
 
 function Main() {
@@ -340,7 +340,7 @@ function Main() {
         </DescriptionWrapper>
         <DescriptionWrapper>
           <EnglishSubTitle>GALLERY</EnglishSubTitle>
-          <Title>우리의 소중한 순간</Title>
+          <Title style={{ marginBottom: '35px' }}>우리의 소중한 순간</Title>
 
           <PhotoGallery />
         </DescriptionWrapper>
@@ -391,12 +391,7 @@ const MainImage = styled.div`
   background-position: center;
   background-size: cover;
   min-height: 450px;
-
-  @supports (background-image: -webkit-image-set(url('/images/main.webp') 1x)) {
-    background-image: -webkit-image-set(url('/images/main.webp') 1x);
-  }
-
-  background-image: url('/images/main.jpg');
+  background-image: url('/images/main2.jpg');
 `;
 
 const DescriptionWrapper = styled.div`
@@ -419,7 +414,7 @@ const Description = styled.p`
 
 const Title = styled.p`
   font-family: MaruBuriBold;
-  font-size: 18px;
+  font-size: 18.5px;
   font-weight: 400;
   color: #555555;
 
@@ -428,7 +423,7 @@ const Title = styled.p`
 
 const EnglishSubTitle = styled.p`
   font-family: MaruburiLight;
-  font-size: 11px;
+  font-size: 11.5px;
   color: #b2b2b2;
   letter-spacing: 3px;
   text-align: center;

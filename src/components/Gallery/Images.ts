@@ -37,13 +37,13 @@ import image36 from '../../../public/images/image36.jpg';
 import image37 from '../../../public/images/image37.jpg';
 import image38 from '../../../public/images/image38.jpg';
 import image39 from '../../../public/images/image39.jpg';
-
+import thumbnail from '../../../public/images/thumbnails/image01.jpg';
 const images = [
   /* 이미지 경로를 리스트로 저장 */
   {
     alt: 'image01',
     source: image01,
-    thumbnail: image01,
+    thumbnail: thumbnail,
     width: 600,
     height: 900,
   },
@@ -94,8 +94,8 @@ const images = [
     alt: 'image08',
     source: image08,
     thumbnail: image08,
-    width: 600,
-    height: 900,
+    width: 900,
+    height: 600,
   },
   {
     alt: 'image09',
