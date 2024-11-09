@@ -42,6 +42,7 @@ const PhotoGallery = () => {
             >
               {({ ref, open }) => (
                 <img
+                  loading="lazy"
                   style={smallItemStyles}
                   alt={image.alt}
                   src={image.thumbnail}
