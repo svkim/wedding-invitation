@@ -43,7 +43,7 @@ const PhotoGallery = () => {
                 <img
                   style={smallItemStyles}
                   alt={image.alt}
-                  src={image.source}
+                  src={image.thumbnail}
                   ref={ref}
                   onClick={open}
                 />
