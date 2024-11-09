@@ -19,6 +19,9 @@ const PhotoGallery = () => {
         loop: true,
         close: true,
         preload: [1, 1],
+        arrowPrev: false,
+        arrowNext: false,
+        trapFocus: true,
       }}
     >
       <div
