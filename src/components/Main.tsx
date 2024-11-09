@@ -72,7 +72,7 @@ function Main() {
               fontWeight: 500,
             }}
           >
-            김태현 🌻 이상경
+            김태현&nbsp;&nbsp;🌻&nbsp;&nbsp;이상경
           </Description>
           <Description style={{ letterSpacing: '0.2px' }}>
             2025. 02. 09. 일요일 PM 2:00
