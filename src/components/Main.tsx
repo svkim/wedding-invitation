@@ -392,7 +392,7 @@ const MainImage = styled.div`
   background-position: center;
   background-size: cover;
   min-height: 450px;
-  background-image: url('/images/main2.jpg');
+  background-image: url('/images/main3.jpg');
 `;
 
 const DescriptionWrapper = styled.div`

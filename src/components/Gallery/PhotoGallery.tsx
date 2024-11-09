@@ -19,6 +19,7 @@ const PhotoGallery = () => {
         loop: true,
         close: true,
         clickToCloseNonZoomable: true,
+        preload: [1, 1],
       }}
     >
       <div
