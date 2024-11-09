@@ -14,11 +14,10 @@ const PhotoGallery = () => {
     <Gallery
       options={{
         zoom: false,
-        counter: false,
-        arrowKeys: true,
+        counter: true,
+        arrowKeys: false,
         loop: true,
         close: true,
-        clickToCloseNonZoomable: true,
         preload: [1, 1],
       }}
     >
