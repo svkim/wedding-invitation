@@ -22,6 +22,7 @@ const PhotoGallery = () => {
         arrowPrev: false,
         arrowNext: false,
         trapFocus: true,
+        imageClickAction: 'close',
       }}
     >
       <div
