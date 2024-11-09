@@ -409,7 +409,7 @@ const Description = styled.p`
   text-align: center;
   font-weight: bold;
   position: relative;
-  animation: fade_up 0.8s;
+  /* animation: fade_up 0.8s; */
   font-weight: 200;
 `;
 
