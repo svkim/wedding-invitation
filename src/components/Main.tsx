@@ -10,6 +10,9 @@ import GirlPic from '../../public/images/girl.png';
 import ManPic from '../../public/images/image20.jpg';
 import WomanPic from '../../public/images/image08.jpg';
 import PhotoGallery from './Gallery/PhotoGallery';
+import MainPic from '../../public/images/main7.jpg';
+import ProgressiveImg from './ProgressiveImg';
+import High from '../../public/images/high.jpg';
 
 function Main() {
   const [isboy, setIsBoy] = useState(true);
@@ -23,11 +26,11 @@ function Main() {
 
   const innerHeight = window.innerHeight;
 
-  useEffect(() => {
-    if (mainImageRef.current) {
-      mainImageRef.current.style.height = `${innerHeight - 200}px`;
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (mainImageRef.current) {
+  //     mainImageRef.current.style.height = `${innerHeight - 200}px`;
+  //   }
+  // }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
@@ -52,13 +55,13 @@ function Main() {
   return (
     <Wrappper>
       <ContentWrapper>
-        <MainImage ref={mainImageRef}>
-          <TitleImageTitle>
-            We're Getting
-            <br />
-            Married!
-          </TitleImageTitle>
-        </MainImage>
+        <ProgressiveImg placeholderSrc={MainPic} src={High} />
+
+        <TitleImageTitle>
+          We're Getting
+          <br />
+          Married!
+        </TitleImageTitle>
 
         <DescriptionWrapper style={{ padding: '50px 20px', height: 200 }}>
           <Description
@@ -356,18 +359,18 @@ export default Main;
 const TitleImageTitle = styled.div`
   font-family: Cafe24Behappy;
   color: #ffffff;
-  font-size: 65px;
+  font-size: min(12vw, 65px);
   position: absolute;
   z-index: 5;
-  top: 10%;
+  top: 35px;
   font-style: italic;
-  line-height: 44px;
+  line-height: 0.8;
   text-align: center;
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
-  letter-spacing: 0.5px;
-  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 `;
 
 const Wrappper = styled.div`
@@ -383,16 +386,14 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
-const MainImage = styled.div`
+const MainImage = styled.img`
   position: relative;
   width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  height: 100%;
   min-height: 450px;
-  background-image: url('/images/main5.jpg');
 `;
 
 const DescriptionWrapper = styled.div`
