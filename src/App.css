@@ -223,3 +223,12 @@ table {
     transform: translateZ(0);
   }
 }
+
+/* .pswp .pswp__hide-on-close {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+} */
+
+.pswp__container {
+  pointer-events: none !important;
+}
