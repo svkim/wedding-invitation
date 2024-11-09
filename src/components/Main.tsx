@@ -2,17 +2,18 @@ import styled from 'styled-components';
 import CalendarPic from '../../public/images/calendar.png';
 
 // import FloatingBar from './../components/FloatingBar';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, lazy } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
 import BoyPic from '../../public/images/boy.png';
 import GirlPic from '../../public/images/girl.png';
-import ManPic from '../../public/images/image20.jpg';
-import WomanPic from '../../public/images/image08.jpg';
-import PhotoGallery from './Gallery/PhotoGallery';
+import ManPic from '../../public/images/thumbnails/image20.jpg';
+import WomanPic from '../../public/images/thumbnails/image08.jpg';
 import MainPic from '../../public/images/main7.jpg';
 import ProgressiveImg from './ProgressiveImg';
 import High from '../../public/images/high.jpg';
+
+const PhotoGallery = lazy(() => import('./Gallery/PhotoGallery'));
 
 function Main() {
   const [isboy, setIsBoy] = useState(true);
@@ -232,6 +233,7 @@ function Main() {
                   transition: 'opacity 3s',
                 }}
                 src={GirlPic}
+                loading="lazy"
               />
               <img
                 style={{
@@ -246,6 +248,7 @@ function Main() {
                   objectFit: 'cover',
                 }}
                 src={WomanPic}
+                loading="lazy"
               />
             </div>
           </div>
@@ -327,9 +330,9 @@ function Main() {
 
         <DescriptionWrapper
           style={{
-            backgroundImage: `url(/images/calendarBackground.jpg)`,
+            backgroundImage: `url(/images/image0.jpg)`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'left',
             backgroundRepeat: 'no-repeat',
           }}
         >
