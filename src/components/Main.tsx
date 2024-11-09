@@ -356,7 +356,7 @@ export default Main;
 const TitleImageTitle = styled.div`
   font-family: Cafe24Behappy;
   color: #ffffff;
-  font-size: 62px;
+  font-size: 65px;
   position: absolute;
   z-index: 5;
   top: 10%;
