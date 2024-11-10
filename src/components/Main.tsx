@@ -6,7 +6,7 @@ import { useEffect, useRef, useState, lazy } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
 import ManPic from '../../public/images/man.jpg';
-import WomanPic from '../../public/images/woman2.jpg';
+import WomanPic from '../../public/images/woman.jpg';
 import BoyPic from '../../public/images/boy.png';
 import GirlPic from '../../public/images/girl.png';
 import MainPic from '../../public/images/main7.jpg';
