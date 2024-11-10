@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import s from 'csd';
-import Hall from '../../public/images/food.jpg';
+import Hall from '../../public/images/food2.jpg';
 import Hall2 from '../../public/images/hall2.png';
 
 // StyledTabIndicator 컴포넌트

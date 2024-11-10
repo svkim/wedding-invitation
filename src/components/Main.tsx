@@ -298,6 +298,19 @@ function Main({ setComponent }: Props) {
                   transform: 'rotate(25deg)',
                 }}
               ></span>
+              <span
+                style={{
+                  position: 'absolute',
+                  bottom: -29,
+                  right: -12,
+                  fontSize: 'min(10.5px, 2.7vw)',
+                  fontFamily: 'Pretendard',
+                  zIndex: 100,
+                  transform: 'rotate(-25deg)',
+                }}
+              >
+                Click!
+              </span>
               <div
                 style={{
                   position: 'absolute',
