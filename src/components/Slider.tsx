@@ -43,6 +43,7 @@ const StyledTab = styled.li<StyledTabProps>`
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
     margin-bottom: 4px;
+    font-weight: ${(props) => (props.isFocused ? '600' : '400')};
 
     border-bottom-style: solid;
     border-bottom-width: 1px;
