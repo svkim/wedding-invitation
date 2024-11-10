@@ -5,7 +5,10 @@ import CalendarPic from '../../public/images/calendar.png';
 import { useEffect, useRef, useState, lazy } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
-
+import ManPic from '../../public/images/man.jpg';
+import WomanPic from '../../public/images/woman2.jpg';
+import BoyPic from '../../public/images/boy.png';
+import GirlPic from '../../public/images/girl.png';
 import MainPic from '../../public/images/main7.jpg';
 import ProgressiveImg from './ProgressiveImg';
 import High from '../../public/images/high.jpg';
@@ -234,7 +237,7 @@ function Main({ setComponent }: Props) {
                   opacity: isboy ? 1 : 0,
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(../../public/images/boy.png)`,
+                  backgroundImage: `url(${BoyPic})`,
                 }}
               />
               <div
@@ -250,7 +253,7 @@ function Main({ setComponent }: Props) {
                   backgroundSize: 'cover',
                   backgroundPosition: 'top',
                   backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(../../public/images/man.jpg)`,
+                  backgroundImage: `url(${ManPic})`,
                 }}
               />
             </div>
@@ -279,7 +282,7 @@ function Main({ setComponent }: Props) {
                   transition: 'opacity 3s',
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(../../public/images/girl.png)`,
+                  backgroundImage: `url(${GirlPic})`,
                 }}
               />
               <div
@@ -295,7 +298,7 @@ function Main({ setComponent }: Props) {
                   backgroundSize: 'cover',
                   backgroundPosition: 'bottom',
                   backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(../../public/images/woman2.jpg)`,
+                  backgroundImage: `url(${WomanPic})`,
                 }}
               />
             </div>
