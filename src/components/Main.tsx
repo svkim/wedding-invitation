@@ -69,17 +69,18 @@ function Main({ setComponent }: Props) {
           Married!
         </TitleImageTitle>
 
-        <DescriptionWrapper style={{ padding: '50px 20px', height: 200 }}>
+        <DescriptionWrapper style={{ padding: '50px 20px', height: 190 }}>
           <Description
             style={{
               fontSize: '22px',
-              marginBottom: '40px',
+              marginBottom: '32px',
               fontWeight: 500,
+              letterSpacing: '0.5px',
             }}
           >
             김태현&nbsp;&nbsp;🌻&nbsp;&nbsp;이상경
           </Description>
-          <Description style={{ letterSpacing: '0.2px' }}>
+          <Description style={{ letterSpacing: '0.3px', marginBottom: '6px' }}>
             2025. 02. 09. 일요일 PM 2:00
           </Description>
           <Description style={{ letterSpacing: '0.2px' }}>
@@ -89,7 +90,7 @@ function Main({ setComponent }: Props) {
         <DescriptionWrapper
           style={{
             backgroundColor: '#F4F4F4',
-            gap: '30px',
+            gap: '32px',
             position: 'relative',
           }}
         >
@@ -122,8 +123,7 @@ function Main({ setComponent }: Props) {
             ref={refEl}
             style={{
               fontWeight: 200,
-              lineHeight: '28px',
-              fontSize: '14px',
+              lineHeight: '32px',
             }}
           >
             계절이 6번 돌아오는 동안
@@ -136,24 +136,42 @@ function Main({ setComponent }: Props) {
           </Description>
 
           <HR />
-          <Description style={{ lineHeight: '28px', fontSize: '14px' }}>
-            <span>김은수 • 곽숙견 의 장남</span>
+          <Description style={{ lineHeight: '31px' }}>
+            <span
+              style={{
+                fontFamily: 'Pretendard',
+                fontWeight: 400,
+                fontSize: '16px',
+              }}
+            >
+              김은수 &nbsp;•&nbsp; 곽숙견
+              &nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;아들&nbsp;
+            </span>
             <span
               style={{
                 fontFamily: 'MaruBuriSemiBold',
-                fontSize: '16px',
-                marginLeft: '8px',
+                fontSize: '18px',
+                marginLeft: '10px',
               }}
             >
               태현
             </span>
             <br />
-            <span>이혁선 • 이화순 의 차녀</span>
+            <span
+              style={{
+                fontFamily: 'Pretendard',
+                fontWeight: 400,
+                fontSize: '16px',
+              }}
+            >
+              이혁선 &nbsp;•&nbsp; 이화순
+              &nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;
+            </span>
             <span
               style={{
                 fontFamily: 'MaruBuriSemiBold',
-                fontSize: '16px',
-                marginLeft: '8px',
+                fontSize: '18px',
+                marginLeft: '10px',
               }}
             >
               상경
@@ -418,11 +436,11 @@ const DescriptionWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 55px 20px 60px 20px;
+  padding: 55px 20px 40px 20px;
 `;
 
 const Description = styled.p`
-  font-size: 14px;
+  font-size: 15.5px;
   text-align: center;
   font-weight: bold;
   position: relative;
@@ -432,7 +450,7 @@ const Description = styled.p`
 
 const Title = styled.p`
   font-family: MaruBuriBold;
-  font-size: 18.5px;
+  font-size: 20px;
   font-weight: 400;
   color: #555555;
 
@@ -441,11 +459,11 @@ const Title = styled.p`
 
 const EnglishSubTitle = styled.p`
   font-family: MaruburiLight;
-  font-size: 11.5px;
+  font-size: 13px;
   color: #b2b2b2;
   letter-spacing: 3px;
   text-align: center;
-  padding-bottom: 4px;
+  padding-bottom: 5px;
 `;
 
 const HR = styled.hr`

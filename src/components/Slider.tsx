@@ -20,7 +20,7 @@ const StyledTabIndicator = styled.div<StyledTabIndicatorProps>`
   transform: translate(${(props) => props.offset}, -100%);
   transition: transform ${(props) => props.duration}ms;
   border-top-style: solid;
-  border-top-width: 3px;
+  border-top-width: 4px;
   border-top-color: #555555;
 `;
 
@@ -32,6 +32,7 @@ interface StyledTabProps {
 const StyledTab = styled.li<StyledTabProps>`
   flex: 1;
   height: 100%;
+  font-family: Pretendard;
 
   button {
     cursor: pointer;
@@ -46,6 +47,8 @@ const StyledTab = styled.li<StyledTabProps>`
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: #e4e4e4;
+    font-family: Pretendard;
+    font-size: 17px;
   }
 `;
 
@@ -158,9 +161,8 @@ const Pane1: React.FC = () => (
 
     <Li>
       <Marker>⦁</Marker>
-      전체메뉴의 80% 이상이 즉석 메뉴로 구성된 뷔페로,
-      <br />
-      생맥주, 와인 등 주류도 무제한이니 편하게 즐겨주시면 감사하겠습니다.
+      전체메뉴의 80% 이상이 즉석 메뉴로 구성된 뷔페로, 생맥주, 와인 등 주류도
+      무제한이니 편하게 즐겨주시면 감사하겠습니다.
     </Li>
   </Wrapper>
 );
@@ -186,7 +188,7 @@ const Slider: React.FC = () => {
   return (
     <Container>
       <Tabs focusedIdx={focusedIdx} onChange={setFocusedIdx}>
-        <Tab title="예식·식사 안내" onClick={() => {}} isFocused={false} />
+        <Tab title="예식 · 식사 안내" onClick={() => {}} isFocused={false} />
         <Tab title="지방 피로연 안내" onClick={() => {}} isFocused={false} />
       </Tabs>
       <Sliders focusedIdx={focusedIdx}>
@@ -202,6 +204,7 @@ export default Slider;
 const Container = styled.div`
   color: #555555;
   width: 100%;
+  font-family: Pretendard;
   /* border: 1px solid blue; */
 `;
 
@@ -211,8 +214,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   gap: 6.5px;
   font-size: 15px;
-  font-weight: 800;
-  line-height: 1.8;
+  font-family: Pretendard;
+  line-height: 1.75;
   word-break: keep-all;
   word-wrap: break-word;
   color: #555555;
@@ -221,10 +224,13 @@ const Wrapper = styled.div`
 const Li = styled.li`
   list-style: none;
   /* font-weight: 800; */
+  font-family: Pretendard;
+  font-size: 15px;
 `;
 
 const Marker = styled.span`
-  font-size: 14px;
+  font-size: 12px;
   color: #555555;
   margin-right: 6px;
+  font-family: Pretendard;
 `;
