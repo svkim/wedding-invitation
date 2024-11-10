@@ -465,6 +465,81 @@ function Main({ setComponent }: Props) {
 
           <Slider />
         </DescriptionWrapper>
+        <DescriptionWrapper
+          style={{
+            backgroundColor: '#F4F4F4',
+            gap: '32px',
+            position: 'relative',
+            padding: '60px 15px 50px 15px',
+          }}
+        >
+          <div>
+            <EnglishSubTitle>SAVE THE DATE</EnglishSubTitle>
+            <Title>참석정보를 전달해주세요</Title>
+          </div>
+          <Description
+            ref={refEl}
+            style={{
+              fontWeight: 200,
+              lineHeight: '32px',
+            }}
+          >
+            축하의 마음으로 예식에 참석하시는
+            <br />
+            모든 분들을 더욱 귀하게 모실 수 있도록, <br />
+            아래 버튼을 눌러 신랑 & 신부에게
+            <br /> 참석 정보 전달을 부탁드립니다.
+          </Description>
+
+          <HR
+            style={{
+              borderWidth: '4px 0 0 0',
+              borderStyle: 'double',
+              borderColor: '#cccccc',
+            }}
+          />
+
+          <Description style={{ lineHeight: '30px' }}>
+            <span
+              style={{
+                fontFamily: 'Pretendard',
+                fontWeight: 400,
+                fontSize: '18px',
+                color: '#444444',
+              }}
+            >
+              2025. 02. 09. 일요일 오후 2:00
+            </span>
+            <br />
+            <span
+              style={{
+                fontFamily: 'Pretendard',
+                fontWeight: 400,
+                fontSize: '18px',
+                left: '1px',
+                position: 'relative',
+                color: '#444444',
+              }}
+            >
+              서울숲 보테가마지오 단독홀
+            </span>
+          </Description>
+          <HR
+            style={{
+              borderWidth: '4px 0 0 0',
+              borderStyle: 'double',
+              borderColor: '#cccccc',
+            }}
+          />
+          <Button
+            style={{ backgroundColor: '#444444', color: 'white' }}
+            onClick={() =>
+              setComponent(<PhoneModal setComponent={setComponent} />)
+            }
+          >
+            참석정보 전달하기
+          </Button>
+        </DescriptionWrapper>
       </ContentWrapper>
       {/* <FloatingBar isVisible={isVisible} /> */}
       {/* {툴팁 추가할까?하단에 좋아요 배;치하고 놓치지않게 } */}
