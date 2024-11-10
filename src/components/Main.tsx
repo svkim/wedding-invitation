@@ -8,11 +8,13 @@ import Snowfall from 'react-snowfall';
 import ManPic from '../../public/images/man.jpg';
 import WomanPic from '../../public/images/woman.jpg';
 import BoyPic from '../../public/images/boy.png';
-import GirlPic from '../../public/images/girl.png';
+import GirlPic from '../../public/images/girl.jpeg';
 import MainPic from '../../public/images/main7.jpg';
 import ProgressiveImg from './ProgressiveImg';
 import High from '../../public/images/high.jpg';
 import Slider from './Slider';
+import Cursor from '../../public/images/cursor.png';
+import PhoneModal from './PhoneModal';
 
 interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
@@ -198,6 +200,13 @@ function Main({ setComponent }: Props) {
             </span>
           </Description>
           <HR />
+          <Button
+            onClick={() =>
+              setComponent(<PhoneModal setComponent={setComponent} />)
+            }
+          >
+            전화로 축하 인사하기
+          </Button>
         </DescriptionWrapper>
 
         <DescriptionWrapper>
@@ -207,7 +216,7 @@ function Main({ setComponent }: Props) {
             style={{
               paddingTop: 30,
               display: 'flex',
-              gap: 'min(30px, 3vw)',
+              gap: 'min(15px, 2vw)',
               width: '100%',
               justifyContent: 'center',
             }}
@@ -234,10 +243,11 @@ function Main({ setComponent }: Props) {
                   height: '100%',
                   cursor: 'pointer',
                   transition: 'opacity 2s',
-                  opacity: isboy ? 1 : 0,
+                  opacity: isboy ? 0 : 1,
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundImage: `url(${BoyPic})`,
+                  boxShadow: '3px 6px 6px rgba(0, 0, 0, 0.12)',
                 }}
               />
               <div
@@ -245,10 +255,11 @@ function Main({ setComponent }: Props) {
                   position: 'absolute',
                   top: 0,
                   borderRadius: '20%',
+                  boxShadow: '3px 6px 6px rgba(0, 0, 0, 0.12)',
                   width: '100%',
                   height: '100%',
                   cursor: 'pointer',
-                  opacity: isboy ? 0 : 1,
+                  opacity: isboy ? 1 : 0,
                   transition: 'opacity 2s',
                   backgroundSize: 'cover',
                   backgroundPosition: 'top',
@@ -270,21 +281,22 @@ function Main({ setComponent }: Props) {
                 setIsGirl(!isGirl);
               }}
             >
-              <div
+              <span
                 style={{
                   position: 'absolute',
-                  top: 0,
-                  borderRadius: '20%',
-                  width: '100%',
-                  height: '100%',
-                  cursor: 'pointer',
-                  opacity: isGirl ? 1 : 0,
-                  transition: 'opacity 3s',
-                  backgroundSize: 'cover',
+                  bottom: -15,
+                  right: -5,
+                  fontSize: '11px',
+                  fontFamily: 'Pretendard',
+                  backgroundImage: `url(${Cursor})`,
+                  width: 'min(11vw, 42px)',
+                  height: 'min(11vw, 42px)',
+                  backgroundSize: 'contain',
                   backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(${GirlPic})`,
+                  zIndex: 100,
+                  transform: 'rotate(25deg)',
                 }}
-              />
+              ></span>
               <div
                 style={{
                   position: 'absolute',
@@ -296,9 +308,26 @@ function Main({ setComponent }: Props) {
                   opacity: isGirl ? 0 : 1,
                   transition: 'opacity 3s',
                   backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundImage: `url(${GirlPic})`,
+                  boxShadow: '3px 6px 6px rgba(0, 0, 0, 0.12)',
+                }}
+              />
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  borderRadius: '20%',
+                  width: '100%',
+                  height: '100%',
+                  cursor: 'pointer',
+                  opacity: isGirl ? 1 : 0,
+                  transition: 'opacity 3s',
+                  backgroundSize: 'cover',
                   backgroundPosition: 'bottom',
                   backgroundRepeat: 'no-repeat',
                   backgroundImage: `url(${WomanPic})`,
+                  boxShadow: '3px 6px 6px rgba(0, 0, 0, 0.12)',
                 }}
               />
             </div>
@@ -318,9 +347,19 @@ function Main({ setComponent }: Props) {
                 width: 'calc(100vw - 60px)',
               }}
             >
-              <p style={{ textAlign: 'center', marginBottom: 10 }}>
+              <p
+                style={{
+                  textAlign: 'center',
+                  marginBottom: '10px',
+                  fontSize: '17px',
+                }}
+              >
                 <span
-                  style={{ fontSize: 10, marginRight: 6, color: '#15527e' }}
+                  style={{
+                    fontSize: '12px',
+                    marginRight: '6px',
+                    color: '#136198',
+                  }}
                 >
                   신랑
                 </span>{' '}
@@ -350,11 +389,16 @@ function Main({ setComponent }: Props) {
               <p
                 style={{
                   textAlign: 'center',
-                  marginBottom: 10,
+                  marginBottom: '10px',
+                  fontSize: '17px',
                 }}
               >
                 <span
-                  style={{ fontSize: 10, marginRight: 6, color: '#e05068' }}
+                  style={{
+                    fontSize: '12px',
+                    marginRight: '6px',
+                    color: '#e05068',
+                  }}
                 >
                   신부
                 </span>{' '}
@@ -524,4 +568,17 @@ const GalleryItemImg = styled.img`
   height: 100%; /* 이미지 높이도 꽉 차도록 설정 */
   object-fit: cover; /* 이미지 크기 맞추기 */
   display: block; /* 이미지 아래 공백 제거 */
+`;
+
+const Button = styled.button`
+  font-family: 'Pretendard';
+  background-color: rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.5px;
+  width: min(300px, 85%);
+  height: 60px;
+  border: 1px solid #afafaf;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0px 16px;
 `;
