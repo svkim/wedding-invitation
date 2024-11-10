@@ -74,13 +74,13 @@ function Main({ setComponent }: Props) {
             style={{
               fontSize: '22px',
               marginBottom: '32px',
-              fontWeight: 500,
+              fontWeight: 600,
               letterSpacing: '0.5px',
             }}
           >
             김태현&nbsp;&nbsp;🌻&nbsp;&nbsp;이상경
           </Description>
-          <Description style={{ letterSpacing: '0.3px', marginBottom: '6px' }}>
+          <Description style={{ letterSpacing: '0.3px', marginBottom: '5px' }}>
             2025. 02. 09. 일요일 PM 2:00
           </Description>
           <Description style={{ letterSpacing: '0.2px' }}>
