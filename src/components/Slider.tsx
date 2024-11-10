@@ -151,7 +151,11 @@ const Sliders: React.FC<SlidersProps> = ({
 // Pane 컴포넌트들
 const Pane1: React.FC = () => (
   <Wrapper>
-    <img src={Hall} loading="lazy" style={{ marginBottom: '18px' }} />
+    <img
+      src={Hall}
+      loading="lazy"
+      style={{ marginBottom: '18px', width: '100%' }}
+    />
     <Li>
       <Marker>𒊹</Marker>식사 장소는 예식홀과 동일한 층인 G층에 마련되어
       있습니다.
@@ -169,7 +173,11 @@ const Pane1: React.FC = () => (
 );
 const Pane2: React.FC = () => (
   <Wrapper>
-    <img src={Hall2} loading="lazy" style={{ marginBottom: '18px' }} />
+    <img
+      src={Hall2}
+      loading="lazy"
+      style={{ marginBottom: '18px', width: '100%' }}
+    />
     <Li>
       <Marker>𒊹</Marker>지방하객들을 위해 예식으로부터 3일 전 피로연을
       진행합니다.
