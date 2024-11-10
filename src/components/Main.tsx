@@ -451,7 +451,7 @@ const Description = styled.p`
 const Title = styled.p`
   font-family: MaruBuriBold;
   font-size: 21px;
-  font-weight: 600;
+  font-weight: 500;
   color: #555555;
 
   /* font-style: italic; */
