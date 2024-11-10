@@ -37,7 +37,7 @@ const StyledTab = styled.li<StyledTabProps>`
   button {
     cursor: pointer;
     transition: color 0.3s;
-    color: ${(props) => (props.isFocused ? '#000' : '#777')};
+    color: ${(props) => (props.isFocused ? '#555555' : '#b5b5b5')};
     border: none;
     width: 100%;
     height: 100%;
@@ -48,7 +48,7 @@ const StyledTab = styled.li<StyledTabProps>`
     border-bottom-width: 1px;
     border-bottom-color: #e4e4e4;
     font-family: Pretendard;
-    font-size: 18px;
+    font-size: ${(props) => (props.isFocused ? '18px' : '17.9px')};
   }
 `;
 
@@ -152,15 +152,15 @@ const Pane1: React.FC = () => (
   <Wrapper>
     <img src={Hall} loading="lazy" style={{ marginBottom: '18px' }} />
     <Li>
-      <Marker>⦁</Marker>식사 장소는 예식홀과 동일한 층인 G층에 마련되어
+      <Marker>𒊹</Marker>식사 장소는 예식홀과 동일한 층인 G층에 마련되어
       있습니다.
     </Li>
     <Li>
-      <Marker>⦁</Marker>예식 시작 30분 전인 오후 1시 30분부터 식사가 가능합니다.
+      <Marker>𒊹</Marker>예식 시작 30분 전인 오후 1시 30분부터 식사가 가능합니다.
     </Li>
 
     <Li>
-      <Marker>⦁</Marker>
+      <Marker>𒊹</Marker>
       전체메뉴의 80% 이상이 즉석 메뉴로 구성된 뷔페로, 생맥주, 와인 등 주류도
       무제한이니 편하게 즐겨주시면 감사하겠습니다.
     </Li>
@@ -170,11 +170,11 @@ const Pane2: React.FC = () => (
   <Wrapper>
     <img src={Hall2} loading="lazy" style={{ marginBottom: '18px' }} />
     <Li>
-      <Marker>⦁</Marker>지방하객들을 위해 예식으로부터 3일 전 피로연을
+      <Marker>𒊹</Marker>지방하객들을 위해 예식으로부터 3일 전 피로연을
       진행합니다.
     </Li>
     <Li>
-      <Marker>⦁</Marker>
+      <Marker>𒊹</Marker>
       2/5 (수) 예산 더스타웨딩홀
     </Li>
   </Wrapper>
@@ -233,4 +233,6 @@ const Marker = styled.span`
   color: #555555;
   margin-right: 6px;
   font-family: Pretendard;
+  position: relative;
+  bottom: 2px;
 `;
