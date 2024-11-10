@@ -141,7 +141,7 @@ function Main({ setComponent }: Props) {
               style={{
                 fontFamily: 'Pretendard',
                 fontWeight: 400,
-                fontSize: '16px',
+                fontSize: '17px',
               }}
             >
               김은수 &nbsp;•&nbsp; 곽숙견
@@ -161,7 +161,7 @@ function Main({ setComponent }: Props) {
               style={{
                 fontFamily: 'Pretendard',
                 fontWeight: 400,
-                fontSize: '16px',
+                fontSize: '17px',
               }}
             >
               이혁선 &nbsp;•&nbsp; 이화순

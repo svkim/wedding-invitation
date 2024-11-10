@@ -48,7 +48,7 @@ const StyledTab = styled.li<StyledTabProps>`
     border-bottom-width: 1px;
     border-bottom-color: #e4e4e4;
     font-family: Pretendard;
-    font-size: 17px;
+    font-size: 18px;
   }
 `;
 
@@ -225,7 +225,7 @@ const Li = styled.li`
   list-style: none;
   /* font-weight: 800; */
   font-family: Pretendard;
-  font-size: 15px;
+  font-size: 16px;
 `;
 
 const Marker = styled.span`
