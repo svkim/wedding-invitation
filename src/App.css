@@ -175,6 +175,8 @@ video {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   /* pointer-events: none;  @TODO*/
+  word-break: keep-all;
+  word-wrap: break-word;
 }
 /* HTML5 display-role reset for older browsers */
 article,

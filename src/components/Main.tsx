@@ -12,6 +12,7 @@ import WomanPic from '../../public/images/thumbnails/image08.jpg';
 import MainPic from '../../public/images/main7.jpg';
 import ProgressiveImg from './ProgressiveImg';
 import High from '../../public/images/high.jpg';
+import Slider from './Slider';
 
 const PhotoGallery = lazy(() => import('./Gallery/PhotoGallery'));
 
@@ -350,6 +351,12 @@ function Main() {
 
           <PhotoGallery />
         </DescriptionWrapper>
+        <DescriptionWrapper>
+          <EnglishSubTitle>INFORMATION</EnglishSubTitle>
+          <Title style={{ marginBottom: '35px' }}>안내 말씀드립니다</Title>
+
+          <Slider />
+        </DescriptionWrapper>
       </ContentWrapper>
       {/* <FloatingBar isVisible={isVisible} /> */}
       {/* {툴팁 추가할까?하단에 좋아요 배;치하고 놓치지않게 } */}
@@ -379,6 +386,7 @@ const TitleImageTitle = styled.div`
 const Wrappper = styled.div`
   background-color: #e4e4e4;
   width: 100vw;
+  padding-bottom: 300px;
 `;
 
 const ContentWrapper = styled.div`
