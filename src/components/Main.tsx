@@ -5,10 +5,7 @@ import CalendarPic from '../../public/images/calendar.png';
 import { useEffect, useRef, useState, lazy } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
-import BoyPic from '../../public/images/boy.png';
-import GirlPic from '../../public/images/girl.png';
-import ManPic from '../../public/images/thumbnails/image20.jpg';
-import WomanPic from '../../public/images/thumbnails/image08.jpg';
+
 import MainPic from '../../public/images/main7.jpg';
 import ProgressiveImg from './ProgressiveImg';
 import High from '../../public/images/high.jpg';
@@ -72,9 +69,9 @@ function Main({ setComponent }: Props) {
         <DescriptionWrapper style={{ padding: '50px 20px', height: 180 }}>
           <Description
             style={{
-              fontSize: '20px',
+              fontSize: '21px',
               marginBottom: '25px',
-              fontWeight: 500,
+              fontWeight: 'bold',
               letterSpacing: '0.1px',
               color: '#282828',
             }}
@@ -207,7 +204,7 @@ function Main({ setComponent }: Props) {
             style={{
               paddingTop: 30,
               display: 'flex',
-              gap: 'min(25px, 5%)',
+              gap: 'min(30px, 3vw)',
               width: '100%',
               justifyContent: 'center',
             }}
@@ -215,7 +212,8 @@ function Main({ setComponent }: Props) {
             <div
               style={{
                 position: 'relative',
-                width: 'calc(100vw - 70px)',
+                width: 'min(45vw, 270px)',
+                height: 'min(45vw, 270px)',
                 aspectRatio: '1/1',
                 pointerEvents: 'auto',
               }}
@@ -224,7 +222,7 @@ function Main({ setComponent }: Props) {
                 setIsBoy(!isboy);
               }}
             >
-              <img
+              <div
                 style={{
                   position: 'absolute',
                   top: 0,
@@ -234,10 +232,12 @@ function Main({ setComponent }: Props) {
                   cursor: 'pointer',
                   transition: 'opacity 2s',
                   opacity: isboy ? 1 : 0,
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundImage: `url(${'../../public/images/boy.png'})`,
                 }}
-                src={BoyPic}
               />
-              <img
+              <div
                 style={{
                   position: 'absolute',
                   top: 0,
@@ -247,15 +247,18 @@ function Main({ setComponent }: Props) {
                   cursor: 'pointer',
                   opacity: isboy ? 0 : 1,
                   transition: 'opacity 2s',
-                  objectFit: 'cover',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'top',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundImage: `url(${'../../public/images/man.jpg'})`,
                 }}
-                src={ManPic}
               />
             </div>
             <div
               style={{
                 position: 'relative',
-                width: 'calc(100vw - 70px)',
+                width: 'min(45vw, 270px)',
+                height: 'min(45vw, 270px)',
                 aspectRatio: '1/1',
                 pointerEvents: 'auto',
               }}
@@ -264,7 +267,7 @@ function Main({ setComponent }: Props) {
                 setIsGirl(!isGirl);
               }}
             >
-              <img
+              <div
                 style={{
                   position: 'absolute',
                   top: 0,
@@ -274,11 +277,12 @@ function Main({ setComponent }: Props) {
                   cursor: 'pointer',
                   opacity: isGirl ? 1 : 0,
                   transition: 'opacity 3s',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundImage: `url(${'../../public/images/girl.png'})`,
                 }}
-                src={GirlPic}
-                loading="lazy"
               />
-              <img
+              <div
                 style={{
                   position: 'absolute',
                   top: 0,
@@ -288,10 +292,11 @@ function Main({ setComponent }: Props) {
                   cursor: 'pointer',
                   opacity: isGirl ? 0 : 1,
                   transition: 'opacity 3s',
-                  objectFit: 'cover',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'bottom',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundImage: `url(${'../../public/images/woman2.jpg'})`,
                 }}
-                src={WomanPic}
-                loading="lazy"
               />
             </div>
           </div>
@@ -389,7 +394,7 @@ function Main({ setComponent }: Props) {
         </DescriptionWrapper>
         <DescriptionWrapper>
           <EnglishSubTitle>GALLERY</EnglishSubTitle>
-          <Title style={{ marginBottom: '35px' }}>우리의 소중한 순간</Title>
+          <Title style={{ marginBottom: '38px' }}>우리의 소중한 순간</Title>
 
           <PhotoGallery />
         </DescriptionWrapper>

@@ -11,7 +11,7 @@ const ProgressiveImg = ({ placeholderSrc, src, ...props }: any) => {
       {...{ src: imgSrc, ...props }}
       alt={props.alt || ''}
       className={`image ${customClass}`}
-      style={{ minHeight: '400px' }}
+      style={{ minHeight: '400px', width: '100%' }}
     />
   );
 };
