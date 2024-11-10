@@ -14,9 +14,13 @@ import ProgressiveImg from './ProgressiveImg';
 import High from '../../public/images/high.jpg';
 import Slider from './Slider';
 
+interface Props {
+  setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
+}
+
 const PhotoGallery = lazy(() => import('./Gallery/PhotoGallery'));
 
-function Main() {
+function Main({ setComponent }: Props) {
   const [isboy, setIsBoy] = useState(true);
   const [isGirl, setIsGirl] = useState(true);
   const [, setIsVisible] = useState(false);

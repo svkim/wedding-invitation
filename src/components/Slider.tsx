@@ -210,7 +210,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 6.5px;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 800;
   line-height: 1.8;
   word-break: keep-all;
   word-wrap: break-word;
@@ -223,7 +224,7 @@ const Li = styled.li`
 `;
 
 const Marker = styled.span`
-  font-size: 10px;
+  font-size: 14px;
   color: #555555;
   margin-right: 6px;
 `;
