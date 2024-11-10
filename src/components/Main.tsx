@@ -81,10 +81,23 @@ function Main({ setComponent }: Props) {
           >
             김태현&nbsp;&nbsp;&&nbsp;&nbsp;이상경
           </Description>
-          <Description style={{ letterSpacing: '0.3px', marginBottom: '5px' }}>
+          <Description
+            style={{
+              letterSpacing: '0.3px',
+              marginBottom: '4px',
+              fontFamily: 'Pretendard',
+              fontWeight: 400,
+            }}
+          >
             2025. 02. 09. 일요일 PM 2:00
           </Description>
-          <Description style={{ letterSpacing: '0.2px' }}>
+          <Description
+            style={{
+              letterSpacing: '0.2px',
+              fontFamily: 'Pretendard',
+              fontWeight: 400,
+            }}
+          >
             서울숲 갤러리아포레 G층 보테가마지오
           </Description>
         </DescriptionWrapper>
