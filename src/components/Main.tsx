@@ -580,5 +580,5 @@ const Button = styled.button`
   font-size: 17px;
   border-radius: 10px;
   cursor: pointer;
-  margin: 10px 0px 16px;
+  margin: 8px 0px 14px;
 `;

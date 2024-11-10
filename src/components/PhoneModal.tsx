@@ -14,7 +14,7 @@ const PhoneModal = ({ setComponent }: Props) => {
     handler: () => setComponent(null),
   });
 
-  return <Container ref={elRef}></Container>;
+  return <Container ref={elRef}>태똥이 바보</Container>;
 };
 
 export default PhoneModal;
@@ -23,4 +23,8 @@ const Container = styled.div`
   background-color: white;
   width: min(calc(100vw - 20px), 500px);
   height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
 `;
