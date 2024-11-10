@@ -149,7 +149,7 @@ function Main({ setComponent }: Props) {
             </span>
             <span
               style={{
-                fontFamily: 'MaruBuriSemiBold',
+                fontFamily: 'MaruBuriBold',
                 fontSize: '18px',
                 marginLeft: '10px',
               }}
@@ -162,6 +162,8 @@ function Main({ setComponent }: Props) {
                 fontFamily: 'Pretendard',
                 fontWeight: 400,
                 fontSize: '17px',
+                left: '1px',
+                position: 'relative',
               }}
             >
               이혁선 &nbsp;•&nbsp; 이화순
@@ -169,7 +171,7 @@ function Main({ setComponent }: Props) {
             </span>
             <span
               style={{
-                fontFamily: 'MaruBuriSemiBold',
+                fontFamily: 'MaruBuriBold',
                 fontSize: '18px',
                 marginLeft: '10px',
               }}
