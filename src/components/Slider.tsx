@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import s from 'csd';
-import Hall from '../../public/images/hall.jpg';
-import Hall2 from '../../public/images/hall2.jpeg';
+import Hall from '../../public/images/food.jpg';
+import Hall2 from '../../public/images/hall2.png';
 
 // StyledTabIndicator 컴포넌트
 interface StyledTabIndicatorProps {
@@ -149,7 +149,8 @@ const Pane1: React.FC = () => (
   <Wrapper>
     <img src={Hall} style={{ marginBottom: '18px' }} />
     <Li>
-      <Marker>⦁</Marker>본식과 식사 장소는 G층에 마련되어 있습니다.
+      <Marker>⦁</Marker>식사 장소는 예식홀과 동일한 층인 G층에 마련되어
+      있습니다.
     </Li>
     <Li>
       <Marker>⦁</Marker>예식 시작 30분 전인 오후 1시 30분부터 식사가 가능합니다.
@@ -157,7 +158,7 @@ const Pane1: React.FC = () => (
 
     <Li>
       <Marker>⦁</Marker>
-      전체메뉴의 70% 이상이 즉석 메뉴로 구성된 뷔페로,
+      전체메뉴의 80% 이상이 즉석 메뉴로 구성된 뷔페로,
       <br />
       생맥주, 와인 등 주류도 무제한이니 편하게 즐겨주시면 감사하겠습니다.
     </Li>
@@ -186,7 +187,7 @@ const Slider: React.FC = () => {
     <Container>
       <Tabs focusedIdx={focusedIdx} onChange={setFocusedIdx}>
         <Tab title="예식·식사 안내" onClick={() => {}} isFocused={false} />
-        <Tab title="피로연 안내" onClick={() => {}} isFocused={false} />
+        <Tab title="지방 피로연 안내" onClick={() => {}} isFocused={false} />
       </Tabs>
       <Sliders focusedIdx={focusedIdx}>
         <Pane1 />
@@ -208,8 +209,8 @@ const Wrapper = styled.div`
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  font-size: 13.5px;
+  gap: 6.5px;
+  font-size: 14px;
   line-height: 1.8;
   word-break: keep-all;
   word-wrap: break-word;
@@ -218,6 +219,7 @@ const Wrapper = styled.div`
 
 const Li = styled.li`
   list-style: none;
+  /* font-weight: 800; */
 `;
 
 const Marker = styled.span`

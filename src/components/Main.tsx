@@ -369,17 +369,18 @@ export default Main;
 const TitleImageTitle = styled.div`
   font-family: Cafe24Behappy;
   color: #ffffff;
-  font-size: min(12vw, 65px);
+  font-size: min(14vw, 70px);
   position: absolute;
   z-index: 5;
   top: 35px;
   font-style: italic;
-  line-height: 0.8;
+  line-height: 0.75;
   text-align: center;
+
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 `;
 
