@@ -69,13 +69,13 @@ function Main({ setComponent }: Props) {
           Married!
         </TitleImageTitle>
 
-        <DescriptionWrapper style={{ padding: '50px 20px', height: 190 }}>
+        <DescriptionWrapper style={{ padding: '50px 20px', height: 180 }}>
           <Description
             style={{
-              fontSize: '22px',
-              marginBottom: '32px',
+              fontSize: '20px',
+              marginBottom: '25px',
               fontWeight: 500,
-              letterSpacing: '0.5px',
+              letterSpacing: '0.4px',
               color: '#282828',
             }}
           >
