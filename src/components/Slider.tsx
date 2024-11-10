@@ -230,10 +230,10 @@ const Li = styled.li`
 `;
 
 const Marker = styled.span`
-  font-size: 12px;
+  font-size: 10px;
   color: #555555;
   margin-right: 6px;
   font-family: Pretendard;
   position: relative;
-  bottom: 2px;
+  bottom: 3px;
 `;
