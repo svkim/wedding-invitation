@@ -156,6 +156,7 @@ function Main({ setComponent }: Props) {
                 fontFamily: 'Pretendard',
                 fontWeight: 400,
                 fontSize: '17px',
+                color: '#555555',
               }}
             >
               김은수 &nbsp;•&nbsp; 곽숙견
@@ -166,6 +167,7 @@ function Main({ setComponent }: Props) {
                 fontFamily: 'MaruBuriBold',
                 fontSize: '18px',
                 marginLeft: '10px',
+                color: '#3b3b3b',
               }}
             >
               태현
@@ -178,6 +180,7 @@ function Main({ setComponent }: Props) {
                 fontSize: '17px',
                 left: '1px',
                 position: 'relative',
+                color: '#555555',
               }}
             >
               이혁선 &nbsp;•&nbsp; 이화순
@@ -188,6 +191,7 @@ function Main({ setComponent }: Props) {
                 fontFamily: 'MaruBuriBold',
                 fontSize: '18px',
                 marginLeft: '10px',
+                color: '#3b3b3b',
               }}
             >
               상경
