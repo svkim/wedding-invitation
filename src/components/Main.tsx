@@ -74,7 +74,7 @@ function Main({ setComponent }: Props) {
             style={{
               fontSize: '22px',
               marginBottom: '32px',
-              fontWeight: 500,
+              fontWeight: 600,
               letterSpacing: '0.5px',
             }}
           >
