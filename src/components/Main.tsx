@@ -234,7 +234,7 @@ function Main({ setComponent }: Props) {
                   opacity: isboy ? 1 : 0,
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(${'../../public/images/boy.png'})`,
+                  backgroundImage: `url(../../public/images/boy.png)`,
                 }}
               />
               <div
@@ -250,7 +250,7 @@ function Main({ setComponent }: Props) {
                   backgroundSize: 'cover',
                   backgroundPosition: 'top',
                   backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(${'../../public/images/man.jpg'})`,
+                  backgroundImage: `url(../../public/images/man.jpg)`,
                 }}
               />
             </div>
@@ -279,7 +279,7 @@ function Main({ setComponent }: Props) {
                   transition: 'opacity 3s',
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(${'../../public/images/girl.png'})`,
+                  backgroundImage: `url(../../public/images/girl.png)`,
                 }}
               />
               <div
@@ -295,7 +295,7 @@ function Main({ setComponent }: Props) {
                   backgroundSize: 'cover',
                   backgroundPosition: 'bottom',
                   backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(${'../../public/images/woman2.jpg'})`,
+                  backgroundImage: `url(../../public/images/woman2.jpg)`,
                 }}
               />
             </div>
