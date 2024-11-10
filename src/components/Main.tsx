@@ -78,7 +78,7 @@ function Main({ setComponent }: Props) {
               marginBottom: '25px',
               fontWeight: 'bold',
               letterSpacing: '0.1px',
-              color: '#282828',
+              color: '#343434',
             }}
           >
             김태현&nbsp;&nbsp;&&nbsp;&nbsp;이상경
@@ -89,6 +89,7 @@ function Main({ setComponent }: Props) {
               marginBottom: '4px',
               fontFamily: 'Pretendard',
               fontWeight: 400,
+              color: '#4f4f4f',
             }}
           >
             2025. 02. 09. 일요일 PM 2:00
@@ -580,5 +581,5 @@ const Button = styled.button`
   font-size: 17px;
   border-radius: 10px;
   cursor: pointer;
-  margin: 8px 0px 14px;
+  margin: 8px 0px 16px;
 `;
