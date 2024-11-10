@@ -74,11 +74,12 @@ function Main({ setComponent }: Props) {
             style={{
               fontSize: '22px',
               marginBottom: '32px',
-              fontWeight: 600,
+              fontWeight: 500,
               letterSpacing: '0.5px',
+              color: '#282828',
             }}
           >
-            김태현&nbsp;&nbsp;🌻&nbsp;&nbsp;이상경
+            김태현&nbsp;&nbsp;&&nbsp;&nbsp;이상경
           </Description>
           <Description style={{ letterSpacing: '0.3px', marginBottom: '5px' }}>
             2025. 02. 09. 일요일 PM 2:00
@@ -448,6 +449,7 @@ const Description = styled.p`
   position: relative;
   /* animation: fade_up 0.8s; */
   font-weight: 200;
+  color: #555555;
 `;
 
 const Title = styled.p`
