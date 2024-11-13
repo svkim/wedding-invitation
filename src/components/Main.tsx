@@ -469,7 +469,7 @@ function Main({ setComponent }: Props) {
           style={{
             backgroundColor: '#F4F4F4',
             position: 'relative',
-            padding: '60px 15px 50px 15px',
+            padding: '60px 15px 65px 15px',
           }}
         >
           <div>
@@ -502,6 +502,47 @@ function Main({ setComponent }: Props) {
             </span>
           </Description>
           <Map />
+          <NaviWrapper style={{ paddingTop: '40px' }}>
+            <NaviTitle>자가용 안내</NaviTitle>
+            <Li style={{ marginBottom: '4px' }}>
+              <Marker>𒊹</Marker>내비게이션으로 "보테가마지오" 검색해주세요.
+            </Li>
+            <Li>
+              <Marker>𒊹</Marker>무료 주차는 2시간 가능합니다.
+            </Li>
+            <Li> - &nbsp;건물 내 B3-B7층, 무료주차 2시간 가능</Li>
+            <Li> - &nbsp;안내데스크에서 주차 등록</Li>
+          </NaviWrapper>
+          <NaviWrapper>
+            <NaviTitle>지하철 안내</NaviTitle>
+            <Li>
+              <Marker>𒊹</Marker>수인분당선 서울숲역 5번 출구
+            </Li>
+            <Li style={{ marginBottom: '12px' }}>- &nbsp;도보 2분 거리</Li>
+            <Li>
+              <Marker>𒊹</Marker>2호선 뚝섬역 8번 출구
+            </Li>
+            <Li>- &nbsp;도보 5분 거리</Li>
+          </NaviWrapper>
+          <NaviWrapper>
+            <NaviTitle>버스 안내</NaviTitle>
+            <Li>
+              <Marker>𒊹</Marker> '뚝섬 서울숲 정류장' 하차
+            </Li>
+            <Li style={{ marginBottom: '12px' }}>
+              - &nbsp;간선(파랑색) : 121, 141, 145, 148, 463
+            </Li>
+            <Li>
+              <Marker>𒊹</Marker>'성동구민 종합 체육센터 정류장' 하차
+            </Li>
+            <Li style={{ marginBottom: '12px' }}>
+              - &nbsp;지선(녹색) : 2014, 2224, 2413
+            </Li>
+            <Li>
+              <Marker>𒊹</Marker> '뚝섬역 8번 출구 정류장' 하차
+            </Li>
+            <Li>- &nbsp;지선(녹색) : 2016, 2224, 2413</Li>
+          </NaviWrapper>
         </DescriptionWrapper>
         <DescriptionWrapper style={{ padding: '60px 20px 60px 20px' }}>
           <EnglishSubTitle>INFORMATION</EnglishSubTitle>
@@ -760,4 +801,34 @@ const TabButton = styled.div`
   justify-content: space-between;
   padding: 0 20px;
   cursor: pointer;
+`;
+
+const NaviWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid lightgray;
+  padding: 26px 0;
+`;
+
+const NaviTitle = styled.div`
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+`;
+
+const Li = styled.li`
+  list-style: none;
+  font-family: Pretendard;
+  font-size: 15.5px;
+  line-height: 1.8;
+`;
+
+const Marker = styled.span`
+  font-size: 10px;
+  color: #555555;
+  margin-right: 6px;
+  font-family: Pretendard;
+  position: relative;
+  bottom: 3px;
 `;
