@@ -179,12 +179,12 @@ const Pane2: React.FC = () => (
       style={{ marginBottom: '18px', width: '100%' }}
     />
     <Li>
-      <Marker>𒊹</Marker>지방하객들을 위해 예식으로부터 3일 전 피로연을
-      진행합니다.
+      <Marker>𒊹</Marker>결혼식에 참석하기 어려운 분들을 위해 예식 3일전 피로연
+      자리를 마련하였습니다.
     </Li>
     <Li>
       <Marker>𒊹</Marker>
-      2/5 (수) 예산 더스타웨딩홀
+      25.02.05. 수요일 오후 5시 30분 예산 더스타 웨딩홀
     </Li>
   </Wrapper>
 );

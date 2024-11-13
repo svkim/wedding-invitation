@@ -27,4 +27,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   color: black;
+  position: relative;
+  animation: fadeInUp 0.3s ease-in-out;
 `;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import CalendarPic from '../../public/images/calendar.png';
+import CalendarBackground from '../../public/images/calendarBackground.jpg';
 
 // import FloatingBar from './../components/FloatingBar';
 import { useEffect, useRef, useState, lazy } from 'react';
@@ -12,15 +13,17 @@ import GirlPic from '../../public/images/girl.jpeg';
 import MainPic from '../../public/images/main7.jpg';
 import ProgressiveImg from './ProgressiveImg';
 import High from '../../public/images/high.jpg';
-import Slider from './Slider';
+
 import Cursor from '../../public/images/cursor.png';
 import PhoneModal from './PhoneModal';
+import Map from '../Map';
 
 interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
 }
 
 const PhotoGallery = lazy(() => import('./Gallery/PhotoGallery'));
+const Slider = lazy(() => import('./Slider'));
 
 function Main({ setComponent }: Props) {
   const [isboy, setIsBoy] = useState(true);
@@ -146,10 +149,10 @@ function Main({ setComponent }: Props) {
             계절이 6번 돌아오는 동안
             <br />
             함께 행복했던 기억이 차곡차곡 쌓였습니다. <br />
-            힘들 때마다 큰 위로가
-            <br /> 되어주리라는 마음으로 <br />
-            평생을 약속했습니다. <br /> 저희의 새로운 시작의 날에
-            <br /> 축하와 온기로 함께해 주세요.
+            부부로서 하나의 길을 걷게 될
+            <br /> 힘찬 첫걸음을 내딛는 날, 함께해 주세요. <br />
+            귀한 걸음 하시어 따스한 마음으로 격려해 주신다면 <br /> 평생의
+            응원으로 여기며 살아가겠습니다.
           </Description>
 
           <HR />
@@ -439,10 +442,13 @@ function Main({ setComponent }: Props) {
 
         <DescriptionWrapper
           style={{
-            backgroundImage: `url(/images/image0.jpg)`,
+            backgroundImage: `url(${CalendarBackground})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'left',
+            backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
+            width: '100%',
+            height: '520px',
+            paddingBottom: '80px',
           }}
         >
           <EnglishSubTitle>WEDDING DAY</EnglishSubTitle>
@@ -459,7 +465,45 @@ function Main({ setComponent }: Props) {
 
           <PhotoGallery />
         </DescriptionWrapper>
-        <DescriptionWrapper>
+        <DescriptionWrapper
+          style={{
+            backgroundColor: '#F4F4F4',
+            position: 'relative',
+            padding: '60px 15px 50px 15px',
+          }}
+        >
+          <div>
+            <EnglishSubTitle>LOCATION</EnglishSubTitle>
+            <Title>오시는 길</Title>
+          </div>
+          <Description style={{ lineHeight: '30px', margin: '40px 0 24px' }}>
+            <span
+              style={{
+                fontFamily: 'Pretendard',
+                fontWeight: 600,
+                fontSize: '18px',
+                color: '#314a35',
+              }}
+            >
+              보테가마지오
+            </span>
+            <br />
+            <span
+              style={{
+                fontFamily: 'Pretendard',
+                fontSize: '16px',
+                left: '1px',
+                position: 'relative',
+                color: '#444444',
+                lineHeight: '1',
+              }}
+            >
+              서울 성동구 서울숲2길 32-14 갤러리아 포레
+            </span>
+          </Description>
+          <Map />
+        </DescriptionWrapper>
+        <DescriptionWrapper style={{ padding: '60px 20px 60px 20px' }}>
           <EnglishSubTitle>INFORMATION</EnglishSubTitle>
           <Title style={{ marginBottom: '35px' }}>안내 말씀드립니다</Title>
 
@@ -540,6 +584,41 @@ function Main({ setComponent }: Props) {
             참석정보 전달하기
           </Button>
         </DescriptionWrapper>
+        <DescriptionWrapper>
+          <EnglishSubTitle>🌸</EnglishSubTitle>
+          <Title>마음 전하실 곳</Title>
+          <Description
+            style={{
+              fontWeight: 200,
+              lineHeight: '32px',
+              margin: '32px 0',
+            }}
+          >
+            필요하신 분들을 위해
+            <br />
+            안내드리니 양해 부탁드립니다.
+            <br />
+            참석하지 못하더라도 축복해주시는
+            <br />그 마음 감사히 간직하겠습니다.
+          </Description>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '12px',
+              width: '98%',
+            }}
+          >
+            <TabButton style={{ backgroundColor: '#ebf0f3' }}>
+              <span>신랑측</span>
+              <span>↓</span>
+            </TabButton>
+            <TabButton style={{ backgroundColor: '#f3ebeb' }}>
+              <span>신부측</span>
+              <span>↓</span>
+            </TabButton>
+          </div>
+        </DescriptionWrapper>
       </ContentWrapper>
       {/* <FloatingBar isVisible={isVisible} /> */}
       {/* {툴팁 추가할까?하단에 좋아요 배;치하고 놓치지않게 } */}
@@ -550,7 +629,7 @@ function Main({ setComponent }: Props) {
 export default Main;
 
 const TitleImageTitle = styled.div`
-  font-family: Cafe24Behappy;
+  font-family: Cafe24Behappy, MaruBuriBold;
   color: #ffffff;
   font-size: min(14vw, 70px);
   position: absolute;
@@ -625,7 +704,7 @@ const EnglishSubTitle = styled.p`
   color: #b2b2b2;
   letter-spacing: 3px;
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 `;
 
 const HR = styled.hr`
@@ -670,4 +749,15 @@ const Button = styled.button`
   border-radius: 10px;
   cursor: pointer;
   margin: 8px 0px 16px;
+`;
+
+const TabButton = styled.div`
+  border: 1px solid gray;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  cursor: pointer;
 `;
