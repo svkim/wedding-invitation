@@ -35,7 +35,10 @@ function Main({ setComponent }: Props) {
   const [searchParams] = useSearchParams();
   const dear = searchParams.get('dear'); // 받는사람 성명
 
-  const innerHeight = window.innerHeight;
+  const [openGroomAccount, setOpenGroomAccount] = useState<boolean>(false);
+  const [openBrideccount, setOpenBrideAccount] = useState<boolean>(false);
+
+  // const innerHeight = window.innerHeight;
 
   // useEffect(() => {
   //   if (mainImageRef.current) {
@@ -67,13 +70,11 @@ function Main({ setComponent }: Props) {
     <Wrappper>
       <ContentWrapper>
         <ProgressiveImg placeholderSrc={MainPic} src={High} />
-
         <TitleImageTitle>
           We're Getting
           <br />
           Married!
         </TitleImageTitle>
-
         <DescriptionWrapper style={{ padding: '50px 20px', height: 180 }}>
           <Description
             style={{
@@ -593,6 +594,7 @@ function Main({ setComponent }: Props) {
                 color: '#444444',
               }}
             >
+              {/* <i className="fa fa-calendar"></i> */}
               2025. 02. 09. 일요일 오후 2:00
             </span>
             <br />
@@ -632,7 +634,7 @@ function Main({ setComponent }: Props) {
             style={{
               fontWeight: 200,
               lineHeight: '32px',
-              margin: '32px 0',
+              margin: '33px 0',
             }}
           >
             필요하신 분들을 위해
@@ -646,18 +648,38 @@ function Main({ setComponent }: Props) {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '12px',
+              gap: '10px',
               width: '98%',
             }}
           >
-            <TabButton style={{ backgroundColor: '#ebf0f3' }}>
-              <span>신랑측</span>
-              <span>↓</span>
+            <TabButton
+              style={{ backgroundColor: '#355568' }}
+              onClick={() => setOpenGroomAccount(!openGroomAccount)}
+            >
+              신랑측 계좌번호 보기
             </TabButton>
-            <TabButton style={{ backgroundColor: '#f3ebeb' }}>
-              <span>신부측</span>
-              <span>↓</span>
+            <AccountWrapper style={{ height: openGroomAccount ? '310px' : 0 }}>
+              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
+              <AccountItem>000-0000-0000-00</AccountItem>
+              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
+              <AccountItem>000-0000-0000-00</AccountItem>
+              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
+              <AccountItem>000-0000-0000-00</AccountItem>
+            </AccountWrapper>
+            <TabButton
+              onClick={() => setOpenBrideAccount(!openBrideccount)}
+              style={{ backgroundColor: '#714048' }}
+            >
+              신부측 계좌번호 보기
             </TabButton>
+            <AccountWrapper style={{ height: openBrideccount ? '310px' : 0 }}>
+              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
+              <AccountItem>000-0000-0000-00</AccountItem>
+              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
+              <AccountItem>000-0000-0000-00</AccountItem>
+              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
+              <AccountItem>000-0000-0000-00</AccountItem>
+            </AccountWrapper>
           </div>
         </DescriptionWrapper>
       </ContentWrapper>
@@ -790,17 +812,21 @@ const Button = styled.button`
   border-radius: 10px;
   cursor: pointer;
   margin: 8px 0px 16px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const TabButton = styled.div`
   border: 1px solid gray;
-  width: 100%;
-  height: 60px;
+  width: 220px;
+  height: 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+  justify-content: center;
+  margin: 0 auto;
   cursor: pointer;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const NaviWrapper = styled.div`
@@ -831,4 +857,29 @@ const Marker = styled.span`
   font-family: Pretendard;
   position: relative;
   bottom: 3px;
+`;
+
+const AccountWrapper = styled.div`
+  margin: 0 auto;
+  width: max(75%, 290px);
+  transition: height 0.6s;
+  transition-timing-function: cubic-bezier(0.15, 0.82, 0.165, 1);
+  overflow: hidden;
+`;
+
+const AccountOwner = styled.div`
+  font-family: Pretendard;
+  width: 100%;
+  padding-top: 20px;
+`;
+
+const AccountItem = styled.div`
+  font-family: Pretendard;
+  margin-top: 8px;
+  height: 40px;
+  width: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  padding-left: 12px;
+  align-items: center;
 `;
