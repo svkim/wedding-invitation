@@ -146,7 +146,7 @@ function Main({ setComponent }: Props) {
             ref={refEl}
             style={{
               fontWeight: 200,
-              lineHeight: '36px',
+              lineHeight: '34px',
             }}
           >
             계절이 6번 돌아오는 동안
