@@ -456,8 +456,7 @@ function Main({ setComponent }: Props) {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             width: '100%',
-            height: '700px',
-            paddingBottom: '80px',
+            padding: '65px 20px 90px 20px',
           }}
         >
           <EnglishSubTitle style={{ color: '#999999' }}>
