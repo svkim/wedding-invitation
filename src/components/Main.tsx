@@ -17,6 +17,7 @@ import High from '../../public/images/high.jpg';
 import Cursor from '../../public/images/cursor.png';
 import PhoneModal from './PhoneModal';
 import Map from '../Map';
+import LikeButton from './LikeButton';
 
 interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
@@ -449,6 +450,7 @@ function Main({ setComponent }: Props) {
               </p>
             </div>
           </div>
+          <LikeButton />
         </DescriptionWrapper>
 
         <DescriptionWrapper
