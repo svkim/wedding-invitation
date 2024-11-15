@@ -75,11 +75,11 @@ function Main({ setComponent }: Props) {
           <br />
           Married!
         </TitleImageTitle>
-        <DescriptionWrapper style={{ padding: '50px 20px', height: 180 }}>
+        <DescriptionWrapper style={{ padding: '50px 20px', height: 185 }}>
           <Description
             style={{
-              fontSize: '21px',
-              marginBottom: '25px',
+              fontSize: '22px',
+              marginBottom: '30px',
               fontWeight: 'bold',
               letterSpacing: '0.1px',
               color: '#343434',
@@ -89,8 +89,9 @@ function Main({ setComponent }: Props) {
           </Description>
           <Description
             style={{
-              letterSpacing: '0.3px',
-              marginBottom: '4px',
+              fontSize: '17.5px',
+              letterSpacing: '0.4px',
+              marginBottom: '6px',
               fontFamily: 'Pretendard',
               fontWeight: 400,
               color: '#4f4f4f',
@@ -100,9 +101,11 @@ function Main({ setComponent }: Props) {
           </Description>
           <Description
             style={{
-              letterSpacing: '0.2px',
+              fontSize: '17.5px',
+              letterSpacing: '0.4px',
               fontFamily: 'Pretendard',
               fontWeight: 400,
+              color: '#4f4f4f',
             }}
           >
             서울숲 갤러리아포레 G층 보테가마지오
@@ -126,15 +129,14 @@ function Main({ setComponent }: Props) {
 
           <span>🌻</span>
 
-          <div>
+          <div style={{ marginBottom: '4px' }}>
             <>
               <EnglishSubTitle>INVITATION</EnglishSubTitle>
               {dear ? (
-                <>
-                  <Title>소중한 {dear}님</Title>
-                  <br />
-                  <Title>저희 결혼식에 초대합니다</Title>
-                </>
+                <Title style={{ textAlign: 'center', lineHeight: '1.8' }}>
+                  소중한 {dear}님 <br />
+                  저희 결혼식에 초대합니다
+                </Title>
               ) : (
                 <Title>소중한 분들을 초대합니다</Title>
               )}
@@ -144,7 +146,7 @@ function Main({ setComponent }: Props) {
             ref={refEl}
             style={{
               fontWeight: 200,
-              lineHeight: '32px',
+              lineHeight: '36px',
             }}
           >
             계절이 6번 돌아오는 동안
@@ -157,12 +159,12 @@ function Main({ setComponent }: Props) {
           </Description>
 
           <HR />
-          <Description style={{ lineHeight: '31px' }}>
+          <Description style={{ lineHeight: '32px' }}>
             <span
               style={{
                 fontFamily: 'Pretendard',
                 fontWeight: 400,
-                fontSize: '17px',
+                fontSize: '18.5px',
                 color: '#555555',
               }}
             >
@@ -172,7 +174,7 @@ function Main({ setComponent }: Props) {
             <span
               style={{
                 fontFamily: 'MaruBuriBold',
-                fontSize: '18px',
+                fontSize: '20px',
                 marginLeft: '10px',
                 color: '#3b3b3b',
               }}
@@ -184,7 +186,7 @@ function Main({ setComponent }: Props) {
               style={{
                 fontFamily: 'Pretendard',
                 fontWeight: 400,
-                fontSize: '17px',
+                fontSize: '18.5px',
                 left: '1px',
                 position: 'relative',
                 color: '#555555',
@@ -196,7 +198,7 @@ function Main({ setComponent }: Props) {
             <span
               style={{
                 fontFamily: 'MaruBuriBold',
-                fontSize: '18px',
+                fontSize: '20px',
                 marginLeft: '10px',
                 color: '#3b3b3b',
               }}
@@ -215,7 +217,7 @@ function Main({ setComponent }: Props) {
               style={{
                 transform: 'rotate(100deg)',
                 marginRight: '10px',
-                fontSize: '14px',
+                fontSize: '16px',
               }}
             ></i>
             전화로 축하 인사하기
@@ -227,7 +229,7 @@ function Main({ setComponent }: Props) {
           <Title>신랑 신부는요,</Title>
           <div
             style={{
-              paddingTop: 30,
+              paddingTop: 40,
               display: 'flex',
               gap: 'min(15px, 2vw)',
               width: '100%',
@@ -360,7 +362,7 @@ function Main({ setComponent }: Props) {
           </div>
           <div
             style={{
-              paddingTop: 30,
+              paddingTop: 35,
               display: 'flex',
               gap: 'min(25px, 5%)',
               width: '100%',
@@ -471,7 +473,7 @@ function Main({ setComponent }: Props) {
         </DescriptionWrapper>
         <DescriptionWrapper>
           <EnglishSubTitle>GALLERY</EnglishSubTitle>
-          <Title style={{ marginBottom: '38px' }}>우리의 소중한 순간</Title>
+          <Title style={{ marginBottom: '40px' }}>우리의 소중한 순간</Title>
 
           <PhotoGallery />
         </DescriptionWrapper>
@@ -486,12 +488,12 @@ function Main({ setComponent }: Props) {
             <EnglishSubTitle>LOCATION</EnglishSubTitle>
             <Title>오시는 길</Title>
           </div>
-          <Description style={{ lineHeight: '30px', margin: '40px 0 24px' }}>
+          <Description style={{ lineHeight: '30px', margin: '50px 0 24px' }}>
             <span
               style={{
                 fontFamily: 'Pretendard',
                 fontWeight: 600,
-                fontSize: '18px',
+                fontSize: '21px',
                 color: '#314a35',
               }}
             >
@@ -501,18 +503,16 @@ function Main({ setComponent }: Props) {
             <span
               style={{
                 fontFamily: 'Pretendard',
-                fontSize: '16px',
-                left: '1px',
-                position: 'relative',
+                fontSize: '19px',
                 color: '#444444',
-                lineHeight: '1',
+                lineHeight: '2',
               }}
             >
               서울 성동구 서울숲2길 32-14 갤러리아 포레
             </span>
           </Description>
           <Map />
-          <NaviWrapper style={{ paddingTop: '40px', paddingLeft: '10px' }}>
+          <NaviWrapper style={{ paddingTop: '50px', paddingLeft: '10px' }}>
             <NaviTitle>자가용 안내</NaviTitle>
             <Li style={{ marginBottom: '4px' }}>
               <Marker>𒊹</Marker>내비게이션으로 "보테가마지오" 검색해주세요.
@@ -563,7 +563,7 @@ function Main({ setComponent }: Props) {
         <DescriptionWrapper
           style={{
             backgroundColor: '#F4F4F4',
-            gap: '32px',
+            gap: '36px',
             position: 'relative',
             padding: '60px 15px 50px 15px',
           }}
@@ -594,7 +594,7 @@ function Main({ setComponent }: Props) {
             }}
           />
 
-          <Description style={{ lineHeight: '30px' }}>
+          <Description style={{ lineHeight: '32px' }}>
             <span
               style={{
                 fontFamily: 'Pretendard',
@@ -636,7 +636,7 @@ function Main({ setComponent }: Props) {
             참석정보 전달하기
           </Button>
         </DescriptionWrapper>
-        <DescriptionWrapper>
+        <DescriptionWrapper style={{ padding: '60px 20px 55px 20px' }}>
           <EnglishSubTitle>
             <i
               className="fa fa-heart"
@@ -647,8 +647,8 @@ function Main({ setComponent }: Props) {
           <Description
             style={{
               fontWeight: 200,
-              lineHeight: '32px',
-              margin: '33px 0',
+              lineHeight: '34px',
+              margin: '45px 0',
             }}
           >
             필요하신 분들을 위해
@@ -708,7 +708,7 @@ export default Main;
 const TitleImageTitle = styled.div`
   font-family: Cafe24Behappy, MaruBuriBold;
   color: #ffffff;
-  font-size: min(14vw, 70px);
+  font-size: min(15vw, 80px);
   position: absolute;
   z-index: 5;
   top: 35px;
@@ -757,7 +757,7 @@ const DescriptionWrapper = styled.div`
 `;
 
 const Description = styled.p`
-  font-size: 15.5px;
+  font-size: 17.5px;
   text-align: center;
   font-weight: bold;
   position: relative;
@@ -768,7 +768,7 @@ const Description = styled.p`
 
 const Title = styled.p`
   font-family: MaruBuriBold;
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 500;
   color: #555555;
 
@@ -781,7 +781,7 @@ const EnglishSubTitle = styled.p`
   color: #b2b2b2;
   letter-spacing: 3px;
   text-align: center;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 `;
 
 const HR = styled.hr`
@@ -790,7 +790,7 @@ const HR = styled.hr`
   height: 1px;
   border-width: 1px 0 0 0;
   border-style: solid;
-  border-color: #e4e4e4;
+  border-color: #d6d6d6;
 `;
 
 const Gallery = styled.div`
@@ -831,8 +831,8 @@ const Button = styled.button`
 
 const TabButton = styled.div`
   border: 1px solid gray;
-  width: 220px;
-  height: 40px;
+  width: 230px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -848,20 +848,20 @@ const NaviWrapper = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid lightgray;
-  padding: 26px 0;
+  padding: 35px 0;
 `;
 
 const NaviTitle = styled.div`
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 `;
 
 const Li = styled.li`
   list-style: none;
   font-family: Pretendard;
-  font-size: 15.5px;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.9;
 `;
 
 const Marker = styled.span`

@@ -49,7 +49,7 @@ const StyledTab = styled.li<StyledTabProps>`
     border-bottom-width: 1px;
     border-bottom-color: #e4e4e4;
     font-family: Pretendard;
-    font-size: ${(props) => (props.isFocused ? '18px' : '17.9px')};
+    font-size: ${(props) => (props.isFocused ? '18.9px' : '18.5px')};
   }
 `;
 
@@ -234,7 +234,7 @@ const Li = styled.li`
   list-style: none;
   /* font-weight: 800; */
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 17px;
 `;
 
 const Marker = styled.span`
