@@ -503,7 +503,7 @@ function Main({ setComponent }: Props) {
             <span
               style={{
                 fontFamily: 'Pretendard',
-                fontSize: '18px',
+                fontSize: '17px',
                 color: '#555555',
                 lineHeight: '1.8',
               }}
@@ -860,8 +860,8 @@ const NaviTitle = styled.div`
 const Li = styled.li`
   list-style: none;
   font-family: Pretendard;
-  font-size: 18px;
-  line-height: 1.9;
+  font-size: 17.5px;
+  line-height: 1.8;
 `;
 
 const Marker = styled.span`
