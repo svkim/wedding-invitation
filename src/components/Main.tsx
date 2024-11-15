@@ -503,9 +503,9 @@ function Main({ setComponent }: Props) {
             <span
               style={{
                 fontFamily: 'Pretendard',
-                fontSize: '19px',
-                color: '#444444',
-                lineHeight: '2',
+                fontSize: '18px',
+                color: '#555555',
+                lineHeight: '1.8',
               }}
             >
               서울 성동구 서울숲2길 32-14 갤러리아 포레
