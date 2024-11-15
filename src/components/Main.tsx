@@ -757,7 +757,7 @@ const DescriptionWrapper = styled.div`
 `;
 
 const Description = styled.p`
-  font-size: 17.5px;
+  font-size: 16.5px;
   text-align: center;
   font-weight: bold;
   position: relative;
