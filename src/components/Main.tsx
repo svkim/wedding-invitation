@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CalendarPic from '../../public/images/calendar6.png';
+import CalendarPic from '../../public/images/calendar.png';
 import CalendarBackground from '../../public/images/calendarBackground.jpg';
 
 // import FloatingBar from './../components/FloatingBar';
@@ -456,7 +456,7 @@ function Main({ setComponent }: Props) {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             width: '100%',
-            height: '715px',
+            height: '700px',
             paddingBottom: '80px',
           }}
         >
