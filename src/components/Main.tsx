@@ -378,14 +378,14 @@ function Main({ setComponent }: Props) {
               <p
                 style={{
                   textAlign: 'center',
-                  marginBottom: '10px',
-                  fontSize: '17px',
+                  marginBottom: '14px',
+                  fontSize: '20px',
                 }}
               >
                 <span
                   style={{
-                    fontSize: '12px',
-                    marginRight: '6px',
+                    fontSize: '14px',
+                    marginRight: '8px',
                     color: '#136198',
                   }}
                 >
@@ -395,8 +395,8 @@ function Main({ setComponent }: Props) {
               </p>
               <p
                 style={{
-                  fontSize: 10,
-                  lineHeight: 1.7,
+                  fontSize: 13,
+                  lineHeight: 1.8,
                   textAlign: 'center',
                   whiteSpace: 'nowrap',
                 }}
@@ -417,14 +417,14 @@ function Main({ setComponent }: Props) {
               <p
                 style={{
                   textAlign: 'center',
-                  marginBottom: '10px',
-                  fontSize: '17px',
+                  marginBottom: '14px',
+                  fontSize: '20px',
                 }}
               >
                 <span
                   style={{
-                    fontSize: '12px',
-                    marginRight: '6px',
+                    fontSize: '14px',
+                    marginRight: '8px',
                     color: '#e05068',
                   }}
                 >
@@ -434,8 +434,8 @@ function Main({ setComponent }: Props) {
               </p>
               <p
                 style={{
-                  fontSize: 10,
-                  lineHeight: 1.7,
+                  fontSize: 13,
+                  lineHeight: 1.8,
                   textAlign: 'center',
                   whiteSpace: 'nowrap',
                 }}
@@ -461,7 +461,7 @@ function Main({ setComponent }: Props) {
             padding: '65px 20px 90px 20px',
           }}
         >
-          <EnglishSubTitle style={{ color: '#999999' }}>
+          <EnglishSubTitle style={{ color: '#777777' }}>
             WEDDING DAY
           </EnglishSubTitle>
           <Title>날짜 </Title>
@@ -753,7 +753,7 @@ const DescriptionWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 55px 20px 40px 20px;
+  padding: 60px 20px;
 `;
 
 const Description = styled.p`
@@ -768,7 +768,7 @@ const Description = styled.p`
 
 const Title = styled.p`
   font-family: MaruBuriBold;
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 500;
   color: #555555;
 
@@ -777,11 +777,11 @@ const Title = styled.p`
 
 const EnglishSubTitle = styled.p`
   font-family: MaruburiLight;
-  font-size: 12px;
+  font-size: 13px;
   color: #b2b2b2;
   letter-spacing: 3px;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
 `;
 
 const HR = styled.hr`
@@ -822,7 +822,7 @@ const Button = styled.button`
   width: min(300px, 85%);
   height: 60px;
   border: 1px solid #afafaf;
-  font-size: 17px;
+  font-size: 17.5px;
   border-radius: 10px;
   cursor: pointer;
   margin: 8px 0px 16px;
