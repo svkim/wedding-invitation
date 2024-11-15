@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CalendarPic from '../../public/images/calendar.png';
+import CalendarPic from '../../public/images/calendar6.png';
 import CalendarBackground from '../../public/images/calendarBackground.jpg';
 
 // import FloatingBar from './../components/FloatingBar';
@@ -210,6 +210,14 @@ function Main({ setComponent }: Props) {
               setComponent(<PhoneModal setComponent={setComponent} />)
             }
           >
+            <i
+              className="fa fa-phone"
+              style={{
+                transform: 'rotate(100deg)',
+                marginRight: '10px',
+                fontSize: '14px',
+              }}
+            ></i>
             전화로 축하 인사하기
           </Button>
         </DescriptionWrapper>
@@ -448,16 +456,18 @@ function Main({ setComponent }: Props) {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             width: '100%',
-            height: '520px',
+            height: '720px',
             paddingBottom: '80px',
           }}
         >
-          <EnglishSubTitle>WEDDING DAY</EnglishSubTitle>
+          <EnglishSubTitle style={{ color: '#999999' }}>
+            WEDDING DAY
+          </EnglishSubTitle>
           <Title>날짜 </Title>
           <img
             src={CalendarPic}
             alt="캘린더"
-            style={{ width: '80%', maxWidth: '300px', marginTop: '35px' }}
+            style={{ width: '90%', maxWidth: '380px', marginTop: '35px' }}
           />
         </DescriptionWrapper>
         <DescriptionWrapper>
@@ -503,7 +513,7 @@ function Main({ setComponent }: Props) {
             </span>
           </Description>
           <Map />
-          <NaviWrapper style={{ paddingTop: '40px' }}>
+          <NaviWrapper style={{ paddingTop: '40px', paddingLeft: '10px' }}>
             <NaviTitle>자가용 안내</NaviTitle>
             <Li style={{ marginBottom: '4px' }}>
               <Marker>𒊹</Marker>내비게이션으로 "보테가마지오" 검색해주세요.
@@ -514,7 +524,7 @@ function Main({ setComponent }: Props) {
             <Li> - &nbsp;건물 내 B3-B7층, 무료주차 2시간 가능</Li>
             <Li> - &nbsp;안내데스크에서 주차 등록</Li>
           </NaviWrapper>
-          <NaviWrapper>
+          <NaviWrapper style={{ paddingLeft: '10px' }}>
             <NaviTitle>지하철 안내</NaviTitle>
             <Li>
               <Marker>𒊹</Marker>수인분당선 서울숲역 5번 출구
@@ -525,22 +535,22 @@ function Main({ setComponent }: Props) {
             </Li>
             <Li>- &nbsp;도보 5분 거리</Li>
           </NaviWrapper>
-          <NaviWrapper>
+          <NaviWrapper style={{ paddingLeft: '10px' }}>
             <NaviTitle>버스 안내</NaviTitle>
             <Li>
-              <Marker>𒊹</Marker> '뚝섬 서울숲 정류장' 하차
+              <Marker>𒊹</Marker> 뚝섬 서울숲 정류장
             </Li>
             <Li style={{ marginBottom: '12px' }}>
               - &nbsp;간선(파랑색) : 121, 141, 145, 148, 463
             </Li>
             <Li>
-              <Marker>𒊹</Marker>'성동구민 종합 체육센터 정류장' 하차
+              <Marker>𒊹</Marker> 성동구민 종합 체육센터 정류장
             </Li>
             <Li style={{ marginBottom: '12px' }}>
               - &nbsp;지선(녹색) : 2014, 2224, 2413
             </Li>
             <Li>
-              <Marker>𒊹</Marker> '뚝섬역 8번 출구 정류장' 하차
+              <Marker>𒊹</Marker> 뚝섬역 8번 출구 정류장
             </Li>
             <Li>- &nbsp;지선(녹색) : 2016, 2224, 2413</Li>
           </NaviWrapper>
@@ -628,7 +638,12 @@ function Main({ setComponent }: Props) {
           </Button>
         </DescriptionWrapper>
         <DescriptionWrapper>
-          <EnglishSubTitle>🌸</EnglishSubTitle>
+          <EnglishSubTitle>
+            <i
+              className="fa fa-heart"
+              style={{ color: '#ffa2a2', fontSize: '16px' }}
+            ></i>
+          </EnglishSubTitle>
           <Title>마음 전하실 곳</Title>
           <Description
             style={{

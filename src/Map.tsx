@@ -14,12 +14,12 @@ const Map = () => {
     <MapDiv
       style={{
         width: '100%',
-        height: '300px',
+        height: '310px',
       }}
     >
       <NaverMap
         defaultCenter={new navermaps.LatLng(lat, lon)}
-        defaultZoom={17}
+        defaultZoom={16}
         draggable={true}
         pinchZoom={true}
         zoomControl={true}
