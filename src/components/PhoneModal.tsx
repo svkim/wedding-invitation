@@ -14,7 +14,7 @@ const PhoneModal = ({ setComponent }: Props) => {
     handler: () => setComponent(null),
   });
 
-  return <Container ref={elRef}>태똥이 바보</Container>;
+  return <Container ref={elRef}>Test</Container>;
 };
 
 export default PhoneModal;

@@ -91,7 +91,7 @@ function Main({ setComponent }: Props) {
             style={{
               fontSize: '17.5px',
               letterSpacing: '0.4px',
-              marginBottom: '6px',
+              marginBottom: '8px',
               fontFamily: 'Pretendard',
               fontWeight: 400,
               color: '#4f4f4f',
@@ -146,7 +146,7 @@ function Main({ setComponent }: Props) {
             ref={refEl}
             style={{
               fontWeight: 200,
-              lineHeight: '34px',
+              lineHeight: '32px',
             }}
           >
             계절이 6번 돌아오는 동안
