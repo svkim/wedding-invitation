@@ -73,17 +73,30 @@ function Main({ setComponent }: Props) {
         <DescriptionWrapper style={{ padding: '32px 20px' }}>
           <Description
             style={{
-              fontSize: '23.2px',
+              fontSize: '23px',
               marginBottom: '32px',
               color: '#141414',
+              letterSpacing: '0.5px',
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
-            김태현&nbsp;&nbsp;&&nbsp;&nbsp;이상경
+            김태현
+            <div
+              style={{
+                backgroundImage: `url(${SunFlower2})`,
+                width: '34px',
+                height: '34px',
+                backgroundSize: 'contain',
+                margin: '0 12px',
+              }}
+            />
+            이상경
           </Description>
           <Description
             style={{
-              lineHeight: '34px',
-              fontSize: '17.5px',
+              lineHeight: '33px',
+              fontSize: '17.4px',
               color: '#3a3a3a',
             }}
           >
@@ -107,19 +120,24 @@ function Main({ setComponent }: Props) {
             style={{ opacity: 0.3 }}
           />
 
-          <div
+          {/* <div
             style={{
               backgroundImage: `url(${SunFlower3})`,
-              width: '85px',
-              height: '85px',
+              width: '50px',
+              height: '50px',
               backgroundSize: 'contain',
             }}
-          />
+          /> */}
 
           <div>
             <EnglishSubTitle>INVITATION</EnglishSubTitle>
             {dear ? (
-              <Title style={{ textAlign: 'center', lineHeight: '1.77' }}>
+              <Title
+                style={{
+                  textAlign: 'center',
+                  lineHeight: '1.77',
+                }}
+              >
                 소중한 {dear}님 <br />
                 저희 결혼식에 초대합니다
               </Title>
@@ -127,6 +145,7 @@ function Main({ setComponent }: Props) {
               <Title>소중한 분들을 초대합니다</Title>
             )}
           </div>
+
           <Description>
             계절이 6번 돌아오는 동안
             <br />
@@ -707,7 +726,7 @@ const Title = styled.p`
   font-size: 24px;
   font-weight: 500;
   color: #4d4d4d;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 
   @media only screen and (max-width: 360px) {
     font-size: 22.5px;
