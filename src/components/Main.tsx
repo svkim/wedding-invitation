@@ -31,21 +31,12 @@ function Main({ setComponent }: Props) {
   const [isGirl, setIsGirl] = useState(true);
   const [, setIsVisible] = useState(false);
   const refEl = useRef(null);
-  const mainImageRef = useRef<HTMLDivElement>(null);
 
   const [searchParams] = useSearchParams();
   const dear = searchParams.get('dear'); // 받는사람 성명
 
   const [openGroomAccount, setOpenGroomAccount] = useState<boolean>(false);
   const [openBrideccount, setOpenBrideAccount] = useState<boolean>(false);
-
-  // const innerHeight = window.innerHeight;
-
-  // useEffect(() => {
-  //   if (mainImageRef.current) {
-  //     mainImageRef.current.style.height = `${innerHeight - 200}px`;
-  //   }
-  // }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
@@ -76,13 +67,11 @@ function Main({ setComponent }: Props) {
           <br />
           Married!
         </TitleImageTitle>
-        <DescriptionWrapper style={{ padding: '50px 20px', height: 185 }}>
+        <DescriptionWrapper style={{ padding: '30px 20px' }}>
           <Description
             style={{
-              fontSize: '22px',
+              fontSize: '23px',
               marginBottom: '30px',
-              fontWeight: 'bold',
-              letterSpacing: '0.1px',
               color: '#343434',
             }}
           >
@@ -90,26 +79,13 @@ function Main({ setComponent }: Props) {
           </Description>
           <Description
             style={{
+              lineHeight: '34px',
               fontSize: '17.5px',
-              letterSpacing: '0.4px',
-              marginBottom: '8px',
-              fontFamily: 'Pretendard',
-              fontWeight: 400,
               color: '#4f4f4f',
             }}
           >
             2025. 02. 09. 일요일 PM 2:00
-          </Description>
-          <Description
-            style={{
-              fontSize: '17.5px',
-              letterSpacing: '0.4px',
-              fontFamily: 'Pretendard',
-              fontWeight: 400,
-              color: '#4f4f4f',
-            }}
-          >
-            서울숲 갤러리아포레 G층 보테가마지오
+            <br /> 서울숲 갤러리아포레 G층 보테가마지오
           </Description>
         </DescriptionWrapper>
         <DescriptionWrapper
@@ -143,7 +119,7 @@ function Main({ setComponent }: Props) {
               )}
             </>
           </div>
-          <Description ref={refEl}>
+          <Description>
             계절이 6번 돌아오는 동안
             <br />
             함께 행복했던 기억이 차곡차곡 쌓였습니다. <br />
@@ -450,11 +426,6 @@ function Main({ setComponent }: Props) {
         <DescriptionWrapper
           style={{
             backgroundImage: `url(${CalendarBackground})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            width: '100%',
-            padding: '65px 20px 90px 20px',
           }}
         >
           <EnglishSubTitle style={{ color: '#777777' }}>
@@ -477,7 +448,6 @@ function Main({ setComponent }: Props) {
           style={{
             backgroundColor: '#F4F4F4',
             position: 'relative',
-            padding: '60px 15px 65px 15px',
           }}
         >
           <div>
@@ -568,7 +538,7 @@ function Main({ setComponent }: Props) {
             <EnglishSubTitle>SAVE THE DATE</EnglishSubTitle>
             <Title>참석정보를 전달해주세요</Title>
           </div>
-          <Description ref={refEl}>
+          <Description>
             축하의 마음으로 예식에 참석하시는
             <br />
             모든 분들을 더욱 귀하게 모실 수 있도록, <br />
@@ -743,13 +713,16 @@ const DescriptionWrapper = styled.div`
   align-items: center;
   padding: 60px 20px;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media only screen and (max-width: 445px) {
-    padding: 58px 19px;
+    padding: 58px 18px;
   }
 
   @media only screen and (max-width: 360px) {
-    padding: 55px 19px;
+    padding: 55px 16px;
   }
 `;
 
