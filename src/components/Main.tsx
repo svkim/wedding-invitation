@@ -81,7 +81,7 @@ function Main({ setComponent }: Props) {
             style={{
               lineHeight: '34px',
               fontSize: '17.5px',
-              color: '#3d3d3d',
+              color: '#3a3a3a',
             }}
           >
             2025. 02. 09. 일요일 PM 2:00
@@ -733,7 +733,7 @@ const Description = styled.p`
   /* animation: fade_up 0.8s; */
   white-space: nowrap;
   font-weight: 200;
-  color: #555555;
+  color: #4e4e4e;
 
   @media only screen and (max-width: 445px) {
     font-size: 17px;
