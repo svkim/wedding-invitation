@@ -63,7 +63,6 @@ const LikeButton = () => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           const { likes } = snapshot.val();
-          console.log('====likes : ', likes);
           setLikes(likes);
         } else {
           console.log('No data available');
@@ -95,7 +94,7 @@ const LikeButton = () => {
   };
 
   const handle = () => {
-    void jsConfetti.addConfetti({ emojis, emojiSize: 35 });
+    void jsConfetti.addConfetti({ emojis, emojiSize: 32 });
 
     increaseLikes();
   };
