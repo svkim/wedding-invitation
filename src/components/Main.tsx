@@ -143,24 +143,18 @@ function Main({ setComponent }: Props) {
               )}
             </>
           </div>
-          <Description
-            ref={refEl}
-            style={{
-              fontWeight: 200,
-              lineHeight: '32px',
-            }}
-          >
+          <Description ref={refEl}>
             계절이 6번 돌아오는 동안
             <br />
             함께 행복했던 기억이 차곡차곡 쌓였습니다. <br />
             부부로서 하나의 길을 걷게 될
             <br /> 힘찬 첫걸음을 내딛는 날, 함께해 주세요. <br />
-            귀한 걸음 하시어 따스한 마음으로 격려해 주신다면 <br /> 평생의
-            응원으로 여기며 살아가겠습니다.
+            귀한 걸음 하시어 따스하게 격려해 주신다면 <br /> 평생의 응원으로
+            여기며 살아가겠습니다.
           </Description>
 
           <HR />
-          <Description style={{ lineHeight: '32px' }}>
+          <Description>
             <span
               style={{
                 fontFamily: 'Pretendard',
@@ -232,7 +226,7 @@ function Main({ setComponent }: Props) {
             style={{
               paddingTop: 40,
               display: 'flex',
-              gap: 'min(15px, 2vw)',
+              gap: '20px',
               width: '100%',
               justifyContent: 'center',
             }}
@@ -240,8 +234,8 @@ function Main({ setComponent }: Props) {
             <div
               style={{
                 position: 'relative',
-                width: 'min(45vw, 270px)',
-                height: 'min(45vw, 270px)',
+                width: 'min(43vw, 260px)',
+                height: 'min(43vw, 260px)',
                 aspectRatio: '1/1',
                 pointerEvents: 'auto',
               }}
@@ -287,8 +281,8 @@ function Main({ setComponent }: Props) {
             <div
               style={{
                 position: 'relative',
-                width: 'min(45vw, 270px)',
-                height: 'min(45vw, 270px)',
+                width: 'min(43vw, 260px)',
+                height: 'min(43vw, 260px)',
                 aspectRatio: '1/1',
                 pointerEvents: 'auto',
               }}
@@ -394,7 +388,7 @@ function Main({ setComponent }: Props) {
                 </span>{' '}
                 김태현
               </p>
-              <p
+              {/* <p
                 style={{
                   fontSize: 13,
                   lineHeight: 1.8,
@@ -407,7 +401,7 @@ function Main({ setComponent }: Props) {
                 신랑은 자상하고 신중한 어른으로 자라 <br />
                 예쁘고 사려깊은 신부의 모습이 <br />
                 마음에 쏙 들었다고 합니다.
-              </p>
+              </p> */}
             </div>
             <div
               style={{
@@ -433,7 +427,7 @@ function Main({ setComponent }: Props) {
                 </span>{' '}
                 이상경
               </p>
-              <p
+              {/* <p
                 style={{
                   fontSize: 13,
                   lineHeight: 1.8,
@@ -447,7 +441,7 @@ function Main({ setComponent }: Props) {
                 다정하면서도 배울점이 많은
                 <br />
                 신랑의 모습에 반했다고 합니다.
-              </p>
+              </p> */}
             </div>
           </div>
           <LikeButton />
@@ -490,7 +484,7 @@ function Main({ setComponent }: Props) {
             <EnglishSubTitle>LOCATION</EnglishSubTitle>
             <Title>오시는 길</Title>
           </div>
-          <Description style={{ lineHeight: '30px', margin: '50px 0 24px' }}>
+          <Description style={{ margin: '50px 0 24px' }}>
             <span
               style={{
                 fontFamily: 'Pretendard',
@@ -574,13 +568,7 @@ function Main({ setComponent }: Props) {
             <EnglishSubTitle>SAVE THE DATE</EnglishSubTitle>
             <Title>참석정보를 전달해주세요</Title>
           </div>
-          <Description
-            ref={refEl}
-            style={{
-              fontWeight: 200,
-              lineHeight: '32px',
-            }}
-          >
+          <Description ref={refEl}>
             축하의 마음으로 예식에 참석하시는
             <br />
             모든 분들을 더욱 귀하게 모실 수 있도록, <br />
@@ -596,7 +584,7 @@ function Main({ setComponent }: Props) {
             }}
           />
 
-          <Description style={{ lineHeight: '32px' }}>
+          <Description>
             <span
               style={{
                 fontFamily: 'Pretendard',
@@ -648,8 +636,6 @@ function Main({ setComponent }: Props) {
           <Title>마음 전하실 곳</Title>
           <Description
             style={{
-              fontWeight: 200,
-              lineHeight: '34px',
               margin: '45px 0',
             }}
           >
@@ -756,16 +742,37 @@ const DescriptionWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 445px) {
+    padding: 58px 19px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    padding: 55px 19px;
+  }
 `;
 
 const Description = styled.p`
-  font-size: 16.5px;
+  font-size: 18.5px;
+  line-height: 38px;
   text-align: center;
   font-weight: bold;
   position: relative;
   /* animation: fade_up 0.8s; */
+  white-space: nowrap;
   font-weight: 200;
   color: #555555;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 17px;
+    line-height: 36px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 16.5px;
+    line-height: 35px;
+  }
 `;
 
 const Title = styled.p`
@@ -774,7 +781,9 @@ const Title = styled.p`
   font-weight: 500;
   color: #555555;
 
-  /* font-style: italic; */
+  @media only screen and (max-width: 360px) {
+    font-size: 22.5px;
+  }
 `;
 
 const EnglishSubTitle = styled.p`
@@ -787,7 +796,7 @@ const EnglishSubTitle = styled.p`
 `;
 
 const HR = styled.hr`
-  width: 50%;
+  width: min(270px, 70%);
   border: 0;
   height: 1px;
   border-width: 1px 0 0 0;
