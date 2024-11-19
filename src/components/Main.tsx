@@ -90,7 +90,7 @@ function Main({ setComponent }: Props) {
         </DescriptionWrapper>
         <DescriptionWrapper
           style={{
-            backgroundColor: '#F4F4F4',
+            backgroundColor: '#f6f6f6',
             gap: '32px',
             position: 'relative',
           }}
@@ -110,7 +110,7 @@ function Main({ setComponent }: Props) {
             <>
               <EnglishSubTitle>INVITATION</EnglishSubTitle>
               {dear ? (
-                <Title style={{ textAlign: 'center', lineHeight: '1.8' }}>
+                <Title style={{ textAlign: 'center', lineHeight: '1.77' }}>
                   소중한 {dear}님 <br />
                   저희 결혼식에 초대합니다
                 </Title>
@@ -183,7 +183,33 @@ function Main({ setComponent }: Props) {
             전화로 축하 인사하기
           </Button>
         </DescriptionWrapper>
+        <DescriptionWrapper
+          style={{
+            backgroundColor: '#efefef',
+            gap: '36px',
+            position: 'relative',
+          }}
+        >
+          <div>
+            <EnglishSubTitle>SAVE THE DATE</EnglishSubTitle>
+            <Title>참석여부를 전달해주세요</Title>
+          </div>
+          <Description>
+            축하의 마음으로 예식에 참석하시는
+            <br />
+            모든 분들을 더욱 귀하게 모실 수 있도록, <br />
+            참석 여부를 알려주시면 감사하겠습니다.
+          </Description>
 
+          <Button
+            style={{ backgroundColor: '#444444', color: 'white' }}
+            onClick={() =>
+              setComponent(<PhoneModal setComponent={setComponent} />)
+            }
+          >
+            참석여부 전달하기
+          </Button>
+        </DescriptionWrapper>
         <DescriptionWrapper>
           <EnglishSubTitle>GROOM & BRIDE</EnglishSubTitle>
           <Title>신랑 신부는요,</Title>
@@ -435,7 +461,7 @@ function Main({ setComponent }: Props) {
         </DescriptionWrapper>
         <DescriptionWrapper
           style={{
-            backgroundColor: '#F4F4F4',
+            backgroundColor: '#f6f6f6',
             position: 'relative',
           }}
         >
@@ -464,7 +490,7 @@ function Main({ setComponent }: Props) {
                 fontWeight: 300,
               }}
             >
-              서울 성동구 서울숲2길 32-14 갤러리아 포레
+              서울 성동구 서울숲2길 32-14 갤러리아포레 G층
             </span>
           </Description>
           <Map />
@@ -516,75 +542,8 @@ function Main({ setComponent }: Props) {
 
           <Slider />
         </DescriptionWrapper>
-        <DescriptionWrapper
-          style={{
-            backgroundColor: '#F4F4F4',
-            gap: '36px',
-            position: 'relative',
-          }}
-        >
-          <div>
-            <EnglishSubTitle>SAVE THE DATE</EnglishSubTitle>
-            <Title>참석정보를 전달해주세요</Title>
-          </div>
-          <Description>
-            축하의 마음으로 예식에 참석하시는
-            <br />
-            모든 분들을 더욱 귀하게 모실 수 있도록, <br />
-            참석 여부를 알려주시면 감사하겠습니다.
-          </Description>
 
-          <HR
-            style={{
-              borderWidth: '4px 0 0 0',
-              borderStyle: 'double',
-              borderColor: '#cccccc',
-            }}
-          />
-
-          <Description>
-            <span
-              style={{
-                fontFamily: 'Pretendard',
-                fontWeight: 400,
-                fontSize: '18px',
-                color: '#444444',
-              }}
-            >
-              {/* <i className="fa fa-calendar"></i> */}
-              2025. 02. 09. 일요일 오후 2:00
-            </span>
-            <br />
-            <span
-              style={{
-                fontFamily: 'Pretendard',
-                fontWeight: 400,
-                fontSize: '18px',
-                left: '1px',
-                position: 'relative',
-                color: '#444444',
-              }}
-            >
-              서울숲 보테가마지오 단독홀
-            </span>
-          </Description>
-          <HR
-            style={{
-              borderWidth: '4px 0 0 0',
-              borderStyle: 'double',
-              borderColor: '#cccccc',
-            }}
-          />
-          <Button
-            style={{ backgroundColor: '#444444', color: 'white' }}
-            onClick={() =>
-              setComponent(<PhoneModal setComponent={setComponent} />)
-            }
-          >
-            참석정보 전달하기
-          </Button>
-        </DescriptionWrapper>
-        <DescriptionWrapper>
+        <DescriptionWrapper style={{ backgroundColor: '#f6f6f6' }}>
           <EnglishSubTitle>
             <i
               className="fa fa-heart"
@@ -752,7 +711,7 @@ const EnglishSubTitle = styled.p`
   color: #b2b2b2;
   letter-spacing: 3px;
   text-align: center;
-  padding-bottom: 11px;
+  padding-bottom: 12px;
 `;
 
 const HR = styled.hr`
