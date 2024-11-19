@@ -157,11 +157,10 @@ const Pane1: React.FC = () => (
       style={{ marginBottom: '18px', width: '100%' }}
     />
     <Li>
-      <Marker>𒊹</Marker>식사 장소는 예식홀과 동일한 층인 G층에 마련되어
-      있습니다.
+      <Marker>𒊹</Marker>식사 장소는 예식홀과 동일한 층에 마련되어 있습니다.
     </Li>
     <Li>
-      <Marker>𒊹</Marker>예식 시작 30분 전인 오후 1시 30분부터 식사가 가능합니다.
+      <Marker>𒊹</Marker>예식 시작 30분 전부터 식사가 가능합니다.
     </Li>
 
     <Li>
@@ -179,7 +178,7 @@ const Pane2: React.FC = () => (
       style={{ marginBottom: '18px', width: '100%' }}
     />
     <Li>
-      <Marker>𒊹</Marker>결혼식에 참석하기 어려운 분들을 위해 예식 3일전 피로연
+      <Marker>𒊹</Marker>결혼식에 참석하기 어려운 분들을 위해, 예식 4일전 피로연
       자리를 마련하였습니다.
     </Li>
     <Li>

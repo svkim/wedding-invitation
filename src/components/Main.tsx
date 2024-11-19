@@ -72,7 +72,7 @@ function Main({ setComponent }: Props) {
             style={{
               fontSize: '23px',
               marginBottom: '30px',
-              color: '#343434',
+              color: '#3d3d3d',
             }}
           >
             김태현&nbsp;&nbsp;&&nbsp;&nbsp;이상경
@@ -81,7 +81,7 @@ function Main({ setComponent }: Props) {
             style={{
               lineHeight: '34px',
               fontSize: '17.5px',
-              color: '#4f4f4f',
+              color: '#3d3d3d',
             }}
           >
             2025. 02. 09. 일요일 PM 2:00
@@ -469,7 +469,7 @@ function Main({ setComponent }: Props) {
             <span
               style={{
                 fontFamily: 'Pretendard',
-                fontSize: '17px',
+                fontSize: '17.5px',
                 color: '#555555',
                 lineHeight: '1.8',
               }}
@@ -478,7 +478,7 @@ function Main({ setComponent }: Props) {
             </span>
           </Description>
           <Map />
-          <NaviWrapper style={{ paddingTop: '50px', paddingLeft: '10px' }}>
+          <NaviWrapper style={{ paddingTop: '50px' }}>
             <NaviTitle>자가용 안내</NaviTitle>
             <Li style={{ marginBottom: '4px' }}>
               <Marker>𒊹</Marker>내비게이션으로 "보테가마지오" 검색해주세요.
@@ -489,7 +489,7 @@ function Main({ setComponent }: Props) {
             <Li> - &nbsp;건물 내 B3-B7층, 무료주차 2시간 가능</Li>
             <Li> - &nbsp;안내데스크에서 주차 등록</Li>
           </NaviWrapper>
-          <NaviWrapper style={{ paddingLeft: '10px' }}>
+          <NaviWrapper>
             <NaviTitle>지하철 안내</NaviTitle>
             <Li>
               <Marker>𒊹</Marker>수인분당선 서울숲역 5번 출구
@@ -500,7 +500,7 @@ function Main({ setComponent }: Props) {
             </Li>
             <Li>- &nbsp;도보 5분 거리</Li>
           </NaviWrapper>
-          <NaviWrapper style={{ paddingLeft: '10px' }}>
+          <NaviWrapper>
             <NaviTitle>버스 안내</NaviTitle>
             <Li>
               <Marker>𒊹</Marker> 뚝섬 서울숲 정류장
@@ -520,7 +520,7 @@ function Main({ setComponent }: Props) {
             <Li>- &nbsp;지선(녹색) : 2016, 2224, 2413</Li>
           </NaviWrapper>
         </DescriptionWrapper>
-        <DescriptionWrapper style={{ padding: '60px 20px 60px 20px' }}>
+        <DescriptionWrapper>
           <EnglishSubTitle>INFORMATION</EnglishSubTitle>
           <Title style={{ marginBottom: '35px' }}>안내 말씀드립니다</Title>
 
@@ -531,7 +531,6 @@ function Main({ setComponent }: Props) {
             backgroundColor: '#F4F4F4',
             gap: '36px',
             position: 'relative',
-            padding: '60px 15px 50px 15px',
           }}
         >
           <div>
@@ -596,7 +595,7 @@ function Main({ setComponent }: Props) {
             참석정보 전달하기
           </Button>
         </DescriptionWrapper>
-        <DescriptionWrapper style={{ padding: '60px 20px 55px 20px' }}>
+        <DescriptionWrapper>
           <EnglishSubTitle>
             <i
               className="fa fa-heart"
@@ -666,14 +665,13 @@ export default Main;
 const TitleImageTitle = styled.div`
   font-family: Cafe24Behappy, MaruBuriBold;
   color: #ffffff;
-  font-size: min(15vw, 80px);
+  font-size: min(16vw, 85px);
   position: absolute;
   z-index: 5;
   top: 35px;
   font-style: italic;
-  line-height: 0.75;
+  line-height: 0.8;
   text-align: center;
-
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
@@ -752,7 +750,7 @@ const Title = styled.p`
   font-family: MaruBuriBold;
   font-size: 24px;
   font-weight: 500;
-  color: #555555;
+  color: #4d4d4d;
 
   @media only screen and (max-width: 360px) {
     font-size: 22.5px;
@@ -833,6 +831,7 @@ const NaviWrapper = styled.div`
   flex-direction: column;
   border-bottom: 1px solid lightgray;
   padding: 35px 0;
+  overflow: hidden;
 `;
 
 const NaviTitle = styled.div`
@@ -846,6 +845,11 @@ const Li = styled.li`
   font-family: Pretendard;
   font-size: 17.5px;
   line-height: 1.8;
+  white-space: nowrap;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 17px;
+  }
 `;
 
 const Marker = styled.span`
