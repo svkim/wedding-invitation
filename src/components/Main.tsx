@@ -131,17 +131,10 @@ function Main({ setComponent }: Props) {
 
           <HR />
           <Description>
-            <span
-              style={{
-                fontFamily: 'Pretendard',
-                fontWeight: 400,
-                fontSize: '18.5px',
-                color: '#555555',
-              }}
-            >
+            <Parent>
               김은수 &nbsp;•&nbsp; 곽숙견
               &nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;아들&nbsp;
-            </span>
+            </Parent>
             <span
               style={{
                 fontFamily: 'MaruBuriBold',
@@ -153,19 +146,15 @@ function Main({ setComponent }: Props) {
               태현
             </span>
             <br />
-            <span
+            <Parent
               style={{
-                fontFamily: 'Pretendard',
-                fontWeight: 400,
-                fontSize: '18.5px',
                 left: '1px',
                 position: 'relative',
-                color: '#555555',
               }}
             >
               이혁선 &nbsp;•&nbsp; 이화순
               &nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;
-            </span>
+            </Parent>
             <span
               style={{
                 fontFamily: 'MaruBuriBold',
@@ -472,6 +461,7 @@ function Main({ setComponent }: Props) {
                 fontSize: '17.5px',
                 color: '#555555',
                 lineHeight: '1.8',
+                fontWeight: 300,
               }}
             >
               서울 성동구 서울숲2길 32-14 갤러리아 포레
@@ -541,8 +531,7 @@ function Main({ setComponent }: Props) {
             축하의 마음으로 예식에 참석하시는
             <br />
             모든 분들을 더욱 귀하게 모실 수 있도록, <br />
-            아래 버튼을 눌러 신랑 & 신부에게
-            <br /> 참석 정보 전달을 부탁드립니다.
+            참석 여부를 알려주시면 감사하겠습니다.
           </Description>
 
           <HR
@@ -605,7 +594,7 @@ function Main({ setComponent }: Props) {
           <Title>마음 전하실 곳</Title>
           <Description
             style={{
-              margin: '45px 0',
+              margin: '36px 0',
             }}
           >
             필요하신 분들을 위해
@@ -742,7 +731,7 @@ const Description = styled.p`
 
   @media only screen and (max-width: 360px) {
     font-size: 16.5px;
-    line-height: 35px;
+    line-height: 34px;
   }
 `;
 
@@ -807,7 +796,7 @@ const Button = styled.button`
   font-size: 17.5px;
   border-radius: 10px;
   cursor: pointer;
-  margin: 8px 0px 16px;
+  margin: 10px 0px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
@@ -846,6 +835,7 @@ const Li = styled.li`
   font-size: 17.5px;
   line-height: 1.8;
   white-space: nowrap;
+  font-weight: 300;
 
   @media only screen and (max-width: 445px) {
     font-size: 17px;
@@ -884,4 +874,11 @@ const AccountItem = styled.div`
   display: flex;
   padding-left: 12px;
   align-items: center;
+`;
+
+const Parent = styled.span`
+  font-family: Pretendard;
+  font-weight: 400;
+  font-size: 19px;
+  color: #555555;
 `;
