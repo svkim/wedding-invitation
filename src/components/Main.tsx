@@ -114,10 +114,10 @@ function Main({ setComponent }: Props) {
           <Snowfall
             color="gold"
             snowflakeCount={30}
-            radius={[1, 4]}
+            radius={[1, 5]}
             // images={['🌻']}
             speed={[0.2, 1]}
-            style={{ opacity: 0.3 }}
+            style={{ opacity: 0.35 }}
           />
 
           {/* <div
