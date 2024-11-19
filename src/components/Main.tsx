@@ -72,7 +72,7 @@ function Main({ setComponent }: Props) {
             style={{
               fontSize: '23px',
               marginBottom: '32px',
-              color: '#3d3d3d',
+              color: '#1f1f1f',
             }}
           >
             김태현&nbsp;&nbsp;&&nbsp;&nbsp;이상경
