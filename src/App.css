@@ -177,6 +177,11 @@ video {
   /* pointer-events: none;  @TODO*/
   word-break: keep-all;
   word-wrap: break-word;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
