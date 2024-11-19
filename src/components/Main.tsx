@@ -339,12 +339,12 @@ function Main({ setComponent }: Props) {
                 style={{
                   textAlign: 'center',
                   marginBottom: '14px',
-                  fontSize: '20px',
+                  fontSize: '21px',
                 }}
               >
                 <span
                   style={{
-                    fontSize: '14px',
+                    fontSize: '15px',
                     marginRight: '8px',
                     color: '#136198',
                   }}
@@ -378,12 +378,12 @@ function Main({ setComponent }: Props) {
                 style={{
                   textAlign: 'center',
                   marginBottom: '14px',
-                  fontSize: '20px',
+                  fontSize: '21px',
                 }}
               >
                 <span
                   style={{
-                    fontSize: '14px',
+                    fontSize: '15px',
                     marginRight: '8px',
                     color: '#e05068',
                   }}
@@ -835,7 +835,6 @@ const Li = styled.li`
   font-size: 17.5px;
   line-height: 1.8;
   white-space: nowrap;
-  font-weight: 300;
 
   @media only screen and (max-width: 445px) {
     font-size: 17px;
