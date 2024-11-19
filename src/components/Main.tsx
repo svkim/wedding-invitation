@@ -109,6 +109,7 @@ function Main({ setComponent }: Props) {
             backgroundColor: '#f6f6f6',
             gap: '32px',
             position: 'relative',
+            paddingTop: '65px',
           }}
         >
           <Snowfall
