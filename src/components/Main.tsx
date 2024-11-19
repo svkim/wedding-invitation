@@ -67,11 +67,11 @@ function Main({ setComponent }: Props) {
           <br />
           Married!
         </TitleImageTitle>
-        <DescriptionWrapper style={{ padding: '30px 20px' }}>
+        <DescriptionWrapper style={{ padding: '32px 20px' }}>
           <Description
             style={{
               fontSize: '23px',
-              marginBottom: '30px',
+              marginBottom: '32px',
               color: '#3d3d3d',
             }}
           >
