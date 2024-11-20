@@ -244,6 +244,7 @@ const TextInput = styled.input`
   font-family: Pretendard;
   flex: 1;
   outline: none;
+  font-size: 16px;
   font-weight: 500;
   padding-left: 4px;
   background-color: transparent;
