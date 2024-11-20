@@ -9,8 +9,48 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ component }: ModalProps) => {
   useEffect(() => {
-    document.body.style.overflow = component ? 'hidden' : 'auto';
+    if (component) {
+      disableScrollLock();
+    } else {
+      enableScrollLock();
+    }
   }, [component]);
+
+  // 스크롤 잠금
+  const disableScrollLock = () => {
+    const { body } = document;
+
+    if (!body.getAttribute('scrollY')) {
+      const pageY = window.scrollY;
+
+      body.setAttribute('scrollY', pageY.toString());
+
+      body.style.overflow = 'hidden';
+      body.style.position = 'fixed';
+      body.style.left = '0px';
+      body.style.right = '0px';
+      body.style.bottom = '0px';
+      body.style.top = `-${pageY}px`;
+    }
+  };
+
+  // 스크롤 잠금 해제
+  const enableScrollLock = () => {
+    const { body } = document;
+
+    if (body.getAttribute('scrollY')) {
+      body.style.removeProperty('overflow');
+      body.style.removeProperty('position');
+      body.style.removeProperty('top');
+      body.style.removeProperty('left');
+      body.style.removeProperty('right');
+      body.style.removeProperty('bottom');
+
+      window.scrollTo(0, Number(body.getAttribute('scrollY')));
+
+      body.removeAttribute('scrollY');
+    }
+  };
 
   if (!component) {
     return;
