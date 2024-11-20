@@ -140,7 +140,7 @@ const Container = styled.div`
   position: relative;
   background-color: white;
   width: min(calc(100vw - 20px), 500px);
-  height: 530px;
+  height: 540px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,12 +150,12 @@ const Container = styled.div`
   gap: 21px;
 
   @media only screen and (max-width: 445px) {
-    height: 510px;
+    height: 535px;
     gap: 19px;
   }
 
   @media only screen and (max-width: 360px) {
-    height: 490px;
+    height: 510px;
     gap: 18px;
   }
 `;
@@ -180,32 +180,32 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
   width: 100%;
-  height: 58px;
+  height: 60px;
   color: #2d5976;
   border-bottom: 2px solid #cad3d9;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 21px;
+  font-size: 22px;
   margin-bottom: 26px;
 
   @media only screen and (max-width: 600px) {
+    font-size: 21px;
+    height: 58px;
+    margin-bottom: 25px;
+  }
+
+  @media only screen and (max-width: 445px) {
     font-size: 20px;
     height: 56px;
     margin-bottom: 24px;
   }
 
-  @media only screen and (max-width: 445px) {
+  @media only screen and (max-width: 360px) {
     font-size: 19px;
     height: 54px;
     margin-bottom: 22px;
-  }
-
-  @media only screen and (max-width: 360px) {
-    font-size: 18px;
-    height: 52px;
-    margin-bottom: 20px;
   }
 `;
 
@@ -215,20 +215,20 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-bottom: 17px;
+  margin-bottom: 18px;
 
   @media only screen and (max-width: 600px) {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
     gap: 18px;
   }
 
   @media only screen and (max-width: 445px) {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     gap: 17px;
   }
 
   @media only screen and (max-width: 360px) {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
     gap: 16px;
   }
 `;
@@ -238,15 +238,15 @@ const Icon = styled.i`
 
   color: #444444;
   padding: 5px;
-  font-size: 19px;
+  font-size: 21px;
   cursor: pointer;
 
   @media only screen and (max-width: 600px) {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   @media only screen and (max-width: 445px) {
-    font-size: 17px;
+    font-size: 19px;
     padding: 4px;
   }
 `;
@@ -265,16 +265,16 @@ const Content = styled.span`
 `;
 
 const Name = styled(Content)`
-  font-size: 18px;
+  font-size: 20px;
   color: #222222;
   font-weight: bold;
 
   @media only screen and (max-width: 600px) {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   @media only screen and (max-width: 445px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 
