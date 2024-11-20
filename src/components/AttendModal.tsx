@@ -258,7 +258,7 @@ const Container = styled.div`
   position: relative;
   background-color: white;
   width: min(calc(100vw - 20px), 500px);
-  max-height: calc(100vh - 24px);
+  max-height: calc(100svh - 24px);
   display: flex;
   /* justify-content: center; */
   overflow-y: auto;
