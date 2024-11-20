@@ -15,7 +15,9 @@ const PhoneModal = ({ setComponent }: Props) => {
     handler: () => setComponent(null),
   });
 
-  const onClickPhone = () => {};
+  const onClickPhone = () => {
+    document.location.href = 'tel:01030016563';
+  };
 
   const onClickMessage = () => {};
 
@@ -47,8 +49,8 @@ const PhoneModal = ({ setComponent }: Props) => {
           </Content>
         </ContentWrapper>
         <ContentWrapper>
-          <Content>신랑</Content>
-          <Name>김태현</Name>
+          <Content>혼주</Content>
+          <Name>김은수</Name>
 
           <Content style={{ marginLeft: '14px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
@@ -62,8 +64,8 @@ const PhoneModal = ({ setComponent }: Props) => {
           </Content>
         </ContentWrapper>
         <ContentWrapper>
-          <Content>신랑</Content>
-          <Name>김태현</Name>
+          <Content>혼주</Content>
+          <Name>곽숙견</Name>
 
           <Content style={{ marginLeft: '14px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
@@ -82,8 +84,8 @@ const PhoneModal = ({ setComponent }: Props) => {
           신부측
         </Title>
         <ContentWrapper>
-          <Content>신랑</Content>
-          <Name>김태현</Name>
+          <Content>신부</Content>
+          <Name>이상경</Name>
 
           <Content style={{ marginLeft: '14px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
@@ -97,8 +99,8 @@ const PhoneModal = ({ setComponent }: Props) => {
           </Content>
         </ContentWrapper>
         <ContentWrapper>
-          <Content>신랑</Content>
-          <Name>김태현</Name>
+          <Content>혼주</Content>
+          <Name>이혁선</Name>
 
           <Content style={{ marginLeft: '14px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
@@ -112,8 +114,8 @@ const PhoneModal = ({ setComponent }: Props) => {
           </Content>
         </ContentWrapper>
         <ContentWrapper>
-          <Content>신랑</Content>
-          <Name>김태현</Name>
+          <Content>혼주</Content>
+          <Name>이화순</Name>
 
           <Content style={{ marginLeft: '14px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
