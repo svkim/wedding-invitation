@@ -146,7 +146,7 @@ const AttendModal = ({ setComponent }: Props) => {
         )}
       </InputContentWrapper>
       <AgreementWrapper>
-        <SubTitle>개인정보 수집 및 이용 동의(필수)</SubTitle>
+        <AgreementTitle>개인정보 수집 및 이용 동의(필수)</AgreementTitle>
         <AgreementDesc>
           참석정보 전달을 위한 개인정보 수집 및 이용에 동의해주세요.
           <br />
@@ -239,7 +239,7 @@ const Container = styled.div`
   position: relative;
   background-color: white;
   width: min(calc(100vw - 20px), 500px);
-  height: 600px;
+  max-height: calc(100vh - 24px);
   display: flex;
   /* justify-content: center; */
   overflow-y: auto;
@@ -247,49 +247,45 @@ const Container = styled.div`
   position: relative;
   animation: fadeInUp 0.3s ease-in-out;
   flex-direction: column;
-  padding: 26px 35px 35px 35px;
+  padding: 32px 35px;
 
   @media only screen and (max-width: 445px) {
-    padding: 24px 28px 33px 28px;
+    padding: 30px 28px;
   }
 
   @media only screen and (max-width: 360px) {
-    padding: 20px 20px 35px 20px;
+    padding: 24px 20px;
   }
 `;
 
 const Title = styled.div`
   width: 100%;
-  height: 84px;
-  min-height: 84px;
   color: #444444;
   border-bottom: 1px solid #e3e3e3;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 23px;
+  font-size: 22px;
+  padding-bottom: 25px;
   margin-bottom: 33px;
   font-family: Pretendard;
 
   @media only screen and (max-width: 600px) {
-    font-size: 22px;
-    height: 82px;
-    min-height: 82px;
+    font-size: 21px;
+    padding-bottom: 24px;
     margin-bottom: 32px;
   }
 
   @media only screen and (max-width: 445px) {
-    font-size: 21px;
-    height: 80px;
-    min-height: 80px;
+    font-size: 20px;
+    padding-bottom: 23px;
     margin-bottom: 31px;
   }
 
   @media only screen and (max-width: 360px) {
-    font-size: 20px;
-    height: 78px;
-    min-height: 78px;
+    font-size: 19px;
+    padding-bottom: 22px;
     margin-bottom: 30px;
   }
 `;
@@ -312,6 +308,18 @@ const SubTitle = styled.p`
 
   @media only screen and (max-width: 360px) {
     font-size: 15.5px;
+  }
+`;
+
+const AgreementTitle = styled(SubTitle)`
+  font-size: 16px;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 15.5px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 14.8px;
   }
 `;
 
