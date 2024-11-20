@@ -43,6 +43,21 @@ const AttendModal = ({ setComponent }: Props) => {
     setIsAgreed(checked);
   };
 
+  const onSubmit = () => {
+    if (!name) {
+      alert('이름을 입력해주세요.');
+      return;
+    }
+
+    if (!isAgreed) {
+      alert('개인정보 수집 및 이용에 동의해주세요.');
+      return;
+    }
+
+    // api
+    // 참석정보가 전달되었습니다.
+  };
+
   return (
     <Container ref={elRef}>
       <CloseButton onClick={() => setComponent(null)}>
@@ -164,7 +179,7 @@ const AttendModal = ({ setComponent }: Props) => {
           </AgreementLabel>
         </div>
       </AgreementWrapper>
-      <SubmitButton>참석정보 전달하기</SubmitButton>
+      <SubmitButton onClick={onSubmit}>참석정보 전달하기</SubmitButton>
     </Container>
   );
 };
@@ -470,11 +485,13 @@ const AgreementDesc = styled.div`
 const AgreementCheckbox = styled.input`
   width: 15px;
   height: 15px;
+  opacity: 0.8;
 `;
 
 const AgreementLabel = styled.label`
   font-family: Pretendard;
   font-size: 14.5px;
+  color: #363639;
 `;
 
 const SubmitButton = styled.button`
@@ -487,4 +504,5 @@ const SubmitButton = styled.button`
   width: 100%;
   height: 56px;
   min-height: 56px;
+  border-radius: 8px;
 `;
