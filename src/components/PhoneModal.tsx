@@ -19,7 +19,9 @@ const PhoneModal = ({ setComponent }: Props) => {
     document.location.href = 'tel:01030016563';
   };
 
-  const onClickMessage = () => {};
+  const onClickMessage = () => {
+    document.location.href = 'sms:01030016563';
+  };
 
   return (
     <Container ref={elRef}>
