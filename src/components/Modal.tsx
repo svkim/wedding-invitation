@@ -8,6 +8,10 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ component }: ModalProps) => {
+  useEffect(() => {
+    document.body.style.overflow = component ? 'hidden' : 'auto';
+  }, [component]);
+
   if (!component) {
     return;
   }

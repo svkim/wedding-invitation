@@ -281,8 +281,8 @@ const Name = styled(Content)`
 
 const CloseButton = styled.button`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   background-color: rgba(0, 0, 0, 0.28);
   width: 36px;
   height: 36px;
@@ -305,7 +305,7 @@ const CloseButton = styled.button`
     width: 33px;
     height: 33px;
     font-size: 19px;
-    top: 9px;
-    right: 9px;
+    top: 11px;
+    right: 11px;
   }
 `;

@@ -21,6 +21,7 @@ import Cursor from '../../public/images/cursor.png';
 import PhoneModal from './PhoneModal';
 import Map from '../Map';
 import LikeButton from './LikeButton';
+import AttendModal from './AttendModal';
 
 interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
@@ -217,7 +218,7 @@ function Main({ setComponent }: Props) {
           <Button
             style={{ backgroundColor: '#444444', color: 'white' }}
             onClick={() =>
-              setComponent(<PhoneModal setComponent={setComponent} />)
+              setComponent(<AttendModal setComponent={setComponent} />)
             }
           >
             <i
