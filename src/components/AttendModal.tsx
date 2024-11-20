@@ -233,6 +233,7 @@ const InputContentLabel = styled.label`
   font-family: Pretendard;
   font-weight: 600;
   width: 92px;
+  min-width: 92px;
   display: flex;
   align-items: center;
 `;
@@ -505,7 +506,12 @@ const SubmitButton = styled.button`
   font-size: 16px;
   font-weight: 600;
   width: 100%;
-  height: 56px;
-  min-height: 56px;
-  border-radius: 8px;
+  height: 58px;
+  min-height: 58px;
+  border-radius: 4px;
+
+  @media only screen and (max-width: 445px) {
+    height: 56px;
+    min-height: 56px;
+  }
 `;
