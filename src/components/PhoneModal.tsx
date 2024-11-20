@@ -38,7 +38,7 @@ const PhoneModal = ({ setComponent }: Props) => {
           <Content>신랑</Content>
           <Name>김태현</Name>
 
-          <Content style={{ marginLeft: '14px' }}>
+          <Content style={{ marginLeft: '16px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
           </Content>
           <Content>
@@ -53,7 +53,7 @@ const PhoneModal = ({ setComponent }: Props) => {
           <Content>혼주</Content>
           <Name>김은수</Name>
 
-          <Content style={{ marginLeft: '14px' }}>
+          <Content style={{ marginLeft: '16px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
           </Content>
           <Content>
@@ -68,7 +68,7 @@ const PhoneModal = ({ setComponent }: Props) => {
           <Content>혼주</Content>
           <Name>곽숙견</Name>
 
-          <Content style={{ marginLeft: '14px' }}>
+          <Content style={{ marginLeft: '16px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
           </Content>
           <Content>
@@ -88,7 +88,7 @@ const PhoneModal = ({ setComponent }: Props) => {
           <Content>신부</Content>
           <Name>이상경</Name>
 
-          <Content style={{ marginLeft: '14px' }}>
+          <Content style={{ marginLeft: '16px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
           </Content>
           <Content>
@@ -103,7 +103,7 @@ const PhoneModal = ({ setComponent }: Props) => {
           <Content>혼주</Content>
           <Name>이혁선</Name>
 
-          <Content style={{ marginLeft: '14px' }}>
+          <Content style={{ marginLeft: '16px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
           </Content>
           <Content>
@@ -118,7 +118,7 @@ const PhoneModal = ({ setComponent }: Props) => {
           <Content>혼주</Content>
           <Name>이화순</Name>
 
-          <Content style={{ marginLeft: '14px' }}>
+          <Content style={{ marginLeft: '16px' }}>
             <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
           </Content>
           <Content>
@@ -140,7 +140,7 @@ const Container = styled.div`
   position: relative;
   background-color: white;
   width: min(calc(100vw - 20px), 500px);
-  height: 540px;
+  height: 565px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,12 +150,12 @@ const Container = styled.div`
   gap: 21px;
 
   @media only screen and (max-width: 445px) {
-    height: 535px;
+    height: 555px;
     gap: 19px;
   }
 
   @media only screen and (max-width: 360px) {
-    height: 510px;
+    height: 525px;
     gap: 18px;
   }
 `;
@@ -214,22 +214,22 @@ const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   margin-bottom: 18px;
 
   @media only screen and (max-width: 600px) {
     margin-bottom: 17px;
-    gap: 18px;
+    gap: 15px;
   }
 
   @media only screen and (max-width: 445px) {
     margin-bottom: 16px;
-    gap: 17px;
+    gap: 14px;
   }
 
   @media only screen and (max-width: 360px) {
     margin-bottom: 15px;
-    gap: 16px;
+    gap: 13px;
   }
 `;
 
@@ -237,17 +237,18 @@ const Icon = styled.i`
   transform: rotate(93deg);
 
   color: #444444;
-  padding: 5px;
+  padding: 6.5px;
   font-size: 21px;
   cursor: pointer;
 
   @media only screen and (max-width: 600px) {
     font-size: 20px;
+    padding: 5.5px;
   }
 
   @media only screen and (max-width: 445px) {
     font-size: 19px;
-    padding: 4px;
+    padding: 5px;
   }
 `;
 

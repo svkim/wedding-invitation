@@ -49,7 +49,15 @@ const StyledTab = styled.li<StyledTabProps>`
     border-bottom-width: 1px;
     border-bottom-color: #e4e4e4;
     font-family: Pretendard;
-    font-size: ${(props) => (props.isFocused ? '18.9px' : '18.5px')};
+    font-size: ${(props) => (props.isFocused ? '18.5px' : '18.2px')};
+
+    @media only screen and (max-width: 445px) {
+      font-size: ${(props) => (props.isFocused ? '18px' : '17.7px')};
+    }
+
+    @media only screen and (max-width: 360px) {
+      font-size: ${(props) => (props.isFocused ? '17.5px' : '17.2px')};
+    }
   }
 `;
 
@@ -234,6 +242,14 @@ const Li = styled.li`
   /* font-weight: 800; */
   font-family: Pretendard;
   font-size: 17px;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 16.6px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 16.2px;
+  }
 `;
 
 const Marker = styled.span`

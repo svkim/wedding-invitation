@@ -71,38 +71,19 @@ function Main({ setComponent }: Props) {
           Married!
         </TitleImageTitle>
         <DescriptionWrapper style={{ padding: '32px 20px' }}>
-          <Description
-            style={{
-              fontSize: '23px',
-              marginBottom: '32px',
-              color: '#141414',
-              letterSpacing: '0.5px',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
+          <TopName>
             김태현
-            <div
+            <Flower
               style={{
                 backgroundImage: `url(${SunFlower2})`,
-                width: '34px',
-                height: '34px',
-                backgroundSize: 'contain',
-                margin: '0 12px',
               }}
             />
             이상경
-          </Description>
-          <Description
-            style={{
-              lineHeight: '33px',
-              fontSize: '17.4px',
-              color: '#3a3a3a',
-            }}
-          >
+          </TopName>
+          <TitleDescription>
             2025. 02. 09. 일요일 PM 2:00
             <br /> 서울숲 갤러리아포레 G층 보테가마지오
-          </Description>
+          </TitleDescription>
         </DescriptionWrapper>
         <DescriptionWrapper
           style={{
@@ -166,9 +147,11 @@ function Main({ setComponent }: Props) {
             <span
               style={{
                 fontFamily: 'MaruBuriBold',
-                fontSize: '20px',
+                fontSize: '19px',
                 marginLeft: '10px',
                 color: '#3b3b3b',
+                position: 'relative',
+                bottom: '1px',
               }}
             >
               태현
@@ -186,9 +169,11 @@ function Main({ setComponent }: Props) {
             <span
               style={{
                 fontFamily: 'MaruBuriBold',
-                fontSize: '20px',
+                fontSize: '19px',
                 marginLeft: '10px',
                 color: '#3b3b3b',
+                position: 'relative',
+                bottom: '1px',
               }}
             >
               상경
@@ -203,8 +188,8 @@ function Main({ setComponent }: Props) {
             <i
               className="fa fa-phone"
               style={{
-                transform: 'rotate(100deg)',
-                marginRight: '10px',
+                transform: 'rotate(98deg)',
+                marginRight: '12px',
                 fontSize: '16px',
               }}
             ></i>
@@ -235,6 +220,15 @@ function Main({ setComponent }: Props) {
               setComponent(<PhoneModal setComponent={setComponent} />)
             }
           >
+            <i
+              className="fa fa-calendar-check"
+              aria-hidden="true"
+              style={{
+                marginRight: '12px',
+                fontSize: '16px',
+                color: 'white',
+              }}
+            ></i>
             참석여부 전달하기
           </Button>
         </DescriptionWrapper>
@@ -393,12 +387,12 @@ function Main({ setComponent }: Props) {
                 style={{
                   textAlign: 'center',
                   marginBottom: '14px',
-                  fontSize: '21px',
+                  fontSize: '20px',
                 }}
               >
                 <span
                   style={{
-                    fontSize: '15px',
+                    fontSize: '14.5px',
                     marginRight: '8px',
                     color: '#136198',
                   }}
@@ -432,12 +426,12 @@ function Main({ setComponent }: Props) {
                 style={{
                   textAlign: 'center',
                   marginBottom: '14px',
-                  fontSize: '21px',
+                  fontSize: '20px',
                 }}
               >
                 <span
                   style={{
-                    fontSize: '15px',
+                    fontSize: '14.5px',
                     marginRight: '8px',
                     color: '#e05068',
                   }}
@@ -498,28 +492,11 @@ function Main({ setComponent }: Props) {
             <Title>오시는 길</Title>
           </div>
           <Description style={{ margin: '50px 0 24px' }}>
-            <span
-              style={{
-                fontFamily: 'Pretendard',
-                fontWeight: 600,
-                fontSize: '21px',
-                color: '#314a35',
-              }}
-            >
-              보테가마지오
-            </span>
+            <Location>보테가마지오</Location>
             <br />
-            <span
-              style={{
-                fontFamily: 'Pretendard',
-                fontSize: '17.5px',
-                color: '#555555',
-                lineHeight: '1.8',
-                fontWeight: 300,
-              }}
-            >
+            <LocationDetail>
               서울 성동구 서울숲2길 32-14 갤러리아포레 G층
-            </span>
+            </LocationDetail>
           </Description>
           <Map />
           <NaviWrapper style={{ paddingTop: '50px' }}>
@@ -717,20 +694,88 @@ const Description = styled.p`
   }
 
   @media only screen and (max-width: 360px) {
-    font-size: 16.5px;
+    font-size: 16px;
     line-height: 34px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 15px;
+    line-height: 32px;
+  }
+`;
+
+const Flower = styled.div`
+  width: 34px;
+  height: 34px;
+  background-size: contain;
+  margin: 0 12px;
+
+  @media only screen and (max-width: 400px) {
+    width: 33px;
+    height: 33px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    width: 32px;
+    height: 32px;
+  }
+`;
+
+const TopName = styled(Description)`
+  font-size: 23px;
+  margin-bottom: 32px;
+  color: #141414;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 22.5px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 21.5px;
+  }
+`;
+
+const TitleDescription = styled(Description)`
+  line-height: 33px;
+  font-size: 17.2px;
+  color: #3a3a3a;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 17px;
+    line-height: 32.5px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 16.5px;
+    line-height: 32px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 16.2px;
+    line-height: 31.2px;
   }
 `;
 
 const Title = styled.p`
   font-family: MaruBuriBold;
-  font-size: 24px;
+  font-size: 23.5px;
   font-weight: 500;
   color: #4d4d4d;
   margin-bottom: 10px;
 
+  @media only screen and (max-width: 445px) {
+    font-size: 23px;
+  }
+
   @media only screen and (max-width: 360px) {
-    font-size: 22.5px;
+    font-size: 22px;
   }
 `;
 
@@ -741,6 +786,16 @@ const EnglishSubTitle = styled.p`
   letter-spacing: 3px;
   text-align: center;
   padding-bottom: 12px;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 12.5px;
+    padding-bottom: 11.5px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 12.3px;
+    padding-bottom: 11px;
+  }
 `;
 
 const HR = styled.hr`
@@ -786,6 +841,10 @@ const Button = styled.button`
   cursor: pointer;
   margin: 10px 0px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  @media only screen and (max-width: 360px) {
+    font-size: 16px;
+  }
 `;
 
 const TabButton = styled.div`
@@ -808,13 +867,25 @@ const NaviWrapper = styled.div`
   flex-direction: column;
   border-bottom: 1px solid lightgray;
   padding: 35px 0;
-  overflow: hidden;
+  overflow: visible;
+
+  @media only screen and (max-width: 400px) {
+    padding: 33px 0;
+  }
 `;
 
 const NaviTitle = styled.div`
   font-size: 21px;
   font-weight: 600;
   margin-bottom: 18px;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 19px;
+  }
 `;
 
 const Li = styled.li`
@@ -826,6 +897,10 @@ const Li = styled.li`
 
   @media only screen and (max-width: 445px) {
     font-size: 17px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 16.5px;
   }
 `;
 
@@ -857,7 +932,7 @@ const AccountItem = styled.div`
   margin-top: 8px;
   height: 40px;
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: white;
   display: flex;
   padding-left: 12px;
   align-items: center;
@@ -868,4 +943,47 @@ const Parent = styled.span`
   font-weight: 400;
   font-size: 19px;
   color: #555555;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 17px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 16.5px;
+  }
+`;
+
+const Location = styled.span`
+  font-family: Pretendard;
+  font-weight: 600;
+  font-size: 21px;
+  color: #314a35;
+
+  @media only screen and (max-width: 360px) {
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 19px;
+  }
+`;
+
+const LocationDetail = styled.span`
+  font-family: Pretendard;
+  font-weight: 300;
+  font-size: 17.5px;
+  color: #555555;
+  line-height: 1.8;
+
+  @media only screen and (max-width: 360px) {
+    font-size: 17px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 16.5px;
+  }
 `;
