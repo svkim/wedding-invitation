@@ -235,8 +235,7 @@ const ContentWrapper = styled.div`
 
 const Icon = styled.i`
   transform: rotate(93deg);
-
-  color: #444444;
+  color: #555555;
   padding: 6.5px;
   font-size: 21px;
   cursor: pointer;
@@ -253,7 +252,7 @@ const Icon = styled.i`
 `;
 
 const Content = styled.span`
-  color: #444444;
+  color: #555555;
   font-size: 17px;
 
   @media only screen and (max-width: 600px) {
@@ -267,7 +266,7 @@ const Content = styled.span`
 
 const Name = styled(Content)`
   font-size: 20px;
-  color: #222222;
+  color: #444444;
   font-weight: bold;
 
   @media only screen and (max-width: 600px) {
