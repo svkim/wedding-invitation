@@ -1,4 +1,3 @@
-import { useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useOutsideClick } from '../hooks/useOutsideClick';
@@ -148,16 +147,16 @@ const Container = styled.div`
   position: relative;
   animation: fadeInUp 0.3s ease-in-out;
   flex-direction: column;
-  gap: 20px;
+  gap: 21px;
 
   @media only screen and (max-width: 445px) {
     height: 510px;
-    gap: 18px;
+    gap: 19px;
   }
 
   @media only screen and (max-width: 360px) {
     height: 490px;
-    gap: 16px;
+    gap: 18px;
   }
 `;
 
@@ -216,20 +215,21 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 
   @media only screen and (max-width: 600px) {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+    gap: 18px;
   }
 
   @media only screen and (max-width: 445px) {
-    margin-bottom: 14px;
-    gap: 16px;
+    margin-bottom: 15px;
+    gap: 17px;
   }
 
   @media only screen and (max-width: 360px) {
-    margin-bottom: 13px;
-    gap: 14px;
+    margin-bottom: 14px;
+    gap: 16px;
   }
 `;
 
@@ -238,29 +238,29 @@ const Icon = styled.i`
 
   color: #444444;
   padding: 5px;
-  font-size: 18px;
+  font-size: 19px;
   cursor: pointer;
 
   @media only screen and (max-width: 600px) {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   @media only screen and (max-width: 445px) {
-    font-size: 16px;
+    font-size: 17px;
     padding: 4px;
   }
 `;
 
 const Content = styled.span`
   color: #444444;
-  font-size: 16px;
+  font-size: 17px;
 
   @media only screen and (max-width: 600px) {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   @media only screen and (max-width: 445px) {
-    font-size: 14px;
+    font-size: 15px;
   }
 `;
 
