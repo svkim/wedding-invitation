@@ -133,6 +133,7 @@ const AttendModal = ({ setComponent }: Props) => {
           <TextInput
             id="name"
             type="text"
+            spellCheck={false}
             placeholder="홍길동"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -241,13 +242,15 @@ const TextInput = styled.input`
   flex: 1;
   outline: none;
   padding-left: 4px;
+  background-color: transparent;
 `;
 
 const Select = styled.select`
   font-family: Pretendard;
   flex: 1;
   outline: none;
-  padding-left: 0px;
+  padding-left: 4px;
+  background-color: transparent;
 `;
 
 const Container = styled.div`

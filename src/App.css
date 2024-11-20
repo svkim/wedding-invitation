@@ -250,3 +250,23 @@ table {
     transform: translateZ(0);
   }
 }
+
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input,
+select {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
