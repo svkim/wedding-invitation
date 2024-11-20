@@ -28,5 +28,9 @@ const Container = styled.div`
   top: 0;
   left: 0;
   z-index: 100000;
-  padding: 0 20px;
+  padding: 0 22px;
+
+  @media only screen and (max-width: 360px) {
+    padding: 0 15px;
+  }
 `;
