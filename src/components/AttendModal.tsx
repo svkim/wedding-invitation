@@ -146,6 +146,7 @@ const AttendModal = ({ setComponent }: Props) => {
               추가 인원<Dot>*</Dot>
             </InputContentLabel>
 
+            {/* <Bottom>∨</Bottom> */}
             <Select
               id="companionCount"
               value={companionCount}
@@ -209,6 +210,7 @@ const InputContent = styled.div`
   display: flex;
   height: 52px;
   font-size: 16px;
+  position: relative;
 
   @media only screen and (max-width: 445px) {
     font-size: 15.5px;
@@ -242,8 +244,17 @@ const TextInput = styled.input`
   font-family: Pretendard;
   flex: 1;
   outline: none;
+  font-weight: 500;
   padding-left: 4px;
   background-color: transparent;
+
+  &::placeholder,
+  &::-webkit-input-placeholder {
+    color: #bdbdbd;
+  }
+  &::-ms-input-placeholder {
+    color: #bdbdbd;
+  }
 `;
 
 const Select = styled.select`
@@ -251,7 +262,10 @@ const Select = styled.select`
   flex: 1;
   outline: none;
   padding-left: 4px;
+  font-weight: 500;
   background-color: transparent;
+
+  position: relative;
 `;
 
 const Container = styled.div`
@@ -514,4 +528,12 @@ const SubmitButton = styled.button`
     height: 56px;
     min-height: 56px;
   }
+`;
+
+const Bottom = styled.span`
+  font-family: Pretendard;
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
 `;
