@@ -60,7 +60,7 @@ const AttendModal = ({ setComponent }: Props) => {
     //   return;
     // }
 
-    if (isAvailable && useBus === null) {
+    if (isAvailable && useBus === undefined) {
       alert('전세버스 이용여부를 선택해주세요.');
       return;
     }
