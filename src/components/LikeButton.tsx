@@ -105,20 +105,50 @@ const LikeButton = () => {
   );
 
   return (
-    <button
-      style={{
-        border: 'none',
-        backgroundColor: 'transparent',
-        cursor: 'pointer',
-      }}
-      onClick={onClickLike}
-    >
-      <i
-        className="fa fa-heart"
-        style={{ color: '#ff9898', fontSize: '40px' }}
-      ></i>
-      {likes}년 사랑하겠습니다
-    </button>
+    <div>
+      <button
+        style={{
+          backgroundColor: 'white',
+          cursor: 'pointer',
+          borderRadius: '45px',
+          padding: '5px 5px 5px 30px',
+          display: 'flex',
+          alignItems: 'center',
+          boxShadow: '4px 4px 7px 3px rgba(0, 0, 0, 0.12)',
+        }}
+        onClick={onClickLike}
+      >
+        <div
+          style={{
+            minWidth: '45px',
+            marginRight: '12px',
+            display: 'flex',
+            alignItems: 'center',
+            color: '#555555',
+            fontFamily: 'Pretendard',
+            fontSize: '18px',
+            fontWeight: 500,
+          }}
+        >
+          {likes}
+        </div>
+        <div
+          style={{
+            borderRadius: '50%',
+            width: '50px',
+            height: '50px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <i
+            className="fa fa-heart"
+            style={{ color: '#f58a8a', fontSize: '28px' }}
+          ></i>
+        </div>
+      </button>
+    </div>
   );
 };
 
