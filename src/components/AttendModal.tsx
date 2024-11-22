@@ -61,7 +61,7 @@ const AttendModal = ({ setComponent }: Props) => {
     // }
 
     if (isAvailable && useBus === null) {
-      alert('대절버스 이용여부를 선택해주세요.');
+      alert('전세버스 이용여부를 선택해주세요.');
       return;
     }
 
@@ -192,7 +192,7 @@ const AttendModal = ({ setComponent }: Props) => {
                 htmlFor="companionCount"
                 style={{ position: 'relative', bottom: '9px' }}
               >
-                대절버스 이용<Dot>*</Dot>
+                전세버스 이용<Dot>*</Dot>
               </InputContentLabel>
 
               <div
@@ -380,7 +380,7 @@ const Container = styled.div`
   padding: 32px 35px;
 
   @media only screen and (max-width: 445px) {
-    padding: 30px 28px;
+    padding: 28px 26px;
   }
 
   @media only screen and (max-width: 360px) {
@@ -617,7 +617,7 @@ const AgreementLabel = styled.label`
 `;
 
 const SubmitButton = styled.button`
-  margin-top: 20px;
+  margin-top: 28px;
   background-color: #363639;
   color: white;
   font-family: Pretendard;

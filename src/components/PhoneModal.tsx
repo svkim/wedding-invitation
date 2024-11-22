@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useOutsideClick } from '../hooks/useOutsideClick';
+import { INFORMATION } from '../value';
 
 interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
@@ -14,12 +15,12 @@ const PhoneModal = ({ setComponent }: Props) => {
     handler: () => setComponent(null),
   });
 
-  const onClickPhone = () => {
-    document.location.href = 'tel:01030016563';
+  const onClickPhone = (phoneNumber: string) => {
+    window.location.href = `tel:${phoneNumber}`;
   };
 
-  const onClickMessage = () => {
-    document.location.href = 'sms:01030016563';
+  const onClickMessage = (phoneNumber: string) => {
+    window.location.href = `sms:${phoneNumber}`;
   };
 
   return (
@@ -34,101 +35,49 @@ const PhoneModal = ({ setComponent }: Props) => {
 
       <Wrapper>
         <Title>신랑측</Title>
-        <ContentWrapper>
-          <Content>신랑</Content>
-          <Name>김태현</Name>
-
-          <Content style={{ marginLeft: '16px' }}>
-            <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
-          </Content>
-          <Content>
-            <Icon
-              className="fa fa-envelope"
-              onClick={onClickMessage}
-              style={{ transform: 'none' }}
-            ></Icon>
-          </Content>
-        </ContentWrapper>
-        <ContentWrapper>
-          <Content>혼주</Content>
-          <Name>김은수</Name>
-
-          <Content style={{ marginLeft: '16px' }}>
-            <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
-          </Content>
-          <Content>
-            <Icon
-              className="fa fa-envelope"
-              onClick={onClickMessage}
-              style={{ transform: 'none' }}
-            ></Icon>
-          </Content>
-        </ContentWrapper>
-        <ContentWrapper>
-          <Content>혼주</Content>
-          <Name>곽숙견</Name>
-
-          <Content style={{ marginLeft: '16px' }}>
-            <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
-          </Content>
-          <Content>
-            <Icon
-              className="fa fa-envelope"
-              onClick={onClickMessage}
-              style={{ transform: 'none' }}
-            ></Icon>
-          </Content>
-        </ContentWrapper>
+        {INFORMATION.groom.map((info) => (
+          <ContentWrapper key={info.name}>
+            <Content>{info.title}</Content>
+            <Name>{info.name}</Name>
+            <Content style={{ marginLeft: '16px' }}>
+              <Icon
+                className="fa fa-phone"
+                onClick={() => onClickPhone(info.phoneNumber)}
+              ></Icon>
+            </Content>
+            <Content>
+              <Icon
+                className="fa fa-envelope"
+                onClick={() => onClickMessage(info.phoneNumber)}
+                style={{ transform: 'none' }}
+              ></Icon>
+            </Content>
+          </ContentWrapper>
+        ))}
       </Wrapper>
       <Wrapper>
         <Title style={{ color: '#a25364', borderBottom: '2px solid #e3cfd3' }}>
           신부측
         </Title>
-        <ContentWrapper>
-          <Content>신부</Content>
-          <Name>이상경</Name>
-
-          <Content style={{ marginLeft: '16px' }}>
-            <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
-          </Content>
-          <Content>
-            <Icon
-              className="fa fa-envelope"
-              onClick={onClickMessage}
-              style={{ transform: 'none' }}
-            ></Icon>
-          </Content>
-        </ContentWrapper>
-        <ContentWrapper>
-          <Content>혼주</Content>
-          <Name>이혁선</Name>
-
-          <Content style={{ marginLeft: '16px' }}>
-            <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
-          </Content>
-          <Content>
-            <Icon
-              className="fa fa-envelope"
-              onClick={onClickMessage}
-              style={{ transform: 'none' }}
-            ></Icon>
-          </Content>
-        </ContentWrapper>
-        <ContentWrapper>
-          <Content>혼주</Content>
-          <Name>이화순</Name>
-
-          <Content style={{ marginLeft: '16px' }}>
-            <Icon className="fa fa-phone" onClick={onClickPhone}></Icon>
-          </Content>
-          <Content>
-            <Icon
-              className="fa fa-envelope"
-              onClick={onClickMessage}
-              style={{ transform: 'none' }}
-            ></Icon>
-          </Content>
-        </ContentWrapper>
+        {INFORMATION.bride.map((info) => (
+          <ContentWrapper key={info.name}>
+            <Content>{info.title}</Content>
+            <Name>{info.name}</Name>
+            <Content style={{ marginLeft: '16px' }}>
+              <Icon
+                className="fa fa-phone"
+                onClick={() => onClickPhone(info.phoneNumber)}
+              ></Icon>
+            </Content>
+            <Content>
+              <Icon
+                className="fa fa-envelope"
+                onClick={() => onClickMessage(info.phoneNumber)}
+                style={{ transform: 'none' }}
+              ></Icon>
+            </Content>
+          </ContentWrapper>
+        ))}
       </Wrapper>
     </Container>
   );

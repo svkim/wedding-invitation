@@ -186,12 +186,16 @@ const Pane2: React.FC = () => (
       style={{ marginBottom: '18px', width: '100%' }}
     />
     <Li>
-      <Marker>𒊹</Marker>결혼식에 참석하기 어려운 분들을 위해, 예식 4일전 피로연
-      자리를 마련하였습니다.
+      <Marker>𒊹</Marker>예식에 참석하기 어려운 분들을 위해, 예식 4일전 작은
+      피로연 자리를 마련하였습니다.
     </Li>
     <Li>
       <Marker>𒊹</Marker>
-      25.02.05. 수요일 오후 5시 30분 예산 더스타 웨딩홀
+      일시 : 25.02.05. 수요일 오후 5시 30분
+    </Li>
+    <Li>
+      <Marker>𒊹</Marker>
+      장소 : 충남 예산 더스타 웨딩홀 피로연장
     </Li>
   </Wrapper>
 );

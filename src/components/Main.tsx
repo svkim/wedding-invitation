@@ -22,6 +22,7 @@ import PhoneModal from './PhoneModal';
 import Map from '../Map';
 import LikeButton from './LikeButton';
 import AttendModal from './AttendModal';
+import { INFORMATION } from '../value';
 
 interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
@@ -549,8 +550,8 @@ function Main({ setComponent }: Props) {
             </Li>
             <Li>- &nbsp;도보 5분 거리</Li>
           </NaviWrapper>
-          <NaviWrapper>
-            <NaviTitle>버스 안내</NaviTitle>
+          <NaviWrapper style={{ borderBottom: 'none' }}>
+            <NaviTitle>대중교통 버스 안내</NaviTitle>
             <Li>
               <Marker>𒊹</Marker> 뚝섬 서울숲 정류장
             </Li>
@@ -567,6 +568,22 @@ function Main({ setComponent }: Props) {
               <Marker>𒊹</Marker> 뚝섬역 8번 출구 정류장
             </Li>
             <Li>- &nbsp;지선(녹색) : 2016, 2224, 2413</Li>
+          </NaviWrapper>
+          <NaviWrapper
+            style={{
+              margin: 0,
+              border: '4px double lightgray',
+              alignItems: 'center',
+              backgroundColor: 'rgba(255, 255, 255, 0)',
+              padding: '46px 0',
+            }}
+          >
+            <NaviTitle>전세버스 안내</NaviTitle>
+            <Li style={{ textAlign: 'center' }}>
+              귀한 발걸음을 해주시는 하객분들의 편의를 위해 <br />
+              예산↔서울 간 전세버스를 준비하였습니다. <br />
+              출발시간과 탑승 장소는 업데이트 예정입니다.
+            </Li>
           </NaviWrapper>
         </DescriptionWrapper>
         <DescriptionWrapper>
@@ -611,39 +628,23 @@ function Main({ setComponent }: Props) {
               신랑측 계좌번호 보기
             </TabButton>
             <AccountWrapper style={{ height: openGroomAccount ? '310px' : 0 }}>
-              <AccountOwner>새마을금고 (예금주 : 김태현)</AccountOwner>
-              <AccountItem>
-                9003249850662
-                <button
-                  onClick={() => {
-                    onClickCopy('9003249850662');
-                  }}
-                >
-                  복사하기
-                </button>
-              </AccountItem>
-              <AccountOwner>우리은행 (예금주 : 김은수)</AccountOwner>
-              <AccountItem>
-                14202085912001
-                <button
-                  onClick={() => {
-                    onClickCopy('14202085912001');
-                  }}
-                >
-                  복사하기
-                </button>
-              </AccountItem>
-              <AccountOwner>우리은행 (예금주 : 곽숙견)</AccountOwner>
-              <AccountItem>
-                04902692702601
-                <button
-                  onClick={() => {
-                    onClickCopy('04902692702601');
-                  }}
-                >
-                  복사하기
-                </button>
-              </AccountItem>
+              {INFORMATION.groom.map((info) => (
+                <div key={info.name}>
+                  <AccountOwner>
+                    {info.bank} (예금주 : {info.name})
+                  </AccountOwner>
+                  <AccountItem>
+                    {info.accountNumber}
+                    <button
+                      onClick={() => {
+                        onClickCopy(info.accountNumber);
+                      }}
+                    >
+                      복사하기
+                    </button>
+                  </AccountItem>
+                </div>
+              ))}
             </AccountWrapper>
             <TabButton
               onClick={() => setOpenBrideAccount(!openBrideccount)}
@@ -652,39 +653,23 @@ function Main({ setComponent }: Props) {
               신부측 계좌번호 보기
             </TabButton>
             <AccountWrapper style={{ height: openBrideccount ? '310px' : 0 }}>
-              <AccountOwner>농협은행 (예금주 : 이상경)</AccountOwner>
-              <AccountItem>
-                3020785325521
-                <button
-                  onClick={() => {
-                    onClickCopy('3020785325521');
-                  }}
-                >
-                  복사하기
-                </button>
-              </AccountItem>
-              <AccountOwner>농협은행 (예금주 : 이혁선)</AccountOwner>
-              <AccountItem>
-                3020785325521
-                <button
-                  onClick={() => {
-                    onClickCopy('3020785325521');
-                  }}
-                >
-                  복사하기
-                </button>
-              </AccountItem>
-              <AccountOwner>농협은행 (예금주 : 이화순)</AccountOwner>
-              <AccountItem>
-                3020785325521
-                <button
-                  onClick={() => {
-                    onClickCopy('3020785325521');
-                  }}
-                >
-                  복사하기
-                </button>
-              </AccountItem>
+              {INFORMATION.bride.map((info) => (
+                <div key={info.name}>
+                  <AccountOwner>
+                    {info.bank} (예금주 : {info.name})
+                  </AccountOwner>
+                  <AccountItem>
+                    {info.accountNumber}
+                    <button
+                      onClick={() => {
+                        onClickCopy(info.accountNumber);
+                      }}
+                    >
+                      복사하기
+                    </button>
+                  </AccountItem>
+                </div>
+              ))}
             </AccountWrapper>
           </div>
         </DescriptionWrapper>
