@@ -37,7 +37,12 @@ import image36 from '../../../public/images/image36.jpg';
 import image37 from '../../../public/images/image37.jpg';
 import image38 from '../../../public/images/image38.jpg';
 import image39 from '../../../public/images/image39.jpg';
-import image00Thumb from '../../../public/images/thumbnails/image00.jpg';
+import image40 from '../../../public/images/image40.jpeg';
+import image41 from '../../../public/images/image41.jpeg';
+import image42 from '../../../public/images/image42.jpeg';
+import image43 from '../../../public/images/image43.jpg';
+import image44 from '../../../public/images/image44.jpg';
+import image45 from '../../../public/images/image45.jpg';
 import image01Thumb from '../../../public/images/thumbnails/image01.jpg';
 import image02Thumb from '../../../public/images/thumbnails/image02.jpg';
 import image03Thumb from '../../../public/images/thumbnails/image03.jpg';
@@ -77,9 +82,9 @@ import image36Thumb from '../../../public/images/thumbnails/image36.jpg';
 import image37Thumb from '../../../public/images/thumbnails/image37.jpg';
 import image38Thumb from '../../../public/images/thumbnails/image38.jpg';
 import image39Thumb from '../../../public/images/thumbnails/image39.jpg';
-import image40Thumb from '../../../public/images/thumbnails/image40.jpg';
-import image41Thumb from '../../../public/images/thumbnails/image41.jpg';
-import image42Thumb from '../../../public/images/thumbnails/image42.jpg';
+import image40Thumb from '../../../public/images/thumbnails/image40.jpeg';
+import image41Thumb from '../../../public/images/thumbnails/image41.jpeg';
+import image42Thumb from '../../../public/images/thumbnails/image42.jpeg';
 import image43Thumb from '../../../public/images/thumbnails/image43.jpg';
 import image44Thumb from '../../../public/images/thumbnails/image44.jpg';
 import image45Thumb from '../../../public/images/thumbnails/image45.jpg';
@@ -359,6 +364,48 @@ const images = [
     thumbnail: image39Thumb,
     width: 600,
     height: 900,
+  },
+  {
+    alt: 'image40',
+    source: image40,
+    thumbnail: image40Thumb,
+    width: 600,
+    height: 900,
+  },
+  {
+    alt: 'image41',
+    source: image41,
+    thumbnail: image41Thumb,
+    width: 900,
+    height: 600,
+  },
+  {
+    alt: 'image42',
+    source: image42,
+    thumbnail: image42Thumb,
+    width: 600,
+    height: 900,
+  },
+  {
+    alt: 'image43',
+    source: image43,
+    thumbnail: image43Thumb,
+    width: 600,
+    height: 900,
+  },
+  {
+    alt: 'image44',
+    source: image44,
+    thumbnail: image44Thumb,
+    width: 600,
+    height: 900,
+  },
+  {
+    alt: 'image45',
+    source: image45,
+    thumbnail: image45Thumb,
+    width: 900,
+    height: 600,
   },
 ];
 
