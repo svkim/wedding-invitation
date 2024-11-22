@@ -4,6 +4,9 @@ import Main from './components/Main';
 import Modal from './components/Modal';
 import { useState } from 'react';
 import { NavermapsProvider } from 'react-naver-maps';
+import JSConfetti from 'js-confetti';
+
+export const jsConfetti = new JSConfetti();
 
 interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;

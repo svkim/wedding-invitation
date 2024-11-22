@@ -584,11 +584,11 @@ function Main({ setComponent }: Props) {
               신랑측 계좌번호 보기
             </TabButton>
             <AccountWrapper style={{ height: openGroomAccount ? '310px' : 0 }}>
-              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
-              <AccountItem>000-0000-0000-00</AccountItem>
-              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
-              <AccountItem>000-0000-0000-00</AccountItem>
-              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
+              <AccountOwner>새마을금고 (예금주 : 김태현)</AccountOwner>
+              <AccountItem>9003249850662</AccountItem>
+              <AccountOwner>우리은행 (예금주 : 김은수)</AccountOwner>
+              <AccountItem>14202085912001</AccountItem>
+              <AccountOwner>우리은행 (예금주 : 곽숙견)</AccountOwner>
               <AccountItem>000-0000-0000-00</AccountItem>
             </AccountWrapper>
             <TabButton

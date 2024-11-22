@@ -9,8 +9,8 @@ import {
   update,
 } from 'firebase/database';
 import { realtimeDb } from '../firebase.ts';
-import JSConfetti from 'js-confetti';
 import { useCallback, useEffect, useState } from 'react';
+import { jsConfetti } from '../App.tsx';
 
 // 쓰로틀링 함수
 function throttle<T extends (...args: any[]) => any>(
@@ -94,7 +94,7 @@ const LikeButton = () => {
   };
 
   const handle = () => {
-    void jsConfetti.addConfetti({ emojis, emojiSize: 32 });
+    jsConfetti.addConfetti({ emojis, emojiSize: 32 });
 
     increaseLikes();
   };
@@ -103,8 +103,6 @@ const LikeButton = () => {
     throttle(handle, 600), // 0.6초에 한 번만 클릭 허용
     []
   );
-
-  const jsConfetti = new JSConfetti();
 
   return (
     <button
