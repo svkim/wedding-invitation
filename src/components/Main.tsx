@@ -529,7 +529,7 @@ function Main({ setComponent }: Props) {
           </Description>
           <Map />
           <NaviWrapper style={{ paddingTop: '50px' }}>
-            <NaviTitle>자가용 안내</NaviTitle>
+            <NaviTitle>자가용 & 주차 안내</NaviTitle>
             <Li style={{ marginBottom: '4px' }}>
               <Marker>𒊹</Marker>내비게이션으로 "보테가마지오" 검색해주세요.
             </Li>
