@@ -11,7 +11,8 @@ const AttendModal = ({ setComponent }: Props) => {
   const [isGroom, setIsGroom] = useState<boolean>(true);
   const [name, setName] = useState<string>();
   const [companionCount, setCompanionCount] = useState<string>('0');
-  const [isAgreed, setIsAgreed] = useState<boolean>(false);
+  const [useBus, setUseBus] = useState<string>();
+  // const [isAgreed, setIsAgreed] = useState<boolean>(false);
 
   const elRef = useRef<HTMLDivElement>(null);
 
@@ -38,9 +39,13 @@ const AttendModal = ({ setComponent }: Props) => {
     setCompanionCount(e.target.value);
   };
 
-  const isAgreedHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    const { checked } = e.target;
-    setIsAgreed(checked);
+  // const isAgreedHandler = (e: ChangeEvent<HTMLInputElement>) => {
+  //   const { checked } = e.target;
+  //   setIsAgreed(checked);
+  // };
+
+  const useBusHandler = (e: ChangeEvent<HTMLSelectElement>) => {
+    setUseBus(e.target.value);
   };
 
   const onSubmit = () => {
@@ -49,8 +54,13 @@ const AttendModal = ({ setComponent }: Props) => {
       return;
     }
 
-    if (!isAgreed) {
-      alert('개인정보 수집 및 이용에 동의해주세요.');
+    // if (!isAgreed) {
+    //   alert('개인정보 수집 및 이용에 동의해주세요.');
+    //   return;
+    // }
+
+    if (isAvailable && !useBus) {
+      alert('대절버스 이용여부를 선택해주세요.');
       return;
     }
 
@@ -141,28 +151,47 @@ const AttendModal = ({ setComponent }: Props) => {
         </InputContent>
 
         {isAvailable && (
-          <InputContent>
-            <InputContentLabel htmlFor="companionCount">
-              추가 인원<Dot>*</Dot>
-            </InputContentLabel>
+          <>
+            <InputContent>
+              <InputContentLabel htmlFor="companionCount">
+                추가 인원<Dot>*</Dot>
+              </InputContentLabel>
 
-            {/* <Bottom>∨</Bottom> */}
-            <Select
-              id="companionCount"
-              value={companionCount}
-              onChange={companionCountHandler}
-            >
-              <option value="0">동행인 없음</option>
-              <option value="1">외 1명</option>
-              <option value="2">외 2명</option>
-              <option value="3">외 3명</option>
-              <option value="4">외 4명</option>
-              <option value="5">외 5명</option>
-            </Select>
-          </InputContent>
+              <Select
+                id="companionCount"
+                value={companionCount}
+                onChange={companionCountHandler}
+              >
+                <option value="0">동행인 없음</option>
+                <option value="1">외 1명</option>
+                <option value="2">외 2명</option>
+                <option value="3">외 3명</option>
+                <option value="4">외 4명</option>
+                <option value="5">외 5명</option>
+              </Select>
+            </InputContent>
+            <InputContent>
+              <InputContentLabel htmlFor="companionCount">
+                대절버스 이용<Dot>*</Dot>
+              </InputContentLabel>
+
+              <Select
+                id="useBus"
+                value={useBus}
+                onChange={useBusHandler}
+                style={{ color: useBus ? '' : '#bdbdbd' }}
+              >
+                <option selected disabled>
+                  선택해주세요
+                </option>
+                <option value="true">이용 ㅇ</option>
+                <option value="false">이용 x</option>
+              </Select>
+            </InputContent>
+          </>
         )}
       </InputContentWrapper>
-      <AgreementWrapper>
+      {/* <AgreementWrapper>
         <AgreementTitle>개인정보 수집 및 이용 동의(필수)</AgreementTitle>
         <AgreementDesc>
           참석정보 전달을 위한 개인정보 수집 및 이용에 동의해주세요.
@@ -180,7 +209,7 @@ const AttendModal = ({ setComponent }: Props) => {
             동의합니다<Dot>*</Dot>
           </AgreementLabel>
         </div>
-      </AgreementWrapper>
+      </AgreementWrapper> */}
       <SubmitButton onClick={onSubmit}>참석정보 전달하기</SubmitButton>
     </Container>
   );
@@ -265,7 +294,6 @@ const Select = styled.select`
   padding-left: 4px;
   font-weight: 500;
   background-color: transparent;
-
   position: relative;
 `;
 
