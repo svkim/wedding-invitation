@@ -11,7 +11,7 @@ const AttendModal = ({ setComponent }: Props) => {
   const [isGroom, setIsGroom] = useState<boolean>(true);
   const [name, setName] = useState<string>();
   const [companionCount, setCompanionCount] = useState<string>('0');
-  const [useBus, setUseBus] = useState<string>();
+  const [useBus, setUseBus] = useState<boolean>();
   // const [isAgreed, setIsAgreed] = useState<boolean>(false);
 
   const elRef = useRef<HTMLDivElement>(null);
@@ -44,12 +44,13 @@ const AttendModal = ({ setComponent }: Props) => {
   //   setIsAgreed(checked);
   // };
 
-  const useBusHandler = (e: ChangeEvent<HTMLSelectElement>) => {
-    setUseBus(e.target.value);
+  const useBusHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const _useBus = e.target.value === 'true';
+    setUseBus(_useBus);
   };
 
   const onSubmit = () => {
-    if (!name) {
+    if (!name?.trim()) {
       alert('이름을 입력해주세요.');
       return;
     }
@@ -59,7 +60,7 @@ const AttendModal = ({ setComponent }: Props) => {
     //   return;
     // }
 
-    if (isAvailable && !useBus) {
+    if (isAvailable && useBus === null) {
       alert('대절버스 이용여부를 선택해주세요.');
       return;
     }
@@ -170,23 +171,84 @@ const AttendModal = ({ setComponent }: Props) => {
                 <option value="5">외 5명</option>
               </Select>
             </InputContent>
-            <InputContent>
-              <InputContentLabel htmlFor="companionCount">
+            <InputContent
+              style={{
+                border: 'none',
+                paddingTop: '10px',
+              }}
+            >
+              <span
+                style={{
+                  position: 'absolute',
+                  bottom: -2,
+                  fontFamily: 'Pretendard',
+                  color: '#555555',
+                  fontSize: '13.7px',
+                }}
+              >
+                (예산 ↔ 서울)
+              </span>
+              <InputContentLabel
+                htmlFor="companionCount"
+                style={{ position: 'relative', bottom: '9px' }}
+              >
                 대절버스 이용<Dot>*</Dot>
               </InputContentLabel>
 
-              <Select
-                id="useBus"
-                value={useBus}
-                onChange={useBusHandler}
-                style={{ color: useBus ? '' : '#bdbdbd' }}
+              <div
+                style={{
+                  display: 'flex',
+                  flexWrap: 'nowrap',
+                  flex: 1,
+                  maxWidth: '300px',
+                  marginLeft: '8px',
+                  position: 'relative',
+                  top: '2px',
+                }}
               >
-                <option selected disabled>
-                  선택해주세요
-                </option>
-                <option value="true">이용 ㅇ</option>
-                <option value="false">이용 x</option>
-              </Select>
+                <button style={{ width: '50%' }}>
+                  <Input
+                    id="radio-5"
+                    className="useBus"
+                    type="radio"
+                    name="useBus"
+                    value="true"
+                    onChange={useBusHandler}
+                    checked={useBus === true}
+                  />
+                  <Label
+                    htmlFor="radio-5"
+                    style={{
+                      fontWeight: 400,
+                      height: 41,
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    이용함
+                  </Label>
+                </button>
+                <button style={{ width: '50%' }}>
+                  <Input
+                    id="radio-6"
+                    className="useBus"
+                    type="radio"
+                    name="useBus"
+                    value="false"
+                    onChange={useBusHandler}
+                    checked={useBus === false}
+                  />
+                  <Label
+                    htmlFor="radio-6"
+                    style={{
+                      fontWeight: 400,
+                      height: 41,
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    이용 안함
+                  </Label>
+                </button>
+              </div>
             </InputContent>
           </>
         )}
@@ -240,6 +302,7 @@ const InputContent = styled.div`
   height: 52px;
   font-size: 16px;
   position: relative;
+  justify-content: space-between;
 
   @media only screen and (max-width: 445px) {
     font-size: 15.5px;
@@ -262,11 +325,13 @@ const Dot = styled.span`
 
 const InputContentLabel = styled.label`
   font-family: Pretendard;
+  white-space: nowrap;
   font-weight: 600;
-  width: 92px;
-  min-width: 92px;
+  width: 100px;
+  min-width: 100px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 `;
 
 const TextInput = styled.input`
@@ -277,6 +342,7 @@ const TextInput = styled.input`
   font-weight: 500;
   padding-left: 4px;
   background-color: transparent;
+  max-width: 300px;
 
   &::placeholder,
   &::-webkit-input-placeholder {
@@ -295,6 +361,7 @@ const Select = styled.select`
   font-weight: 500;
   background-color: transparent;
   position: relative;
+  max-width: 300px;
 `;
 
 const Container = styled.div`
@@ -439,6 +506,12 @@ const Input = styled.input`
     color: #fff;
     border: 1px solid #be7e79;
   }
+
+  /* &.useBus:checked + label {
+    background-color: gold;
+    color: black;
+    border: 1px solid #555555;
+  } */
 `;
 
 const Button = styled.button`

@@ -271,3 +271,8 @@ select {
   -ms-user-select: auto;
   user-select: auto;
 }
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
