@@ -8,7 +8,7 @@ import { useSearchParams } from 'react-router-dom';
 import Snowfall from 'react-snowfall';
 import ManPic from '../../public/images/man.jpg';
 import WomanPic from '../../public/images/woman.jpg';
-import BoyPic from '../../public/images/boy.png';
+import BoyPic from '../../public/images/boy.jpeg';
 import GirlPic from '../../public/images/girl.jpeg';
 import MainPic from '../../public/images/main7.jpg';
 import ProgressiveImg from './ProgressiveImg';
@@ -44,7 +44,14 @@ function Main({ setComponent }: Props) {
 
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
+
+    const intervalId = setInterval(() => {
+      setIsBoy((prev) => !prev);
+      setIsGirl((prev) => !prev);
+    }, 4000);
+
     return () => {
+      clearInterval(intervalId);
       window.removeEventListener('scroll', checkScrollPosition);
     };
   }, []);
@@ -59,6 +66,15 @@ function Main({ setComponent }: Props) {
       } else {
         setIsVisible(false);
       }
+    }
+  };
+
+  const onClickCopy = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert(`${text}\n계좌번호가 복사되었습니다.`);
+    } catch (err) {
+      console.error(err);
     }
   };
 
@@ -269,6 +285,7 @@ function Main({ setComponent }: Props) {
                   transition: 'opacity 2s',
                   opacity: isboy ? 0 : 1,
                   backgroundSize: 'cover',
+                  backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
                   backgroundImage: `url(${BoyPic})`,
                   boxShadow: '3px 6px 6px rgba(0, 0, 0, 0.12)',
@@ -305,7 +322,7 @@ function Main({ setComponent }: Props) {
                 setIsGirl(!isGirl);
               }}
             >
-              <span
+              {/* <span
                 style={{
                   position: 'absolute',
                   bottom: -15,
@@ -333,7 +350,7 @@ function Main({ setComponent }: Props) {
                 }}
               >
                 Click!
-              </span>
+              </span> */}
               <div
                 style={{
                   position: 'absolute',
@@ -402,6 +419,11 @@ function Main({ setComponent }: Props) {
                 </span>{' '}
                 김태현
               </p>
+              {/* <IntroduceWrapper>
+                <span>1994년생, 서울사람</span>
+                <span>다정한 사랑꾼 ESTJ</span>
+                <span>#운동광 #닭강정</span>
+              </IntroduceWrapper> */}
               {/* <p
                 style={{
                   fontSize: 13,
@@ -441,6 +463,11 @@ function Main({ setComponent }: Props) {
                 </span>{' '}
                 이상경
               </p>
+              {/* <IntroduceWrapper>
+                <span>1995년생, 예산사람</span>
+                <span>다정한 사랑꾼 INFJ</span>
+                <span>#게임광 #닭강정</span>
+              </IntroduceWrapper> */}
               {/* <p
                 style={{
                   fontSize: 13,
@@ -585,11 +612,38 @@ function Main({ setComponent }: Props) {
             </TabButton>
             <AccountWrapper style={{ height: openGroomAccount ? '310px' : 0 }}>
               <AccountOwner>새마을금고 (예금주 : 김태현)</AccountOwner>
-              <AccountItem>9003249850662</AccountItem>
+              <AccountItem>
+                9003249850662
+                <button
+                  onClick={() => {
+                    onClickCopy('9003249850662');
+                  }}
+                >
+                  복사하기
+                </button>
+              </AccountItem>
               <AccountOwner>우리은행 (예금주 : 김은수)</AccountOwner>
-              <AccountItem>14202085912001</AccountItem>
+              <AccountItem>
+                14202085912001
+                <button
+                  onClick={() => {
+                    onClickCopy('14202085912001');
+                  }}
+                >
+                  복사하기
+                </button>
+              </AccountItem>
               <AccountOwner>우리은행 (예금주 : 곽숙견)</AccountOwner>
-              <AccountItem>000-0000-0000-00</AccountItem>
+              <AccountItem>
+                04902692702601
+                <button
+                  onClick={() => {
+                    onClickCopy('04902692702601');
+                  }}
+                >
+                  복사하기
+                </button>
+              </AccountItem>
             </AccountWrapper>
             <TabButton
               onClick={() => setOpenBrideAccount(!openBrideccount)}
@@ -598,12 +652,39 @@ function Main({ setComponent }: Props) {
               신부측 계좌번호 보기
             </TabButton>
             <AccountWrapper style={{ height: openBrideccount ? '310px' : 0 }}>
-              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
-              <AccountItem>000-0000-0000-00</AccountItem>
-              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
-              <AccountItem>000-0000-0000-00</AccountItem>
-              <AccountOwner>농협은행 (예금주 : 김태현)</AccountOwner>
-              <AccountItem>000-0000-0000-00</AccountItem>
+              <AccountOwner>농협은행 (예금주 : 이상경)</AccountOwner>
+              <AccountItem>
+                3020785325521
+                <button
+                  onClick={() => {
+                    onClickCopy('3020785325521');
+                  }}
+                >
+                  복사하기
+                </button>
+              </AccountItem>
+              <AccountOwner>농협은행 (예금주 : 이혁선)</AccountOwner>
+              <AccountItem>
+                3020785325521
+                <button
+                  onClick={() => {
+                    onClickCopy('3020785325521');
+                  }}
+                >
+                  복사하기
+                </button>
+              </AccountItem>
+              <AccountOwner>농협은행 (예금주 : 이화순)</AccountOwner>
+              <AccountItem>
+                3020785325521
+                <button
+                  onClick={() => {
+                    onClickCopy('3020785325521');
+                  }}
+                >
+                  복사하기
+                </button>
+              </AccountItem>
             </AccountWrapper>
           </div>
         </DescriptionWrapper>
@@ -935,8 +1016,23 @@ const AccountItem = styled.div`
   width: 100%;
   background-color: white;
   display: flex;
-  padding-left: 12px;
+  padding: 12px;
   align-items: center;
+  position: relative;
+
+  & > button {
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    font-family: Pretendard;
+    background-color: white;
+    border: 1px solid #c6c6c6;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 6px 8px;
+    font-size: 15px;
+    color: #555555;
+    cursor: pointer;
+  }
 `;
 
 const Parent = styled.span`
@@ -986,5 +1082,18 @@ const LocationDetail = styled.span`
 
   @media only screen and (max-width: 340px) {
     font-size: 16.5px;
+  }
+`;
+
+const IntroduceWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+  gap: 6px;
+
+  & > * {
+    font-family: Pretendard;
+    font-size: 15px;
   }
 `;

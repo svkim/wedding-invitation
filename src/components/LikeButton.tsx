@@ -117,7 +117,7 @@ const LikeButton = () => {
         className="fa fa-heart"
         style={{ color: '#ff9898', fontSize: '40px' }}
       ></i>
-      {likes}
+      {likes}년 사랑하겠습니다
     </button>
   );
 };

@@ -512,6 +512,7 @@ const AgreementLabel = styled.label`
   font-family: Pretendard;
   font-size: 14.5px;
   color: #363639;
+  cursor: pointer;
 `;
 
 const SubmitButton = styled.button`
