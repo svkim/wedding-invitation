@@ -113,7 +113,7 @@ const LikeButton = () => {
           padding: '5px 5px 5px 30px',
           display: 'flex',
           alignItems: 'center',
-          border: '1px solid #e5e5e5',
+          border: '1px solid #e0e0e0',
         }}
         onClick={onClickLike}
       >
@@ -155,7 +155,7 @@ export default LikeButton;
 
 const Button = styled.button`
   background-color: white;
-  box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.15);
 
   &:active {
     background-color: rgba(0, 0, 0, 0.01);
