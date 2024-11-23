@@ -105,16 +105,15 @@ const LikeButton = () => {
   );
 
   return (
-    <div>
-      <button
+    <div style={{ marginTop: '40px' }}>
+      <Button
         style={{
-          backgroundColor: 'white',
           cursor: 'pointer',
           borderRadius: '45px',
           padding: '5px 5px 5px 30px',
           display: 'flex',
           alignItems: 'center',
-          boxShadow: '4px 4px 7px 3px rgba(0, 0, 0, 0.12)',
+          border: '1px solid #e5e5e5',
         }}
         onClick={onClickLike}
       >
@@ -147,9 +146,19 @@ const LikeButton = () => {
             style={{ color: '#f58a8a', fontSize: '28px' }}
           ></i>
         </div>
-      </button>
+      </Button>
     </div>
   );
 };
 
 export default LikeButton;
+
+const Button = styled.button`
+  background-color: white;
+  box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.2);
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.01);
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.09) inset;
+  }
+`;

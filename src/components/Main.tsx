@@ -289,7 +289,6 @@ function Main({ setComponent }: Props) {
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
                   backgroundImage: `url(${BoyPic})`,
-                  boxShadow: '3px 6px 6px rgba(0, 0, 0, 0.12)',
                 }}
               />
               <div
@@ -297,7 +296,7 @@ function Main({ setComponent }: Props) {
                   position: 'absolute',
                   top: 0,
                   borderRadius: '20%',
-                  boxShadow: '3px 6px 6px rgba(0, 0, 0, 0.12)',
+
                   width: '100%',
                   height: '100%',
                   cursor: 'pointer',
@@ -365,7 +364,6 @@ function Main({ setComponent }: Props) {
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundImage: `url(${GirlPic})`,
-                  boxShadow: '3px 6px 6px rgba(0, 0, 0, 0.12)',
                 }}
               />
               <div
@@ -382,7 +380,6 @@ function Main({ setComponent }: Props) {
                   backgroundPosition: 'bottom',
                   backgroundRepeat: 'no-repeat',
                   backgroundImage: `url(${WomanPic})`,
-                  boxShadow: '3px 6px 6px rgba(0, 0, 0, 0.12)',
                 }}
               />
             </div>
