@@ -14,7 +14,7 @@ import MainPic from '../../public/images/main7.jpg';
 import ProgressiveImg from './ProgressiveImg';
 import High from '../../public/images/high.jpg';
 import TossIcon from '../../public/images/toss.jpg';
-import KakaoNaviIcon from '../../public/images/kakaoNavi.png';
+import KakaoMapIcon from '../../public/images/kakaoMap.png';
 import NaverMapIcon from '../../public/images/naverMap.png';
 import TMavIcon from '../../public/images/tmap.png';
 import KakayPayIcon from '../../public/images/kakaopay.png';
@@ -567,14 +567,17 @@ function Main({ setComponent }: Props) {
           </Description>
           <Map />
           <MapIconsWrapper>
-            <MapIconItem target="_blank" onClick={() => onClickMapIcon('TMAP')}>
+            {/* <MapIconItem target="_blank" onClick={() => onClickMapIcon('TMAP')}>
               <MapIconImage src={TMavIcon} width={24} height={24} />
               티맵
+            </MapIconItem> */}
+            <MapIconItem
+              target="_blank"
+              href="https://kko.kakao.com/q2SI2nKc7p"
+            >
+              <MapIconImage src={KakaoMapIcon} width={24} height={24} />
+              카카오맵
             </MapIconItem>
-            <MapIconItemDiv onClick={startNavigation}>
-              <MapIconImage src={KakaoNaviIcon} width={24} height={24} />
-              카카오내비
-            </MapIconItemDiv>
             <MapIconItem
               target="_blank"
               href="https://m.map.naver.com/search2/search.naver?query=%EB%B3%B4%ED%85%8C%EA%B0%80%EB%A7%88%EC%A7%80%EC%98%A4#/map/1/31494641"
@@ -1145,20 +1148,24 @@ const IntroduceWrapper = styled.div`
 const MapIconsWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 330px;
   margin: 20px 0;
+  gap: 50px;
 
   @media only screen and (max-width: 400px) {
     width: 320px;
+    gap: 45px;
   }
 
   @media only screen and (max-width: 360px) {
     width: 310px;
+    gap: 43px;
   }
 
   @media only screen and (max-width: 340px) {
     width: 290px;
+    gap: 42px;
   }
 `;
 
