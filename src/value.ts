@@ -35,14 +35,14 @@ export const INFORMATION = {
       name: '이혁선',
       phoneNumber: '01024338363',
       bank: '농협은행',
-      accountNumber: '3020785325521',
+      accountNumber: '44512147813',
     },
     {
       title: '혼주',
       name: '이화순',
       phoneNumber: '01023928363',
       bank: '농협은행',
-      accountNumber: '3020785325521',
+      accountNumber: '44902210637',
     },
   ],
 };

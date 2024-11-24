@@ -13,6 +13,11 @@ import GirlPic from '../../public/images/girl.jpeg';
 import MainPic from '../../public/images/main7.jpg';
 import ProgressiveImg from './ProgressiveImg';
 import High from '../../public/images/high.jpg';
+import TossIcon from '../../public/images/toss.jpg';
+import KakaoNaviIcon from '../../public/images/kakaoNavi.png';
+import NaverMapIcon from '../../public/images/naverMap.png';
+import TMavIcon from '../../public/images/tmap.png';
+import KakayPayIcon from '../../public/images/kakaopay.png';
 import SunFlower from '../../public/images/sunflower1.png';
 import SunFlower2 from '../../public/images/sunflower2.png';
 import SunFlower3 from '../../public/images/sunflower3.png';
@@ -76,6 +81,13 @@ function Main({ setComponent }: Props) {
       alert(`${text}\n계좌번호가 복사되었습니다.`);
     } catch (err) {
       console.error(err);
+    }
+  };
+
+  const onClickMapIcon = (platform: 'NAVER' | 'KAKAO' | 'TMAP') => {
+    if (platform === 'NAVER') {
+      window.location.href =
+        'https://m.map.naver.com/search2/search.naver?query=%EB%B3%B4%ED%85%8C%EA%B0%80%EB%A7%88%EC%A7%80%EC%98%A4#/map/1/31494641';
     }
   };
 
@@ -525,7 +537,27 @@ function Main({ setComponent }: Props) {
             </LocationDetail>
           </Description>
           <Map />
-          <NaviWrapper style={{ paddingTop: '50px' }}>
+          <MapIconsWrapper>
+            <MapIconItem target="_blank" onClick={() => onClickMapIcon('TMAP')}>
+              <MapIconImage src={TMavIcon} width={24} height={24} />
+              티맵
+            </MapIconItem>
+            <MapIconItem
+              target="_blank"
+              href="https://map.kakao.com/link/to/%EB%B3%B4%ED%85%8C%EA%B0%80%EB%A7%88%EC%A7%80%EC%98%A4,37.5456811,127.042481"
+            >
+              <MapIconImage src={KakaoNaviIcon} width={24} height={24} />
+              카카오내비
+            </MapIconItem>
+            <MapIconItem
+              target="_blank"
+              href="https://m.map.naver.com/search2/search.naver?query=%EB%B3%B4%ED%85%8C%EA%B0%80%EB%A7%88%EC%A7%80%EC%98%A4#/map/1/31494641"
+            >
+              <MapIconImage src={NaverMapIcon} width={24} height={24} />
+              네이버지도
+            </MapIconItem>
+          </MapIconsWrapper>
+          <NaviWrapper style={{ paddingTop: '30px' }}>
             <NaviTitle>자가용 & 주차 안내</NaviTitle>
             <Li style={{ marginBottom: '4px' }}>
               <Marker>𒊹</Marker>내비게이션으로 "보테가마지오" 검색해주세요.
@@ -534,7 +566,7 @@ function Main({ setComponent }: Props) {
               <Marker>𒊹</Marker>무료 주차는 2시간 가능합니다.
             </Li>
             <Li> - &nbsp;건물 내 B3-B7층, 무료주차 2시간 가능</Li>
-            <Li> - &nbsp;안내데스크에서 주차 등록</Li>
+            <Li> - &nbsp;안내데스크에서 주차 등록 必</Li>
           </NaviWrapper>
           <NaviWrapper>
             <NaviTitle>지하철 안내</NaviTitle>
@@ -568,7 +600,7 @@ function Main({ setComponent }: Props) {
           </NaviWrapper>
           <NaviWrapper
             style={{
-              margin: 0,
+              margin: '4px 0 0 0',
               border: '4px double lightgray',
               alignItems: 'center',
               backgroundColor: 'rgba(255, 255, 255, 0)',
@@ -964,7 +996,11 @@ const Li = styled.li`
   }
 
   @media only screen and (max-width: 360px) {
-    font-size: 16.5px;
+    font-size: 16.2px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 15.2px;
   }
 `;
 
@@ -1078,4 +1114,46 @@ const IntroduceWrapper = styled.div`
     font-family: Pretendard;
     font-size: 15px;
   }
+`;
+
+const MapIconsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 330px;
+  margin: 20px 0;
+
+  @media only screen and (max-width: 400px) {
+    width: 320px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    width: 310px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    width: 290px;
+  }
+`;
+
+const MapIconItem = styled.a`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Pretendard;
+  font-size: 16px;
+  text-decoration: none;
+
+  @media only screen and (max-width: 380px) {
+    font-size: 15.5px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 15px;
+  }
+`;
+
+const MapIconImage = styled.img`
+  border-radius: 4px;
 `;

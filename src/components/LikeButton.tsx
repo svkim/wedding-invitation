@@ -1,14 +1,6 @@
 import styled from 'styled-components';
-import {
-  child,
-  get,
-  increment,
-  onValue,
-  ref,
-  set,
-  update,
-} from 'firebase/database';
-import { realtimeDb } from '../firebase.ts';
+import { child, get, increment, ref, update } from 'firebase/database';
+import { dbref, realtimeDb } from '../firebase.ts';
 import { useCallback, useEffect, useState } from 'react';
 import { jsConfetti } from '../App.tsx';
 
@@ -36,30 +28,31 @@ function throttle<T extends (...args: any[]) => any>(
   };
 }
 
-const LikeButton = () => {
-  const emojis = [
-    '❤️',
-    '❤️',
-    '💜',
-    '💚',
-    '💛',
-    '💛',
-    '🧡',
-    '🧡',
-    '💛',
-    '🤍',
-    '💗',
-    '🤍',
-    '💗',
-  ];
+const EMOJIS = [
+  '❤️',
+  '❤️',
+  '💜',
+  '💚',
+  '💛',
+  '💛',
+  '🧡',
+  '🧡',
+  '💛',
+  '🤍',
+  '💗',
+  '🤍',
+  '💗',
+];
 
+const LikeButton = () => {
   const [likes, setLikes] = useState(0);
 
-  // '좋아요' 갯수를 가져오는 함수
-  const fetchLikes = async () => {
-    const dbRef = ref(realtimeDb);
+  useEffect(() => {
+    fetchLikes();
+  }, []);
 
-    get(child(dbRef, '/like'))
+  const fetchLikes = async () => {
+    get(child(dbref, '/like'))
       .then((snapshot) => {
         if (snapshot.exists()) {
           const { likes } = snapshot.val();
@@ -73,36 +66,26 @@ const LikeButton = () => {
       });
   };
 
-  // 컴포넌트가 처음 렌더링될 때 '좋아요' 갯수 가져오기
-  useEffect(() => {
-    fetchLikes();
-  }, []); // 빈 배열로 두면 컴포넌트가 처음 렌더링될 때 한 번만 실행됩니다.
-
-  // '좋아요' 갯수를 증가시키는 함수
   const increaseLikes = async () => {
-    const dbRef = ref(realtimeDb, '/like'); // likes 경로를 명시적으로 참조
+    const dbRef = ref(realtimeDb, '/like');
     try {
       await update(dbRef, {
-        likes: increment(1), // likes 필드를 1 증가시키는 방식
+        likes: increment(1),
       });
 
-      // 상태 업데이트 (이때 최신 상태를 사용하여 업데이트)
-      setLikes((prevLikes) => prevLikes + 1); // prevState를 사용하여 상태를 안전하게 업데이트
+      setLikes((prevLikes) => prevLikes + 1);
     } catch (error) {
       console.error('Error updating likes:', error);
     }
   };
 
   const handle = () => {
-    jsConfetti.addConfetti({ emojis, emojiSize: 32 });
+    jsConfetti.addConfetti({ emojis: EMOJIS, emojiSize: 32 });
 
     increaseLikes();
   };
 
-  const onClickLike = useCallback(
-    throttle(handle, 600), // 0.6초에 한 번만 클릭 허용
-    []
-  );
+  const onClickLike = useCallback(throttle(handle, 600), []);
 
   return (
     <div style={{ marginTop: '40px' }}>

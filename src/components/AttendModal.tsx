@@ -1,6 +1,8 @@
 import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useOutsideClick } from '../hooks/useOutsideClick';
+import { push, ref } from 'firebase/database';
+import { realtimeDb } from '../firebase';
 
 interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
@@ -49,24 +51,41 @@ const AttendModal = ({ setComponent }: Props) => {
     setUseBus(_useBus);
   };
 
-  const onSubmit = () => {
+  const postAttendInfo = async () => {
+    const inputData = {
+      name,
+      isAvailable,
+      isGroom,
+      companionCount: isAvailable ? companionCount : 0,
+      useBus: isAvailable ? useBus : false,
+      created_at: new Date().toISOString(),
+    };
+
+    const res = await push(ref(realtimeDb, '/attend'), inputData);
+    return res;
+  };
+
+  const onSubmit = async () => {
     if (!name?.trim()) {
       alert('이름을 입력해주세요.');
       return;
     }
-
-    // if (!isAgreed) {
-    //   alert('개인정보 수집 및 이용에 동의해주세요.');
-    //   return;
-    // }
 
     if (isAvailable && useBus === undefined) {
       alert('전세버스 이용여부를 선택해주세요.');
       return;
     }
 
-    // api
-    // 참석정보가 전달되었습니다.
+    try {
+      const res = await postAttendInfo();
+      console.log(res);
+      alert('참석 정보가 전달되었습니다.');
+    } catch (err) {
+      console.error(err);
+      alert('에러가 발생하였습니다.');
+    } finally {
+      setComponent(null);
+    }
   };
 
   return (
@@ -253,25 +272,6 @@ const AttendModal = ({ setComponent }: Props) => {
           </>
         )}
       </InputContentWrapper>
-      {/* <AgreementWrapper>
-        <AgreementTitle>개인정보 수집 및 이용 동의(필수)</AgreementTitle>
-        <AgreementDesc>
-          참석정보 전달을 위한 개인정보 수집 및 이용에 동의해주세요.
-          <br />
-          항목:성함,연락처 보유기간: 청첩장 이용 종료시 까지
-        </AgreementDesc>
-        <div style={{ display: 'flex', gap: '8px' }}>
-          <AgreementCheckbox
-            type="checkbox"
-            id="agreement"
-            checked={isAgreed}
-            onChange={isAgreedHandler}
-          ></AgreementCheckbox>
-          <AgreementLabel htmlFor="agreement">
-            동의합니다<Dot>*</Dot>
-          </AgreementLabel>
-        </div>
-      </AgreementWrapper> */}
       <SubmitButton onClick={onSubmit}>참석정보 전달하기</SubmitButton>
     </Container>
   );
@@ -441,18 +441,6 @@ const SubTitle = styled.p`
   }
 `;
 
-const AgreementTitle = styled(SubTitle)`
-  font-size: 16px;
-
-  @media only screen and (max-width: 445px) {
-    font-size: 15.5px;
-  }
-
-  @media only screen and (max-width: 360px) {
-    font-size: 14.8px;
-  }
-`;
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -544,19 +532,6 @@ const Label = styled.label`
   }
 `;
 
-const Content = styled.span`
-  color: #444444;
-  font-size: 17px;
-
-  @media only screen and (max-width: 600px) {
-    font-size: 16px;
-  }
-
-  @media only screen and (max-width: 445px) {
-    font-size: 15px;
-  }
-`;
-
 const CloseButton = styled.button`
   position: absolute;
   top: 12px;
@@ -588,34 +563,6 @@ const CloseButton = styled.button`
   }
 `;
 
-const AgreementWrapper = styled.div`
-  width: 100%;
-  border: 1px solid #e3e3e3;
-  padding: 20px 18px;
-`;
-
-const AgreementDesc = styled.div`
-  margin: 14px 0;
-  color: #646464;
-  font-family: Pretendard;
-  font-size: 12px;
-  line-height: 1.3;
-  font-weight: 200;
-`;
-
-const AgreementCheckbox = styled.input`
-  width: 15px;
-  height: 15px;
-  opacity: 0.8;
-`;
-
-const AgreementLabel = styled.label`
-  font-family: Pretendard;
-  font-size: 14.5px;
-  color: #363639;
-  cursor: pointer;
-`;
-
 const SubmitButton = styled.button`
   margin-top: 28px;
   background-color: #363639;
@@ -632,12 +579,4 @@ const SubmitButton = styled.button`
     height: 56px;
     min-height: 56px;
   }
-`;
-
-const Bottom = styled.span`
-  font-family: Pretendard;
-  position: absolute;
-  top: 50%;
-  right: 14px;
-  transform: translateY(-50%);
 `;
