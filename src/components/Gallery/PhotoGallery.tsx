@@ -102,12 +102,12 @@ const MoreButton = styled.button`
   }
 
   & > img {
-    width: 95px;
-    height: 88px;
+    width: 90px;
+    height: 85px;
 
     @media only screen and (max-width: 380px) {
-      width: 90px;
-      height: 86px;
+      width: 80px;
+      height: 75px;
     }
   }
 `;
