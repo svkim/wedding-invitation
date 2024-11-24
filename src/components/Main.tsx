@@ -571,10 +571,10 @@ function Main({ setComponent }: Props) {
               <MapIconImage src={TMavIcon} width={24} height={24} />
               티맵
             </MapIconItem>
-            <MapIconItem target="_blank" href="#none" onClick={startNavigation}>
+            <MapIconItemDiv onClick={startNavigation}>
               <MapIconImage src={KakaoNaviIcon} width={24} height={24} />
               카카오내비
-            </MapIconItem>
+            </MapIconItemDiv>
             <MapIconItem
               target="_blank"
               href="https://m.map.naver.com/search2/search.naver?query=%EB%B3%B4%ED%85%8C%EA%B0%80%EB%A7%88%EC%A7%80%EC%98%A4#/map/1/31494641"
@@ -1163,6 +1163,24 @@ const MapIconsWrapper = styled.div`
 `;
 
 const MapIconItem = styled.a`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Pretendard;
+  font-size: 16px;
+  text-decoration: none;
+
+  @media only screen and (max-width: 380px) {
+    font-size: 15.5px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 15px;
+  }
+`;
+
+const MapIconItemDiv = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
