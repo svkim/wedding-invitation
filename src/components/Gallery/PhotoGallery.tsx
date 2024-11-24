@@ -92,21 +92,22 @@ const MoreButton = styled.button`
   padding: 30px 0 0;
   width: 50%;
   cursor: pointer;
-  font-size: 19px;
-  font-weight: 500;
-  gap: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  gap: 6px;
 
   @media only screen and (max-width: 400px) {
-    font-size: 18px;
+    font-size: 19px;
+    gap: 5px;
   }
 
   & > img {
-    width: 75px;
-    height: 75px;
+    width: 95px;
+    height: 88px;
 
-    @media only screen and (max-width: 400px) {
-      width: 70px;
-      height: 70px;
+    @media only screen and (max-width: 380px) {
+      width: 90px;
+      height: 86px;
     }
   }
 `;
