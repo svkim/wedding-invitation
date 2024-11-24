@@ -113,9 +113,9 @@ function Main({ setComponent }: Props) {
   // 내비게이션 시작 함수
   const startNavigation = () => {
     window.Kakao.Navi.start({
-      name: '현대백화점 판교점',
-      x: 127.11205203011632,
-      y: 37.39279717586919,
+      name: '보테가마지오',
+      x: 37.5456811,
+      y: 127.042481,
       coordType: 'wgs84',
     });
   };
@@ -571,11 +571,7 @@ function Main({ setComponent }: Props) {
               <MapIconImage src={TMavIcon} width={24} height={24} />
               티맵
             </MapIconItem>
-            <MapIconItem
-              target="_blank"
-              href="javascript:void(0)"
-              onClick={startNavigation}
-            >
+            <MapIconItem target="_blank" href="#none" onClick={startNavigation}>
               <MapIconImage src={KakaoNaviIcon} width={24} height={24} />
               카카오내비
             </MapIconItem>
