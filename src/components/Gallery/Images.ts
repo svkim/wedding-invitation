@@ -88,6 +88,8 @@ import image42Thumb from '../../../public/images/thumbnails/image42.jpeg';
 import image43Thumb from '../../../public/images/thumbnails/image43.jpg';
 import image44Thumb from '../../../public/images/thumbnails/image44.jpg';
 import image45Thumb from '../../../public/images/thumbnails/image45.jpg';
+import complete from '../../../public/images/complete.png';
+import completeThumb from '../../../public/images/thumbnails/complete.png';
 
 const images = [
   /* 이미지 경로를 리스트로 저장 */
@@ -133,17 +135,24 @@ const images = [
     width: 600,
     height: 900,
   },
+  // {
+  //   alt: 'image44',
+  //   source: image44,
+  //   thumbnail: image44Thumb,
+  //   width: 600,
+  //   height: 900,
+  // },
+  // {
+  //   alt: 'image03',
+  //   source: image03,
+  //   thumbnail: image03Thumb,
+  //   width: 600,
+  //   height: 900,
+  // },
   {
-    alt: 'image44',
-    source: image44,
-    thumbnail: image44Thumb,
-    width: 600,
-    height: 900,
-  },
-  {
-    alt: 'image03',
-    source: image03,
-    thumbnail: image03Thumb,
+    alt: 'complete',
+    source: complete,
+    thumbnail: completeThumb,
     width: 600,
     height: 900,
   },
@@ -347,20 +356,20 @@ const images = [
     width: 600,
     height: 900,
   },
-  {
-    alt: 'image38',
-    source: image38,
-    thumbnail: image38Thumb,
-    width: 600,
-    height: 900,
-  },
-  {
-    alt: 'image39',
-    source: image39,
-    thumbnail: image39Thumb,
-    width: 600,
-    height: 900,
-  },
+  // {
+  //   alt: 'image38',
+  //   source: image38,
+  //   thumbnail: image38Thumb,
+  //   width: 600,
+  //   height: 900,
+  // },
+  // {
+  //   alt: 'image39',
+  //   source: image39,
+  //   thumbnail: image39Thumb,
+  //   width: 600,
+  //   height: 900,
+  // },
   {
     alt: 'image45',
     source: image45,
