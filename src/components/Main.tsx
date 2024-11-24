@@ -62,6 +62,25 @@ function Main({ setComponent }: Props) {
     };
   }, []);
 
+  // 카카오 SDK 로드
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js';
+    script.integrity =
+      'sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka';
+    script.crossOrigin = 'anonymous';
+    script.onload = () => {
+      // 카카오 SDK 초기화
+      window.Kakao.init(import.meta.env.VITE_APP_KAKAO_APP_KEY); // 카카오 앱의 JavaScript 키 입력
+    };
+    document.body.appendChild(script);
+
+    // Cleanup (스크립트 제거)
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const checkScrollPosition = () => {
     if (refEl.current) {
       const { offsetTop } = refEl.current;
@@ -89,6 +108,16 @@ function Main({ setComponent }: Props) {
       window.location.href =
         'https://m.map.naver.com/search2/search.naver?query=%EB%B3%B4%ED%85%8C%EA%B0%80%EB%A7%88%EC%A7%80%EC%98%A4#/map/1/31494641';
     }
+  };
+
+  // 내비게이션 시작 함수
+  const startNavigation = () => {
+    window.Kakao.Navi.start({
+      name: '현대백화점 판교점',
+      x: 127.11205203011632,
+      y: 37.39279717586919,
+      coordType: 'wgs84',
+    });
   };
 
   return (
@@ -544,7 +573,8 @@ function Main({ setComponent }: Props) {
             </MapIconItem>
             <MapIconItem
               target="_blank"
-              href="https://map.kakao.com/link/to/%EB%B3%B4%ED%85%8C%EA%B0%80%EB%A7%88%EC%A7%80%EC%98%A4,37.5456811,127.042481"
+              href="javascript:void(0)"
+              onClick={startNavigation}
             >
               <MapIconImage src={KakaoNaviIcon} width={24} height={24} />
               카카오내비
