@@ -301,7 +301,7 @@ function Main({ setComponent }: Props) {
             참석여부 전달하기
           </Button>
         </DescriptionWrapper>
-        <DescriptionWrapper>
+        <DescriptionWrapper style={{ padding: '60px 26px' }}>
           <EnglishSubTitle>GROOM & BRIDE</EnglishSubTitle>
           <Title>신랑 신부는요,</Title>
 
@@ -343,11 +343,11 @@ function Main({ setComponent }: Props) {
                 교내 영어회화 스터디에서 고양이 같은 여성분을 만났습니다.
                 처음에는 말수가 적고 철벽을 치는 고양이 같았지만, 막상 같이
                 공부하면서 취미나 여행, 게임 이야기를 할 때면 아주 귀여운
-                말티즈가 되어 재잘재잘 말하는 것을 보아하니 개냥이였던 것이
+                말티즈가 되어 재잘재잘 말하는 것을 보니 개냥이였던 것이
                 틀림없습니다. 제가 회사생활이나 시험준비로 힘들어할 때면 쪼르르
-                옆에 와서 격려해주고, 어느 날은 갑자기 짜잔하면서 콘서트
-                티켓이나 비행기표를 보여주면서 같이 스트레스 풀러 다녀오자고
-                저를 놀래켜주기도 했었습니다. <br />
+                옆에 와서 격려해주고, 어느 날은 짜잔하면서 콘서트 티켓이나
+                비행기표를 보여주면서 같이 스트레스 풀러 다녀오자고 저를
+                놀래켜주기도 했었습니다. <br />
                 이렇게 이쁘고 귀여운 여자친구를 데리고 이제는 같은 진로를 통해
                 같은 미래를 바라보며 살아보고자 합니다. 여태껏 서로 달랐던
                 부분들을 잘 맞춰왔듯이, 앞으로도 많은 대화를 통해 서로
@@ -759,20 +759,21 @@ const InterviewWrapper = styled.div`
 
 const Interview = styled.div`
   width: 100%;
-  font-size: 15px;
+  font-size: 15.4px;
   color: #555555;
   line-height: 1.8;
+
   word-break: break-all;
 
   @media only screen and (max-width: 390px) {
-    font-size: 14.6px;
+    font-size: 15px;
   }
 `;
 
 const InterviewImageWrapper = styled.div`
   position: relative;
-  width: min(calc(100vw - 58px), 510px);
-  height: min(calc(100vw - 58px), 510px);
+  width: min(calc(100vw - 50px), 510px);
+  height: min(calc(100vw - 50px), 510px);
   margin: 0 auto;
 `;
 

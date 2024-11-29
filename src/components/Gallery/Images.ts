@@ -371,13 +371,13 @@ const images = [
   //   width: 600,
   //   height: 900,
   // },
-  {
-    alt: 'image45',
-    source: image45,
-    thumbnail: image45Thumb,
-    width: 900,
-    height: 600,
-  },
+  // {
+  //   alt: 'image45',
+  //   source: image45,
+  //   thumbnail: image45Thumb,
+  //   width: 900,
+  //   height: 600,
+  // },
 
   // {
   //   alt: 'image06',
