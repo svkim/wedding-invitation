@@ -301,7 +301,7 @@ function Main({ setComponent }: Props) {
             참석여부 전달하기
           </Button>
         </DescriptionWrapper>
-        <DescriptionWrapper style={{ padding: '60px 26px' }}>
+        <DescriptionWrapper style={{ padding: '60px 22px' }}>
           <EnglishSubTitle>GROOM & BRIDE</EnglishSubTitle>
           <Title>신랑 신부는요,</Title>
 
@@ -775,8 +775,8 @@ const Interview = styled.div`
 
 const InterviewImageWrapper = styled.div`
   position: relative;
-  width: min(calc(100vw - 52px), 510px);
-  height: min(calc(100vw - 52px), 510px);
+  width: min(calc(100vw - 44px), 510px);
+  height: min(calc(100vw - 44px), 510px);
   margin: 0 auto;
 `;
 
