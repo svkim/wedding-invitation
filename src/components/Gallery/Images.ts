@@ -93,13 +93,13 @@ import completeThumb from '../../../public/images/thumbnails/complete.png';
 
 const images = [
   /* 이미지 경로를 리스트로 저장 */
-  {
-    alt: 'image12',
-    source: image12,
-    thumbnail: image12Thumb,
-    width: 600,
-    height: 900,
-  },
+  // {
+  //   alt: 'image12',
+  //   source: image12,
+  //   thumbnail: image12Thumb,
+  //   width: 600,
+  //   height: 900,
+  // },
   {
     alt: 'image42',
     source: image42,
@@ -121,13 +121,13 @@ const images = [
     width: 900,
     height: 600,
   },
-  {
-    alt: 'image41',
-    source: image41,
-    thumbnail: image41Thumb,
-    width: 900,
-    height: 600,
-  },
+  // {
+  //   alt: 'image41',
+  //   source: image41,
+  //   thumbnail: image41Thumb,
+  //   width: 900,
+  //   height: 600,
+  // },
   {
     alt: 'image09',
     source: image09,
@@ -156,13 +156,13 @@ const images = [
     width: 600,
     height: 900,
   },
-  {
-    alt: 'image43',
-    source: image43,
-    thumbnail: image43Thumb,
-    width: 600,
-    height: 900,
-  },
+  // {
+  //   alt: 'image43',
+  //   source: image43,
+  //   thumbnail: image43Thumb,
+  //   width: 600,
+  //   height: 900,
+  // },
   {
     alt: 'image05',
     source: image05,
@@ -236,7 +236,34 @@ const images = [
     width: 600,
     height: 900,
   },
-
+  {
+    alt: 'image36',
+    source: image36,
+    thumbnail: image36Thumb,
+    width: 600,
+    height: 900,
+  },
+  {
+    alt: 'image29',
+    source: image29,
+    thumbnail: image29Thumb,
+    width: 600,
+    height: 900,
+  },
+  {
+    alt: 'image30',
+    source: image30,
+    thumbnail: image30Thumb,
+    width: 600,
+    height: 900,
+  },
+  {
+    alt: 'image31',
+    source: image31,
+    thumbnail: image31Thumb,
+    width: 600,
+    height: 900,
+  },
   {
     alt: 'image21',
     source: image21,
@@ -293,27 +320,7 @@ const images = [
     width: 900,
     height: 600,
   },
-  {
-    alt: 'image29',
-    source: image29,
-    thumbnail: image29Thumb,
-    width: 600,
-    height: 900,
-  },
-  {
-    alt: 'image30',
-    source: image30,
-    thumbnail: image30Thumb,
-    width: 600,
-    height: 900,
-  },
-  {
-    alt: 'image31',
-    source: image31,
-    thumbnail: image31Thumb,
-    width: 600,
-    height: 900,
-  },
+
   {
     alt: 'image32',
     source: image32,
@@ -321,10 +328,17 @@ const images = [
     width: 900,
     height: 600,
   },
+  // {
+  //   alt: 'image33',
+  //   source: image33,
+  //   thumbnail: image33Thumb,
+  //   width: 900,
+  //   height: 600,
+  // },
   {
-    alt: 'image33',
-    source: image33,
-    thumbnail: image33Thumb,
+    alt: 'image35',
+    source: image35,
+    thumbnail: image35Thumb,
     width: 900,
     height: 600,
   },
@@ -335,27 +349,14 @@ const images = [
     width: 600,
     height: 900,
   },
-  {
-    alt: 'image35',
-    source: image35,
-    thumbnail: image35Thumb,
-    width: 900,
-    height: 600,
-  },
-  {
-    alt: 'image36',
-    source: image36,
-    thumbnail: image36Thumb,
-    width: 600,
-    height: 900,
-  },
-  {
-    alt: 'image37',
-    source: image37,
-    thumbnail: image37Thumb,
-    width: 600,
-    height: 900,
-  },
+
+  // {
+  //   alt: 'image37',
+  //   source: image37,
+  //   thumbnail: image37Thumb,
+  //   width: 600,
+  //   height: 900,
+  // },
   // {
   //   alt: 'image38',
   //   source: image38,

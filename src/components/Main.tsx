@@ -22,6 +22,7 @@ import KakayPayIcon from '../../public/images/kakaopay.png';
 import SunFlower from '../../public/images/sunflower1.png';
 import SunFlower2 from '../../public/images/sunflower2.png';
 import SunFlower3 from '../../public/images/sunflower3.png';
+import image45 from '../../public/images/image45.jpg';
 
 import Cursor from '../../public/images/cursor.png';
 import PhoneModal from './PhoneModal';
@@ -34,13 +35,16 @@ interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
 }
 
+const BUS_MAP_URL =
+  'https://map.naver.com/p/directions/14119087.345187,4396486.7244838,%EC%B6%A9%EB%82%A8%20%EC%98%88%EC%82%B0%EA%B5%B0%20%EC%98%88%EC%82%B0%EC%9D%8D%20%EC%82%B0%EC%84%B1%EB%A6%AC%20678,,SIMPLE_POI/-/-/transit?c=18.57,0,0,0,dh';
+
 const PhotoGallery = lazy(() => import('./Gallery/PhotoGallery'));
 const Slider = lazy(() => import('./Slider'));
 
 function Main({ setComponent }: Props) {
   const [isboy, setIsBoy] = useState(true);
   const [isGirl, setIsGirl] = useState(true);
-  const [, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const refEl = useRef(null);
 
   const [searchParams] = useSearchParams();
@@ -99,6 +103,15 @@ function Main({ setComponent }: Props) {
     try {
       await navigator.clipboard.writeText(text);
       alert(`${text}\n계좌번호가 복사되었습니다.`);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const onClickLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      alert(`청첩장 링크가 복사되었습니다.`);
     } catch (err) {
       console.error(err);
     }
@@ -290,7 +303,7 @@ function Main({ setComponent }: Props) {
         </DescriptionWrapper>
         <DescriptionWrapper>
           <EnglishSubTitle>GROOM & BRIDE</EnglishSubTitle>
-          <Title>신랑 & 신부를 소개합니다</Title>
+          <Title>신랑 신부는요,</Title>
 
           <InterviewWrapper>
             <div>
@@ -328,16 +341,17 @@ function Main({ setComponent }: Props) {
               </p>
               <Interview>
                 교내 영어회화 스터디에서 고양이 같은 여성분을 만났습니다.
-                처음에는 철벽을 치는 고양이 같았지만, 막상 같이 공부하면서
-                취미나 여행, 게임 이야기를 할 때면 아주 귀여운 말티즈가 되어
-                재잘재잘 말하는 것을 보아하니 개냥이였던 것이 틀림없습니다. 제가
-                회사생활이나 시험준비로 힘들어할 때면 쪼르르 옆에 와서
-                격려해주고, 어느 날은 갑자기 짜잔하면서 콘서트 티켓이나
-                비행기표를 보여주면서 같이 스트레스 풀러 다녀오자고 저를
-                놀래켜주기도 했었습니다. 이렇게 이쁘고 귀여운 여자친구를 데리고
-                이제는 같은 진로를 통해 같은 미래를 바라보며 살아보고자 합니다.
-                여태껏 서로 달랐던 부분들을 잘 맞춰왔듯이, 앞으로도 많은 대화를
-                통해 서로 배려하면서 예쁘게 잘 살아가겠습니다.
+                처음에는 말수가 적고 철벽을 치는 고양이 같았지만, 막상 같이
+                공부하면서 취미나 여행, 게임 이야기를 할 때면 아주 귀여운
+                말티즈가 되어 재잘재잘 말하는 것을 보아하니 개냥이였던 것이
+                틀림없습니다. 제가 회사생활이나 시험준비로 힘들어할 때면 쪼르르
+                옆에 와서 격려해주고, 어느 날은 갑자기 짜잔하면서 콘서트
+                티켓이나 비행기표를 보여주면서 같이 스트레스 풀러 다녀오자고
+                저를 놀래켜주기도 했었습니다. <br />
+                이렇게 이쁘고 귀여운 여자친구를 데리고 이제는 같은 진로를 통해
+                같은 미래를 바라보며 살아보고자 합니다. 여태껏 서로 달랐던
+                부분들을 잘 맞춰왔듯이, 앞으로도 많은 대화를 통해 서로
+                배려하면서 예쁘게 잘 살아가겠습니다.
               </Interview>
             </div>
             <div>
@@ -414,6 +428,7 @@ function Main({ setComponent }: Props) {
             backgroundColor: '#f6f6f6',
             position: 'relative',
           }}
+          ref={refEl}
         >
           <div>
             <EnglishSubTitle>LOCATION</EnglishSubTitle>
@@ -469,7 +484,7 @@ function Main({ setComponent }: Props) {
             </Li>
             <Li>- &nbsp;도보 5분 거리</Li>
           </NaviWrapper>
-          <NaviWrapper style={{ borderBottom: 'none' }}>
+          <NaviWrapper>
             <NaviTitle>대중교통 버스 안내</NaviTitle>
             <Li>
               <Marker>𒊹</Marker> 뚝섬 서울숲 정류장
@@ -490,19 +505,56 @@ function Main({ setComponent }: Props) {
           </NaviWrapper>
           <NaviWrapper
             style={{
-              margin: '4px 0 0 0',
+              margin: '40px 0 0 0',
               border: '4px double lightgray',
               alignItems: 'center',
               backgroundColor: 'rgba(255, 255, 255, 0)',
-              padding: '46px 0',
+              padding: '30px 0 56px',
             }}
           >
+            <Flower
+              style={{
+                backgroundImage: `url(${SunFlower2})`,
+                marginBottom: '18px',
+              }}
+            />
             <NaviTitle>전세버스 안내</NaviTitle>
-            <Li style={{ textAlign: 'center' }}>
-              귀한 발걸음을 해주시는 하객분들의 편의를 위해 <br />
+            <Li style={{ textAlign: 'center', marginTop: '12px' }}>
+              귀한 발걸음을 해주시는 <br />
+              지방 하객분들의 편의를 위해 <br />
               예산↔서울 간 전세버스를 준비하였습니다. <br />
-              출발시간과 탑승 장소는 업데이트 예정입니다.
+              <i
+                className="fa fa-clock"
+                aria-hidden="true"
+                style={{
+                  marginTop: '38px',
+                  marginRight: '8px',
+                  fontSize: '15.5px',
+                  color: '#444444',
+                }}
+              ></i>
+              출발 시간 : 2025. 02. 09. (일) 오전 10시
+              <br />
+              <i
+                className="fa fa-map-marker-alt"
+                aria-hidden="true"
+                style={{
+                  marginRight: '8px',
+                  fontSize: '15.5px',
+                  color: '#444444',
+                }}
+              ></i>
+              탑승 장소 : 충남 예산군 예산읍 산성리 678
+              <br />
+              하나로마트 예산농협 본점 대로 앞
             </Li>
+            <AButton
+              target="_blank"
+              href={BUS_MAP_URL}
+              style={{ position: 'relative', top: '30px' }}
+            >
+              탑승 위치 보기
+            </AButton>
           </NaviWrapper>
         </DescriptionWrapper>
         <DescriptionWrapper>
@@ -591,14 +643,111 @@ function Main({ setComponent }: Props) {
             </AccountWrapper>
           </div>
         </DescriptionWrapper>
+        <LastImgWrapper style={{ backgroundImage: `url(${image45})` }}>
+          <span style={{ color: 'white', zIndex: 200 }}>
+            저희의 새로운 시작을 축하해주시는
+            <br />
+            모든 분들께 감사드립니다.
+          </span>
+          <Dimmed></Dimmed>
+        </LastImgWrapper>
       </ContentWrapper>
-      {/* <FloatingBar isVisible={isVisible} /> */}
+
+      {isVisible && (
+        <BottomBar>
+          <button
+            style={{ width: '50%' }}
+            onClick={() =>
+              setComponent(<AttendModal setComponent={setComponent} />)
+            }
+          >
+            <i className="fa fa-calendar-check" aria-hidden="true"></i>
+            참석여부 전달하기
+          </button>
+          <button
+            style={{ width: '25%', content: '23423' }}
+            onClick={onClickLink}
+          >
+            {' '}
+            <i className="fa fa-link" aria-hidden="true"></i>
+            링크 복사
+          </button>
+          <button style={{ width: '25%' }}>
+            {' '}
+            <i className="fa fa-comment" aria-hidden="true"></i>
+            카톡 공유
+          </button>
+        </BottomBar>
+      )}
       {/* {툴팁 추가할까?하단에 좋아요 배;치하고 놓치지않게 } */}
     </Wrappper>
   );
 }
 
 export default Main;
+
+const BottomBar = styled.div`
+  position: fixed;
+  bottom: 0;
+  height: 55px;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  z-index: 400;
+
+  & > button {
+    color: #444444;
+    font-family: Pretendard;
+    white-space: nowrap;
+    font-size: 16px;
+
+    @media only screen and (max-width: 380px) {
+      margin-right: 7px;
+      font-size: 15px;
+    }
+  }
+
+  & > button > i {
+    margin-right: 8px;
+    font-size: 15px;
+    color: #444444;
+
+    @media only screen and (max-width: 380px) {
+      margin-right: 7px;
+      font-size: 14px;
+    }
+  }
+`;
+
+const Dimmed = styled.div`
+  background-color: rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+`;
+
+const LastImgWrapper = styled.div`
+  width: 100vw;
+  max-width: 600px;
+  height: calc(min(100vw, 600px) * 0.6667);
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.8;
+
+  @media only screen and (max-width: 380px) {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+`;
 
 const InterviewWrapper = styled.div`
   width: 100%;
@@ -658,7 +807,8 @@ const TitleImageTitle = styled.div`
 const Wrappper = styled.div`
   background-color: #e4e4e4;
   width: 100vw;
-  padding-bottom: 300px;
+  position: relative;
+  padding-bottom: 55px;
 `;
 
 const ContentWrapper = styled.div`
@@ -863,6 +1013,28 @@ const Button = styled.button`
   border-radius: 10px;
   cursor: pointer;
   margin: 10px 0px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  @media only screen and (max-width: 360px) {
+    font-size: 16px;
+  }
+`;
+
+const AButton = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pretendard';
+  background-color: rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.5px;
+  width: min(300px, 85%);
+  height: 60px;
+  border: 1px solid #afafaf;
+  font-size: 17.5px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0px;
+  text-decoration: none;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
   @media only screen and (max-width: 360px) {
