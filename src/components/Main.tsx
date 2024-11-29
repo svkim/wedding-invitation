@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import CalendarPic from '../../public/images/calendar.png';
+import CalendarPic from '../../public/images/calendar3.png';
 import CalendarBackground from '../../public/images/calendarBackground.jpg';
+import Fireworks from 'react-canvas-confetti/dist/presets/fireworks';
 
 // import FloatingBar from './../components/FloatingBar';
 import { useEffect, useRef, useState, lazy } from 'react';
@@ -160,7 +161,6 @@ function Main({ setComponent }: Props) {
             speed={[0.2, 1]}
             style={{ opacity: 0.35 }}
           />
-
           {/* <div
             style={{
               backgroundImage: `url(${SunFlower3})`,
@@ -169,7 +169,6 @@ function Main({ setComponent }: Props) {
               backgroundSize: 'contain',
             }}
           /> */}
-
           <div>
             <EnglishSubTitle>INVITATION</EnglishSubTitle>
             {dear ? (
@@ -186,7 +185,6 @@ function Main({ setComponent }: Props) {
               <Title>소중한 분들을 초대합니다</Title>
             )}
           </div>
-
           <Description>
             계절이 6번 돌아오는 동안
             <br />
@@ -196,7 +194,6 @@ function Main({ setComponent }: Props) {
             귀한 걸음 하시어 따스하게 격려해 주신다면 <br /> 평생의 응원으로
             여기며 살아가겠습니다.
           </Description>
-
           <HR />
           <Description>
             <Parent>
@@ -293,157 +290,28 @@ function Main({ setComponent }: Props) {
         </DescriptionWrapper>
         <DescriptionWrapper>
           <EnglishSubTitle>GROOM & BRIDE</EnglishSubTitle>
-          <Title>신랑 신부는요,</Title>
-          <div
-            style={{
-              paddingTop: 40,
-              display: 'flex',
-              gap: '20px',
-              width: '100%',
-              justifyContent: 'center',
-            }}
-          >
-            <div
-              style={{
-                position: 'relative',
-                width: 'min(43vw, 260px)',
-                height: 'min(43vw, 260px)',
-                aspectRatio: '1/1',
-                pointerEvents: 'auto',
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                setIsBoy(!isboy);
-              }}
-            >
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  borderRadius: '20%',
-                  width: '100%',
-                  height: '100%',
-                  cursor: 'pointer',
-                  transition: 'opacity 2s',
-                  opacity: isboy ? 0 : 1,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(${BoyPic})`,
-                }}
-              />
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  borderRadius: '20%',
+          <Title>신랑 & 신부를 소개합니다</Title>
 
-                  width: '100%',
-                  height: '100%',
-                  cursor: 'pointer',
-                  opacity: isboy ? 1 : 0,
-                  transition: 'opacity 2s',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'top',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(${ManPic})`,
-                }}
-              />
-            </div>
-            <div
-              style={{
-                position: 'relative',
-                width: 'min(43vw, 260px)',
-                height: 'min(43vw, 260px)',
-                aspectRatio: '1/1',
-                pointerEvents: 'auto',
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                setIsGirl(!isGirl);
-              }}
-            >
-              {/* <span
-                style={{
-                  position: 'absolute',
-                  bottom: -15,
-                  right: -5,
-                  fontSize: '11px',
-                  fontFamily: 'Pretendard',
-                  backgroundImage: `url(${Cursor})`,
-                  width: 'min(11vw, 42px)',
-                  height: 'min(11vw, 42px)',
-                  backgroundSize: 'contain',
-                  backgroundRepeat: 'no-repeat',
-                  zIndex: 100,
-                  transform: 'rotate(25deg)',
-                }}
-              ></span>
-              <span
-                style={{
-                  position: 'absolute',
-                  bottom: -29,
-                  right: -12,
-                  fontSize: 'min(10.5px, 2.7vw)',
-                  fontFamily: 'Pretendard',
-                  zIndex: 100,
-                  transform: 'rotate(-25deg)',
-                }}
-              >
-                Click!
-              </span> */}
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  borderRadius: '20%',
-                  width: '100%',
-                  height: '100%',
-                  cursor: 'pointer',
-                  opacity: isGirl ? 0 : 1,
-                  transition: 'opacity 3s',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(${GirlPic})`,
-                }}
-              />
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  borderRadius: '20%',
-                  width: '100%',
-                  height: '100%',
-                  cursor: 'pointer',
-                  opacity: isGirl ? 1 : 0,
-                  transition: 'opacity 3s',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'bottom',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(${WomanPic})`,
-                }}
-              />
-            </div>
-          </div>
-          <div
-            style={{
-              paddingTop: 35,
-              display: 'flex',
-              gap: 'min(25px, 5%)',
-              width: '100%',
-              justifyContent: 'center',
-            }}
-          >
-            <div
-              style={{
-                position: 'relative',
-                width: 'calc(100vw - 60px)',
-              }}
-            >
+          <InterviewWrapper>
+            <div>
+              <InterviewImageWrapper>
+                <InterviewImage
+                  style={{
+                    opacity: isboy ? 0 : 1,
+                    backgroundImage: `url(${BoyPic})`,
+                  }}
+                />
+                <InterviewImage
+                  style={{
+                    opacity: isboy ? 1 : 0,
+                    backgroundImage: `url(${ManPic})`,
+                  }}
+                />
+              </InterviewImageWrapper>
               <p
                 style={{
                   textAlign: 'center',
-                  marginBottom: '14px',
+                  margin: '24px 0 18px',
                   fontSize: '20px',
                 }}
               >
@@ -458,36 +326,40 @@ function Main({ setComponent }: Props) {
                 </span>{' '}
                 김태현
               </p>
-              {/* <IntroduceWrapper>
-                <span>1994년생, 서울사람</span>
-                <span>다정한 사랑꾼 ESTJ</span>
-                <span>#운동광 #닭강정</span>
-              </IntroduceWrapper> */}
-              {/* <p
-                style={{
-                  fontSize: 13,
-                  lineHeight: 1.8,
-                  textAlign: 'center',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                노는걸 좋아하고 장난꾸러기였던
-                <br />
-                신랑은 자상하고 신중한 어른으로 자라 <br />
-                예쁘고 사려깊은 신부의 모습이 <br />
-                마음에 쏙 들었다고 합니다.
-              </p> */}
+              <Interview>
+                교내 영어회화 스터디에서 고양이 같은 여성분을 만났습니다.
+                처음에는 말도 별로 없었고 철벽을 치는 고양이 같았지만, 막상 같이
+                공부하면서 취미나 여행, 게임 같이 본인에게 관심있는 이야기를 할
+                때면 아주 귀여운 말티즈가 되어 재잘재잘 말하는 것을 보아하니
+                개냥이였던 것이 틀림없습니다. 제가 회사를 다니면서 진로나 업무에
+                대해 현타를 느끼거나 수험생활로 힘들어할 때면, 쪼르르 옆에 와서
+                맛있는 음식을 해주기도 했고, 어느 날은 갑자기 짜잔하면서 콘서트
+                티켓이나 비행기표를 보여주면서 같이 스트레스 풀러 다녀오자고
+                저를 놀래켜주기도 했었습니다. 이렇게 이쁘고 귀여운 여자친구를
+                데리고 이제는 같은 진로를 통해 같은 미래를 바라보며 살아보고자
+                합니다. 여태껏 서로 달랐던 부분들을 잘 맞춰왔듯이, 앞으로도 많은
+                대화를 통해 서로 배려하면서 이쁘게 잘 살아가겠습니다.
+              </Interview>
             </div>
-            <div
-              style={{
-                position: 'relative',
-                width: 'calc(100vw - 60px)',
-              }}
-            >
+            <div>
+              <InterviewImageWrapper>
+                <InterviewImage
+                  style={{
+                    opacity: isGirl ? 0 : 1,
+                    backgroundImage: `url(${GirlPic})`,
+                  }}
+                />
+                <InterviewImage
+                  style={{
+                    opacity: isGirl ? 1 : 0,
+                    backgroundImage: `url(${WomanPic})`,
+                  }}
+                />
+              </InterviewImageWrapper>
               <p
                 style={{
                   textAlign: 'center',
-                  marginBottom: '14px',
+                  margin: '24px 0 18px',
                   fontSize: '20px',
                 }}
               >
@@ -502,28 +374,17 @@ function Main({ setComponent }: Props) {
                 </span>{' '}
                 이상경
               </p>
-              {/* <IntroduceWrapper>
-                <span>1995년생, 예산사람</span>
-                <span>다정한 사랑꾼 INFJ</span>
-                <span>#게임광 #닭강정</span>
-              </IntroduceWrapper> */}
-              {/* <p
-                style={{
-                  fontSize: 13,
-                  lineHeight: 1.8,
-                  textAlign: 'center',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                큰 눈이 유달리 반짝였던 신부는
-                <br />
-                씩씩하고 야무진 어른이 되어 <br />
-                다정하면서도 배울점이 많은
-                <br />
-                신랑의 모습에 반했다고 합니다.
-              </p> */}
+              <Interview>
+                대학 스터디에서 다부지고 귀여운 남자를 만났습니다. 스터디
+                초반부터 초콜릿과 쿠키를 챙겨주고, 시험 끝나면 맛있는걸 먹으러
+                가자는 모습이 귀엽고 재밌어서 사귀게 되었습니다. "보고 싶다"는
+                한마디에 왕복 3시간의 거리를 마다하지 않고 달려오고, 잊을만 하면
+                꽃을 사오는 그의 따뜻한 마음에 점점 더 확신이 생겼습니다. 취업과
+                퇴사, 그리고 대학 재입학까지, 삶의 굴곡을 함께하며 쌓아온 신뢰와
+                사랑을 바탕으로 서로 아끼며 행복하게 살아가겠습니다.
+              </Interview>
             </div>
-          </div>
+          </InterviewWrapper>
           <LikeButton />
         </DescriptionWrapper>
 
@@ -647,7 +508,6 @@ function Main({ setComponent }: Props) {
         <DescriptionWrapper>
           <EnglishSubTitle>INFORMATION</EnglishSubTitle>
           <Title style={{ marginBottom: '35px' }}>안내 말씀드립니다</Title>
-
           <Slider />
         </DescriptionWrapper>
 
@@ -739,6 +599,44 @@ function Main({ setComponent }: Props) {
 }
 
 export default Main;
+
+const InterviewWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 36px;
+  flex-direction: column;
+  margin: 36px 0;
+`;
+
+const Interview = styled.div`
+  width: 100%;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.8;
+  word-break: break-all;
+
+  @media only screen and (max-width: 390px) {
+    font-size: 14.6px;
+  }
+`;
+
+const InterviewImageWrapper = styled.div`
+  position: relative;
+  width: min(calc(100vw - 58px), 510px);
+  height: min(calc(100vw - 58px), 510px);
+  margin: 0 auto;
+`;
+
+const InterviewImage = styled.div`
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 2s;
+`;
 
 const TitleImageTitle = styled.div`
   font-family: Cafe24Behappy, MaruBuriBold;
