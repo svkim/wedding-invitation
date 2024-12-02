@@ -47,6 +47,15 @@ function Main({ setComponent }: Props) {
   const [isVisible, setIsVisible] = useState(false);
   const refEl = useRef(null);
 
+  const childRef = useRef<{ triggerChildEvent: () => void }>(null);
+
+  const triggerChildEventFromParent = () => {
+    // 부모가 자식의 메서드를 호출
+    if (childRef.current) {
+      childRef.current.triggerChildEvent();
+    }
+  };
+
   const [searchParams] = useSearchParams();
   const dear = searchParams.get('dear'); // 받는사람 성명
 
@@ -402,7 +411,7 @@ function Main({ setComponent }: Props) {
               </Interview>
             </div>
           </InterviewWrapper>
-          <LikeButton />
+          <LikeButton ref={childRef} />
         </DescriptionWrapper>
 
         <DescriptionWrapper
@@ -675,10 +684,18 @@ function Main({ setComponent }: Props) {
             <i className="fa fa-link" aria-hidden="true"></i>
             링크 복사
           </button>
-          <button style={{ width: '25%' }}>
+          {/* <button style={{ width: '25%' }}>
             {' '}
             <i className="fa fa-comment" aria-hidden="true"></i>
             카톡 공유
+          </button> */}
+          <button
+            style={{ width: '25%' }}
+            onClick={triggerChildEventFromParent}
+          >
+            {' '}
+            <i className="fa fa-heart" aria-hidden="true"></i>
+            좋아요
           </button>
         </BottomBar>
       )}

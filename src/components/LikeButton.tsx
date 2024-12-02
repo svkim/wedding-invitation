@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 import { child, get, increment, ref, update } from 'firebase/database';
 import { dbref, realtimeDb } from '../firebase.ts';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from 'react';
 import { jsConfetti } from '../App.tsx';
 import Fireworks from 'react-canvas-confetti/dist/presets/fireworks/index';
+import React from 'react';
 
 // 쓰로틀링 함수
 function throttle<T extends (...args: any[]) => any>(
@@ -59,11 +66,21 @@ function checkOneInThousand() {
   }
 }
 
-const LikeButton = () => {
+// 자식 컴포넌트 (타입스크립트)
+interface ChildProps {
+  // 자식에서 부모에게 호출될 메서드를 위한 타입
+}
+
+const LikeButton = React.forwardRef<{}, ChildProps>((props, childRef) => {
   const [showFireworks, setShowFireworks] = useState(false);
   const [count, setCount] = useState(0);
   const [likes, setLikes] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // 부모가 호출할 수 있도록 메서드를 노출
+  useImperativeHandle(childRef, () => ({
+    triggerChildEvent: onClickLike,
+  }));
 
   useEffect(() => {
     fetchLikes();
@@ -179,7 +196,7 @@ const LikeButton = () => {
       </div>
     </>
   );
-};
+});
 
 export default LikeButton;
 
