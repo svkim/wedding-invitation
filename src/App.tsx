@@ -8,10 +8,6 @@ import JSConfetti from 'js-confetti';
 
 export const jsConfetti = new JSConfetti();
 
-interface Props {
-  setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
-}
-
 function App() {
   const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
   const [component, setComponent] = useState<React.ReactNode>(null);
@@ -20,18 +16,9 @@ function App() {
     <NavermapsProvider ncpClientId={ncpClientId}>
       <BrowserRouter>
         <Modal component={component} setComponent={setComponent} />
-        <Layout setComponent={setComponent} />
+        <Main setComponent={setComponent} />
       </BrowserRouter>
     </NavermapsProvider>
-  );
-}
-
-function Layout({ setComponent }: Props) {
-  return (
-    <Routes>
-      <Route path="/" element={<Main setComponent={setComponent} />} />
-      <Route path="*" element={<Navigate to="/" />} />
-    </Routes>
   );
 }
 
