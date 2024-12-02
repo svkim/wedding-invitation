@@ -682,7 +682,6 @@ function Main({ setComponent }: Props) {
           </button>
         </BottomBar>
       )}
-      {/* {툴팁 추가할까?하단에 좋아요 배;치하고 놓치지않게 } */}
     </Wrappper>
   );
 }
@@ -704,6 +703,7 @@ const BottomBar = styled.div`
     font-family: Pretendard;
     white-space: nowrap;
     font-size: 16px;
+    z-index: 450;
 
     @media only screen and (max-width: 380px) {
       margin-right: 7px;
@@ -715,6 +715,7 @@ const BottomBar = styled.div`
     margin-right: 8px;
     font-size: 15px;
     color: #444444;
+    z-index: 450;
 
     @media only screen and (max-width: 380px) {
       margin-right: 7px;
