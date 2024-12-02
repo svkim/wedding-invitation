@@ -29,8 +29,8 @@ function App() {
 function Layout({ setComponent }: Props) {
   return (
     <Routes>
-      <Route path="/main" element={<Main setComponent={setComponent} />} />
-      <Route path="*" element={<Navigate to="/main" />} />
+      <Route path="/" element={<Main setComponent={setComponent} />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }
