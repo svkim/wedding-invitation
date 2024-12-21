@@ -120,7 +120,7 @@ function Main({ setComponent }: Props) {
 
   const onClickLink = async () => {
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      await navigator.clipboard.writeText('https://always-summer.vercel.app');
       alert(`청첩장 링크가 복사되었습니다.`);
     } catch (err) {
       console.error(err);

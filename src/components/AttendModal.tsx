@@ -110,7 +110,10 @@ const AttendModal = ({ setComponent }: Props) => {
               onChange={isAvailableHandler}
               checked={isAvailable}
             />
-            <Label htmlFor="radio-1">참석 가능</Label>
+            <Label htmlFor="radio-1">
+              <i className="fa fa-check" style={{ marginRight: '4px' }} />
+              참석 가능
+            </Label>
           </Button>
           <Button>
             <Input
@@ -121,7 +124,20 @@ const AttendModal = ({ setComponent }: Props) => {
               onChange={isAvailableHandler}
               checked={!isAvailable}
             />
-            <Label htmlFor="radio-2">참석 불가</Label>
+            <Label htmlFor="radio-2">
+              <span
+                className="no"
+                style={{
+                  fontFamily: 'Pretendard',
+                  fontWeight: 700,
+                  fontSize: '17px',
+                  marginRight: '4px',
+                }}
+              >
+                X
+              </span>
+              참석 불가
+            </Label>
           </Button>
         </ButtonWrapper>
       </Wrapper>
@@ -482,6 +498,16 @@ const Input = styled.input`
   }
 
   /* Checked */
+  &:checked + label > i.fa-check {
+    color: #91b193;
+  }
+
+  /* Checked */
+  &:checked + label > .no {
+    color: #be7e79;
+  }
+
+  /* Checked */
   &.isGroom:checked + label {
     background-color: #65778f;
     color: #fff;
@@ -520,6 +546,11 @@ const Label = styled.label`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  & > i,
+  span {
+    color: #909090;
+  }
 
   @media only screen and (max-width: 445px) {
     height: 49px;
