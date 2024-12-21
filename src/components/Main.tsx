@@ -531,10 +531,22 @@ function Main({ setComponent }: Props) {
               }}
             />
             <NaviTitle>전세버스 안내</NaviTitle>
-            <Li style={{ textAlign: 'center', marginTop: '12px' }}>
+            <Li
+              style={{
+                textAlign: 'center',
+                marginTop: '12px',
+              }}
+            >
               귀한 발걸음을 해주시는 <br />
               지방 하객분들의 편의를 위해 <br />
-              예산↔서울 간 전세버스를 준비하였습니다. <br />
+              예산↔서울 간 전세버스를 준비하였습니다.
+            </Li>
+            <Li
+              style={{
+                textAlign: 'left',
+                lineHeight: 1.7,
+              }}
+            >
               <i
                 className="fa fa-clock"
                 aria-hidden="true"
@@ -551,15 +563,29 @@ function Main({ setComponent }: Props) {
                 className="fa fa-map-marker-alt"
                 aria-hidden="true"
                 style={{
+                  marginTop: '16px',
                   marginRight: '8px',
                   fontSize: '15.5px',
                   color: '#444444',
                 }}
               ></i>
-              탑승 장소 : 충남 예산군 예산읍 산성리 652
+              탑승 장소 : 충남 예산군 예산읍 산성리 653
               <br />
-              하나로마트 예산농협 본점 대로 앞
+              하나로마트 예산농협 본점, 대로 앞 <br />
+              <i
+                className="fa fa-phone"
+                aria-hidden="true"
+                style={{
+                  marginTop: '16px',
+                  marginRight: '8px',
+                  fontSize: '15.5px',
+                  color: '#444444',
+                  transform: 'rotate(98deg)',
+                }}
+              ></i>
+              관련 문의 : 신부측 연락처로 부탁드립니다.
             </Li>
+
             {/* <img
               src={BusMap}
               style={{
@@ -608,7 +634,9 @@ function Main({ setComponent }: Props) {
           <EnglishSubTitle style={{ marginTop: '68px' }}>
             RECEPTION INFO
           </EnglishSubTitle>
-          <Title style={{ margin: '0 0 24px' }}>지방 피로연 안내</Title>
+          <Title style={{ margin: '0 0 24px' }}>
+            지방 피로연 (앞잔치) 안내
+          </Title>
           <DescriptionItem>
             <HR style={{ width: '100%', marginBottom: '6px' }} />
             <img
