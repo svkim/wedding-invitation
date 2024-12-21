@@ -111,7 +111,8 @@ const LikeButton = React.forwardRef<{}, ChildProps>((props, childRef) => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           const { likes } = snapshot.val();
-          setLikes(likes);
+          const _likes = Math.max(likes - 2100, 0);
+          setLikes(_likes);
         } else {
           console.log('No data available');
         }
@@ -150,62 +151,61 @@ const LikeButton = React.forwardRef<{}, ChildProps>((props, childRef) => {
   return (
     <>
       {showFireworks && <Fireworks autorun={{ speed: 1, duration: 5000 }} />}
-      <div style={{ marginTop: '28px' }}>
-        <Button
+      <div
+        style={{
+          marginTop: 18,
+          fontFamily: 'Pretendard',
+          color: '#e36f6f',
+          textAlign: 'center',
+          fontSize: '14.5px',
+        }}
+      >
+        좋아요 버튼을 눌러보세요:)
+        <button
           style={{
             cursor: 'pointer',
-            borderRadius: '45px',
-            padding: '5px 5px 5px 30px',
+            position: 'relative',
             display: 'flex',
+            justifyItems: 'center',
             alignItems: 'center',
-            border: '1px solid #e0e0e0',
+            borderRadius: '50%',
+            width: '80px',
+            height: '78px',
+            margin: '0 auto',
           }}
           disabled={showFireworks}
           onClick={onClickLike}
         >
-          <div
+          <span
             style={{
-              minWidth: '45px',
-              marginRight: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              color: '#555555',
+              position: 'absolute',
+              color: 'white',
+              fontSize: '17px',
+              zIndex: 10,
+              top: '50%',
+              left: '50%',
               fontFamily: 'Pretendard',
-              fontSize: '18px',
               fontWeight: 500,
+              transform: 'translate(-50%, -50%)',
             }}
           >
+            {' '}
             {showFireworks ? <>FEVER TIME!</> : <>{likes}</>}
-          </div>
-          <div
+          </span>
+          <i
+            className="fa fa-heart"
             style={{
-              borderRadius: '50%',
-              width: '50px',
-              height: '50px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
+              top: 0,
+              color: '#f48383',
+              fontSize: '81px',
+              position: 'absolute',
+              textShadow: 'rgba(0, 0, 0, 0.25) 4px 6px 10px',
             }}
-          >
-            <i
-              className="fa fa-heart"
-              style={{ color: '#f58a8a', fontSize: '28px' }}
-            ></i>
-          </div>
-        </Button>
+          ></i>
+        </button>
       </div>
     </>
   );
 });
 
 export default LikeButton;
-
-const Button = styled.button`
-  background-color: white;
-  box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.15);
-
-  &:active {
-    background-color: rgba(0, 0, 0, 0.01);
-    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.09) inset;
-  }
-`;

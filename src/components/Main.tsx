@@ -30,6 +30,7 @@ import Map from '../Map';
 import LikeButton from './LikeButton';
 import AttendModal from './AttendModal';
 import { INFORMATION } from '../value';
+import BusMap from '../../public/images/busMap.png';
 
 interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
@@ -556,17 +557,25 @@ function Main({ setComponent }: Props) {
                   color: '#444444',
                 }}
               ></i>
-              탑승 장소 : 충남 예산군 예산읍 산성리 678
+              탑승 장소 : 충남 예산군 예산읍 산성리 652
               <br />
               하나로마트 예산농협 본점 대로 앞
             </Li>
-            <AButton
+            {/* <img
+              src={BusMap}
+              style={{
+                width: '80%',
+                marginTop: '36px',
+                border: '1px solid lightgray',
+              }}
+            /> */}
+            {/* <AButton
               target="_blank"
               href={BUS_MAP_URL}
               style={{ position: 'relative', top: '30px' }}
             >
               탑승 위치 보기
-            </AButton>
+            </AButton> */}
           </NaviWrapper>
         </DescriptionWrapper>
         <DescriptionWrapper>
