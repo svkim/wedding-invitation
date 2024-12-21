@@ -23,7 +23,8 @@ import SunFlower from '../../public/images/sunflower1.png';
 import SunFlower2 from '../../public/images/sunflower2.png';
 import SunFlower3 from '../../public/images/sunflower3.png';
 import image45 from '../../public/images/image45.jpg';
-
+import Hall from '../../public/images/food2.jpg';
+import Hall2 from '../../public/images/hall2.jpg';
 import Cursor from '../../public/images/cursor.png';
 import PhoneModal from './PhoneModal';
 import Map from '../Map';
@@ -352,12 +353,10 @@ function Main({ setComponent }: Props) {
               <Interview>
                 교내 영어회화 스터디에서 고양이 같은 여성분을 만났습니다.
                 처음에는 말수가 적고 철벽을 치는 고양이 같았지만, 막상 같이
-                공부하면서 취미나 여행, 게임 이야기를 할 때면 아주 귀여운
-                말티즈가 되어 재잘재잘 말하는 것을 보니 개냥이였던 것이
-                틀림없습니다. 제가 회사생활이나 시험준비로 힘들어할 때면 쪼르르
-                옆에 와서 격려해주고, 어느 날은 짜잔하면서 콘서트 티켓이나
-                비행기표를 보여주면서 같이 스트레스 풀러 다녀오자고 저를
-                놀래켜주기도 했었습니다.{' '}
+                공부하면서 여행, 게임 이야기를 할 때면 귀여운 말티즈가 되어
+                재잘재잘 말하는 것을 보니 개냥이였던 것이 틀림없습니다. 제가
+                힘들어할 때면 쪼르르 옆에 와서 격려해주고, 어느 날은 짜잔하면서
+                콘서트나 비행기 티켓을 준비해서 저를 놀래켜주기도 했습니다.{' '}
                 <div style={{ height: '18.5px' }}></div>
                 이렇게 이쁘고 귀여운 여자친구를 데리고 이제는 같은 진로를 통해
                 같은 미래를 바라보며 살아보고자 합니다. 여태껏 서로 달랐던
@@ -401,10 +400,11 @@ function Main({ setComponent }: Props) {
               <Interview>
                 교내 영어회화 스터디에서 다부지고 귀여운 남자를 만났습니다.
                 무뚝뚝해보이던 첫인상과는 달리, 스터디 초반부터 초콜릿과 쿠키를
-                챙겨주고, 시험 끝나면 맛있는걸 먹으러 가자는 모습이 귀엽고
-                재밌어서 사귀게 되었습니다.
+                챙겨주고, 시험 끝나면 맛있는걸 먹으러 가자는 모습이 귀여웠던
+                기억이 납니다. 스터디가 끝난 이후로도 다정하고 우직한 그의
+                모습에 마음을 열고 사귀게 되었습니다.
                 <div style={{ height: '18.5px' }}></div>
-                "보고 싶다"는 한마디에 왕복 3시간의 거리를 마다하지 않고
+                "보고 싶다"는 한마디에 왕복 4시간의 거리를 마다하지 않고
                 달려오고, 잊을만 하면 꽃다발을 사서 안겨주는 그의 변치않는
                 사랑과 배려에 점점 더 확신이 생겼습니다. 취업과 퇴사, 그리고
                 대학 재입학까지, 삶의 굴곡을 함께하며 쌓아온 신뢰와 사랑을
@@ -579,9 +579,58 @@ function Main({ setComponent }: Props) {
           </NaviWrapper>
         </DescriptionWrapper>
         <DescriptionWrapper>
-          <EnglishSubTitle>INFORMATION</EnglishSubTitle>
-          <Title style={{ marginBottom: '35px' }}>안내 말씀드립니다</Title>
-          <Slider />
+          <EnglishSubTitle>WEDDING DINING INFO</EnglishSubTitle>
+          <Title style={{ margin: '0 0 24px' }}>예식 · 식사 안내</Title>
+
+          {/* <Slider /> */}
+          <DescriptionItem>
+            <HR style={{ width: '100%', marginBottom: '6px' }} />
+            <img
+              src={Hall}
+              loading="lazy"
+              style={{ marginBottom: '18px', width: '100%' }}
+            />
+            <DescriptionLi>
+              <DescriptionMarker>𒊹</DescriptionMarker>식사 장소는 예식홀과
+              동일한 층에 마련되어 있습니다.
+            </DescriptionLi>
+            <DescriptionLi>
+              <DescriptionMarker>𒊹</DescriptionMarker>예식 시작 30분 전부터
+              식사가 가능합니다.
+            </DescriptionLi>
+
+            <DescriptionLi>
+              <DescriptionMarker>𒊹</DescriptionMarker>
+              전체메뉴의 80% 이상이 즉석 메뉴로 구성된 뷔페로, 생맥주, 와인 등
+              주류도 무제한이니 편하게 즐겨주시면 감사하겠습니다.
+            </DescriptionLi>
+          </DescriptionItem>
+
+          <EnglishSubTitle style={{ marginTop: '68px' }}>
+            RECEPTION INFO
+          </EnglishSubTitle>
+          <Title style={{ margin: '0 0 24px' }}>지방 피로연 안내</Title>
+          <DescriptionItem>
+            <HR style={{ width: '100%', marginBottom: '6px' }} />
+            <img
+              src={Hall2}
+              loading="lazy"
+              style={{ marginBottom: '18px', width: '100%' }}
+            />
+            <DescriptionLi>
+              <DescriptionMarker>𒊹</DescriptionMarker>거리가 멀어 본식에
+              참석하지 못하시는 분들을 위해, 예식 4일전 작은 피로연 자리를
+              마련하였습니다.
+            </DescriptionLi>
+            <DescriptionLi>
+              <DescriptionMarker>𒊹</DescriptionMarker>
+              일시 : 25.02.05. 수요일 오후 5시
+            </DescriptionLi>
+            <DescriptionLi>
+              <DescriptionMarker>𒊹</DescriptionMarker>
+              장소 : 충청남도 예산군 더스타웨딩홀 피로연장
+            </DescriptionLi>
+          </DescriptionItem>
         </DescriptionWrapper>
 
         <DescriptionWrapper style={{ backgroundColor: '#f6f6f6' }}>
@@ -1308,4 +1357,41 @@ const MapIconItemDiv = styled.div`
 
 const MapIconImage = styled.img`
   border-radius: 4px;
+`;
+
+const DescriptionItem = styled.div`
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 6.5px;
+  font-size: 15px;
+  font-family: Pretendard;
+  line-height: 1.8;
+  word-break: keep-all;
+  word-wrap: break-word;
+  color: #555555;
+`;
+
+const DescriptionLi = styled.li`
+  list-style: none;
+  /* font-weight: 800; */
+  font-family: Pretendard;
+  font-size: 17px;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 16.6px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 16.2px;
+  }
+`;
+
+const DescriptionMarker = styled.span`
+  font-size: 10px;
+  color: #555555;
+  margin-right: 6px;
+  font-family: Pretendard;
+  position: relative;
+  bottom: 3px;
 `;

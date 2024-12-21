@@ -111,8 +111,7 @@ const LikeButton = React.forwardRef<{}, ChildProps>((props, childRef) => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           const { likes } = snapshot.val();
-          const _likes = Math.max(likes - 2100, 0);
-          setLikes(_likes);
+          setLikes(likes);
         } else {
           console.log('No data available');
         }
@@ -153,14 +152,16 @@ const LikeButton = React.forwardRef<{}, ChildProps>((props, childRef) => {
       {showFireworks && <Fireworks autorun={{ speed: 1, duration: 5000 }} />}
       <div
         style={{
-          marginTop: 18,
+          marginTop: 20,
           fontFamily: 'Pretendard',
           color: '#e36f6f',
           textAlign: 'center',
           fontSize: '14.5px',
         }}
       >
-        좋아요 버튼을 눌러보세요:)
+        재밌게 보셨다면,
+        <br />
+        좋아요 버튼을 눌러주세요:)
         <button
           style={{
             cursor: 'pointer',
