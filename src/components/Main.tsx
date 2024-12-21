@@ -41,7 +41,6 @@ const BUS_MAP_URL =
   'https://map.naver.com/p/directions/14119087.345187,4396486.7244838,%EC%B6%A9%EB%82%A8%20%EC%98%88%EC%82%B0%EA%B5%B0%20%EC%98%88%EC%82%B0%EC%9D%8D%20%EC%82%B0%EC%84%B1%EB%A6%AC%20678,,SIMPLE_POI/-/-/transit?c=18.57,0,0,0,dh';
 
 const PhotoGallery = lazy(() => import('./Gallery/PhotoGallery'));
-const Slider = lazy(() => import('./Slider'));
 
 function Main({ setComponent }: Props) {
   const [isboy, setIsBoy] = useState(true);
