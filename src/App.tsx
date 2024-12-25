@@ -5,6 +5,7 @@ import Modal from './components/Modal';
 import { useState } from 'react';
 import { NavermapsProvider } from 'react-naver-maps';
 import JSConfetti from 'js-confetti';
+import { Analytics } from '@vercel/analytics/react';
 
 export const jsConfetti = new JSConfetti();
 
@@ -17,6 +18,7 @@ function App() {
       <BrowserRouter>
         <Modal component={component} setComponent={setComponent} />
         <Main setComponent={setComponent} />
+        <Analytics />
       </BrowserRouter>
     </NavermapsProvider>
   );
