@@ -209,7 +209,7 @@ function Main({ setComponent }: Props) {
             )}
           </div>
           <Description>
-            계절이 6번 돌아오는 동안
+            같은 계절이 6번 돌아오는 동안
             <br />
             함께 행복했던 기억이 차곡차곡 쌓였습니다. <br />
             부부로서 하나의 길을 걷게 될
