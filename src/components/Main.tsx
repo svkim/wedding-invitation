@@ -610,6 +610,10 @@ function Main({ setComponent }: Props) {
               style={{ marginBottom: '18px', width: '100%' }}
             />
             <DescriptionLi>
+              <DescriptionMarker>𒊹</DescriptionMarker>예식장 내부에 ATM기가
+              없으니 참고 부탁드립니다.
+            </DescriptionLi>
+            <DescriptionLi>
               <DescriptionMarker>𒊹</DescriptionMarker>식사 장소는 예식홀과
               동일한 층에 마련되어 있습니다.
             </DescriptionLi>
