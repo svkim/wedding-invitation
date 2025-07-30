@@ -155,17 +155,17 @@ function Main({ setComponent }: Props) {
         </TitleImageTitle>
         <DescriptionWrapper style={{ padding: '32px 20px' }}>
           <TopName>
-            김태현
+            김성식
             <Flower
               style={{
                 backgroundImage: `url(${SunFlower2})`,
               }}
             />
-            이상경
+            허지승
           </TopName>
           <TitleDescription>
-            2025. 02. 09. 일요일 PM 2:00
-            <br /> 서울숲 갤러리아포레 G층 보테가마지오
+            2025. 11. 01. 토요일 PM 12:00
+            <br /> 서울 KU 웨딩컨벤션
           </TitleDescription>
         </DescriptionWrapper>
         <DescriptionWrapper
@@ -347,7 +347,7 @@ function Main({ setComponent }: Props) {
                 >
                   신랑
                 </span>{' '}
-                김태현
+                김성식
               </p>
               <Interview>
                 교내 영어회화 스터디에서 고양이 같은 여성분을 만났습니다.
@@ -394,7 +394,7 @@ function Main({ setComponent }: Props) {
                 >
                   신부
                 </span>{' '}
-                이상경
+                허지승
               </p>
               <Interview>
                 교내 영어회화 스터디에서 다부지고 귀여운 남자를 만났습니다.
