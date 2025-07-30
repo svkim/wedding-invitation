@@ -165,7 +165,7 @@ function Main({ setComponent }: Props) {
           </TopName>
           <TitleDescription>
             2025. 11. 01. 토요일 PM 12:00
-            <br /> 서울 KU 웨딩컨벤션
+            <br /> 서울 KU컨벤션웨딩홀
           </TitleDescription>
         </DescriptionWrapper>
         <DescriptionWrapper
@@ -447,10 +447,10 @@ function Main({ setComponent }: Props) {
             <Title>오시는 길</Title>
           </div>
           <Description style={{ margin: '50px 0 24px' }}>
-            <Location>보테가마지오</Location>
+            <Location>KU컨벤션웨딩홀</Location>
             <br />
             <LocationDetail>
-              서울 성동구 서울숲2길 32-14 갤러리아포레 G층
+              서울 광진구 아차산로36길 5
             </LocationDetail>
           </Description>
           <Map />
@@ -459,11 +459,11 @@ function Main({ setComponent }: Props) {
               <MapIconImage src={TMavIcon} width={24} height={24} />
               티맵
             </MapIconItem> */}
-            <MapIconItem href="https://kko.kakao.com/q2SI2nKc7p">
+            <MapIconItem href="https://kko.kakao.com/9iRbhRd6g0">
               <MapIconImage src={KakaoMapIcon} width={24} height={24} />
               카카오맵
             </MapIconItem>
-            <MapIconItem href="https://m.map.naver.com/search2/search.naver?query=%EB%B3%B4%ED%85%8C%EA%B0%80%EB%A7%88%EC%A7%80%EC%98%A4#/map/1/31494641">
+            <MapIconItem href="https://naver.me/5Z0vOB1B">
               <MapIconImage src={NaverMapIcon} width={24} height={24} />
               네이버지도
             </MapIconItem>
@@ -471,13 +471,12 @@ function Main({ setComponent }: Props) {
           <NaviWrapper style={{ paddingTop: '30px' }}>
             <NaviTitle>자가용 & 주차 안내</NaviTitle>
             <Li style={{ marginBottom: '4px' }}>
-              <Marker>𒊹</Marker>내비게이션으로 "보테가마지오" 검색해주세요.
+              <Marker>𒊹</Marker>내비게이션으로 "KU컨벤션웨딩홀" 검색해주세요.
             </Li>
             <Li>
               <Marker>𒊹</Marker>무료 주차는 2시간 가능합니다.
             </Li>
-            <Li> - &nbsp;건물 내 B3-B7층, 무료주차 2시간 가능</Li>
-            <Li> - &nbsp;안내데스크에서 주차 등록 必</Li>
+            <Li> - &nbsp;건국대학교 주차장, 무료주차 2시간 가능</Li>
           </NaviWrapper>
           <NaviWrapper>
             <NaviTitle>지하철 안내</NaviTitle>
