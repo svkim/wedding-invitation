@@ -10,11 +10,11 @@ import { Analytics } from '@vercel/analytics/react';
 export const jsConfetti = new JSConfetti();
 
 function App() {
-  const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
+  const ncpKeyId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
   const [component, setComponent] = useState<React.ReactNode>(null);
 
   return (
-    <NavermapsProvider ncpClientId={ncpClientId}>
+    <NavermapsProvider ncpKeyId={ncpKeyId}>
       <BrowserRouter>
         <Modal component={component} setComponent={setComponent} />
         <Main setComponent={setComponent} />
