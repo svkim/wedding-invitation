@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CalendarPic from '../../public/images/calendar3.png';
+import CalendarPic from '../../public/images/calendar4.jpg';
 import CalendarBackground from '../../public/images/calendarBackground.jpg';
 import Fireworks from 'react-canvas-confetti/dist/presets/fireworks';
 
@@ -426,7 +426,7 @@ function Main({ setComponent }: Props) {
           <img
             src={CalendarPic}
             alt="캘린더"
-            style={{ width: '91%', maxWidth: '385px', marginTop: '35px' }}
+            style={{ maxWidth: '385px', marginTop: '35px' }}
           />
         </DescriptionWrapper>
         <DescriptionWrapper>
