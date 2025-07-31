@@ -594,12 +594,12 @@ function Main({ setComponent }: Props) {
               style={{ marginBottom: '18px', width: '100%' }}
             />
             <DescriptionLi>
-              <DescriptionMarker>𒊹</DescriptionMarker>예식장 내부에 ATM기가
-              없으니 참고 부탁드립니다.
+              <DescriptionMarker>𒊹</DescriptionMarker>예식장 1층에 ATM기가
+              있으니 참고 부탁드립니다.
             </DescriptionLi>
             <DescriptionLi>
-              <DescriptionMarker>𒊹</DescriptionMarker>식사 장소는 예식홀과
-              동일한 층에 마련되어 있습니다.
+              <DescriptionMarker>𒊹</DescriptionMarker>식사 장소는 지하 1층
+              에 마련되어 있습니다.
             </DescriptionLi>
             <DescriptionLi>
               <DescriptionMarker>𒊹</DescriptionMarker>예식 시작 30분 전부터
@@ -616,7 +616,7 @@ function Main({ setComponent }: Props) {
           <EnglishSubTitle style={{ marginTop: '68px' }}>
             RECEPTION INFO
           </EnglishSubTitle>
-          <Title style={{ margin: '0 0 24px' }}>
+          {/* <Title style={{ margin: '0 0 24px' }}>
             지방 피로연 (앞잔치) 안내
           </Title>
           <DescriptionItem>
@@ -639,7 +639,7 @@ function Main({ setComponent }: Props) {
               <DescriptionMarker>𒊹</DescriptionMarker>
               장소 : 충청남도 예산군 더스타웨딩홀 피로연장
             </DescriptionLi>
-          </DescriptionItem>
+          </DescriptionItem> */}
         </DescriptionWrapper>
 
         <DescriptionWrapper style={{ backgroundColor: '#f6f6f6' }}>

@@ -32,17 +32,17 @@ export const INFORMATION = {
     },
     {
       title: '혼주',
-      name: 'XXX',
+      name: '김희연',
       phoneNumber: '01000000000',
       bank: '농협은행',
       accountNumber: '01000000000',
     },
-    {
-      title: '혼주',
-      name: 'XXX',
-      phoneNumber: '01000000000',
-      bank: '농협은행',
-      accountNumber: '01000000000',
-    },
+    // {
+    //   title: '혼주',
+    //   name: 'XXX',
+    //   phoneNumber: '01000000000',
+    //   bank: '농협은행',
+    //   accountNumber: '01000000000',
+    // },
   ],
 };
