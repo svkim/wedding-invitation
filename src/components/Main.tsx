@@ -209,7 +209,7 @@ function Main({ setComponent }: Props) {
             )}
           </div>
           <Description>
-            같은 계절이 6번 돌아오는 동안
+            같은 계절이 5번 돌아오는 동안
             <br />
             함께 행복했던 기억이 차곡차곡 쌓였습니다. <br />
             부부로서 하나의 길을 걷게 될
@@ -220,7 +220,7 @@ function Main({ setComponent }: Props) {
           <HR />
           <Description>
             <Parent>
-              김은수 &nbsp;•&nbsp; 곽숙견
+              김성환 &nbsp;•&nbsp; 김정선
               &nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;아들&nbsp;
             </Parent>
             <span
@@ -233,7 +233,7 @@ function Main({ setComponent }: Props) {
                 bottom: '1px',
               }}
             >
-              태현
+              성식
             </span>
             <br />
             <Parent
@@ -242,8 +242,7 @@ function Main({ setComponent }: Props) {
                 position: 'relative',
               }}
             >
-              이혁선 &nbsp;•&nbsp; 이화순
-              &nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;
+              김희연 &nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;
             </Parent>
             <span
               style={{
@@ -255,7 +254,7 @@ function Main({ setComponent }: Props) {
                 bottom: '1px',
               }}
             >
-              상경
+              지승
             </span>
           </Description>
           <HR />
@@ -350,17 +349,14 @@ function Main({ setComponent }: Props) {
                 김성식
               </p>
               <Interview>
-                교내 영어회화 스터디에서 고양이 같은 여성분을 만났습니다.
-                처음에는 말수가 적고 철벽을 치는 고양이 같았지만, 막상 같이
-                공부하면서 여행, 게임 이야기를 할 때면 귀여운 말티즈가 되어
-                재잘재잘 말하는 것을 보니 개냥이였던 것이 틀림없습니다. 제가
-                힘들어할 때면 쪼르르 옆에 와서 격려해주고, 어느 날은 짜잔하면서
-                콘서트나 비행기 티켓을 준비해서 저를 놀래켜주기도 했습니다.{' '}
+                2020년 겨울,
+                수줍게 마스크를 내리던 순간 첫눈에 반했습니다.
+                내 앞에서만 개구쟁이가 되는
+                웃는 얼굴이 참 예쁜 사람과
+                함께 웃고 부딪히며 성장해왔습니다.
                 <div style={{ height: '18.5px' }}></div>
-                이렇게 이쁘고 귀여운 여자친구를 데리고 이제는 같은 진로를 통해
-                같은 미래를 바라보며 살아보고자 합니다. 여태껏 서로 달랐던
-                부분들을 잘 맞춰왔듯이, 앞으로도 많은 대화를 통해 서로
-                배려하면서 예쁘게 잘 살아가겠습니다.
+                그 시간들이 쌓여 서로의 가장 든든한 편이 되어
+                함께 행복하게 살아가겠습니다.
               </Interview>
             </div>
             <div>
@@ -397,17 +393,14 @@ function Main({ setComponent }: Props) {
                 허지승
               </p>
               <Interview>
-                교내 영어회화 스터디에서 다부지고 귀여운 남자를 만났습니다.
-                무뚝뚝해보이던 첫인상과는 달리, 스터디 초반부터 초콜릿과 쿠키를
-                챙겨주고, 시험 끝나면 맛있는걸 먹으러 가자는 모습이 귀여웠던
-                기억이 납니다. 스터디가 끝난 이후로도 다정하고 우직한 그의
-                모습에 마음을 열고 사귀게 되었습니다.
+                2020년 겨울, 
+                마스크를 내리며 수줍게 웃던 개구쟁이 같은 표정이 아직도 생생합니다.
+                밤새 통화하며 잠들던 그 사람과
+                이제는 평생을 함께하게 되었습니다.
                 <div style={{ height: '18.5px' }}></div>
-                "보고 싶다"는 한마디에 왕복 4시간의 거리를 마다하지 않고
-                달려오고, 잊을만 하면 꽃다발을 사서 안겨주는 그의 변치않는
-                사랑과 배려에 점점 더 확신이 생겼습니다. 취업과 퇴사, 그리고
-                대학 재입학까지, 삶의 굴곡을 함께하며 쌓아온 신뢰와 사랑을
-                바탕으로 서로 아끼며 행복하게 살아가겠습니다.
+                대학 졸업, 취업 준비, 그리고 지금까지
+                삶의 굴곡을 함께하며 쌓아온 믿음과 사랑으로
+                서로를 아끼며 행복하게 살아가겠습니다.
               </Interview>
             </div>
           </InterviewWrapper>
@@ -481,32 +474,24 @@ function Main({ setComponent }: Props) {
           <NaviWrapper>
             <NaviTitle>지하철 안내</NaviTitle>
             <Li>
-              <Marker>𒊹</Marker>수인분당선 서울숲역 5번 출구
+              <Marker>𒊹</Marker>건대입구역 5번 혹은 4번 출구
             </Li>
-            <Li style={{ marginBottom: '12px' }}>- &nbsp;도보 2분 거리</Li>
-            <Li>
-              <Marker>𒊹</Marker>2호선 뚝섬역 8번 출구
-            </Li>
-            <Li>- &nbsp;도보 5분 거리</Li>
+            <Li style={{ marginBottom: '12px' }}>- &nbsp;도보 5분 거리</Li>
           </NaviWrapper>
           <NaviWrapper>
             <NaviTitle>대중교통 버스 안내</NaviTitle>
             <Li>
-              <Marker>𒊹</Marker> 뚝섬 서울숲 정류장
+              <Marker>𒊹</Marker> 건국대학교앞 혹은 건대입구역 하차
             </Li>
             <Li style={{ marginBottom: '12px' }}>
-              - &nbsp;간선(파랑색) : 121, 141, 145, 148, 463
+              - &nbsp;240, 721, 2222, 2224, 3217, 3220, 4212, 광진05
             </Li>
             <Li>
-              <Marker>𒊹</Marker> 성동구민 종합 체육센터 정류장
+              <Marker>𒊹</Marker> 광진구의회 하차
             </Li>
             <Li style={{ marginBottom: '12px' }}>
-              - &nbsp;지선(녹색) : 2014, 2224, 2413
+              - &nbsp;공항버스 6013
             </Li>
-            <Li>
-              <Marker>𒊹</Marker> 뚝섬역 8번 출구 정류장
-            </Li>
-            <Li>- &nbsp;지선(녹색) : 2016, 2224, 2413</Li>
           </NaviWrapper>
           <NaviWrapper
             style={{
@@ -532,7 +517,7 @@ function Main({ setComponent }: Props) {
             >
               귀한 발걸음을 해주시는 <br />
               지방 하객분들의 편의를 위해 <br />
-              예산↔서울 간 전세버스를 준비하였습니다.
+              화성↔서울 간 전세버스를 준비하였습니다.
             </Li>
             <Li
               style={{
@@ -550,7 +535,7 @@ function Main({ setComponent }: Props) {
                   color: '#444444',
                 }}
               ></i>
-              출발 시간 : 2025. 02. 09. (일) 오전 10시
+              출발 시간 : 2025. 11. 01. (토) 오전 10시 10분
               <br />
               <i
                 className="fa fa-map-marker-alt"
@@ -562,9 +547,9 @@ function Main({ setComponent }: Props) {
                   color: '#444444',
                 }}
               ></i>
-              탑승 장소 : 충남 예산군 예산읍 산성리 653
+              탑승 장소 : 경기도 화성시 반월동 948
               <br />
-              하나로마트 예산농협 본점, 대로 앞 <br />
+              삼성전자 NanoCity 화성캠퍼스 대형 주차장 (H1) → H3정문(경유) <br />
               <i
                 className="fa fa-phone"
                 aria-hidden="true"
@@ -576,7 +561,7 @@ function Main({ setComponent }: Props) {
                   transform: 'rotate(98deg)',
                 }}
               ></i>
-              관련 문의 : 신부측 연락처로 부탁드립니다.
+              관련 문의 : 신랑측 연락처로 부탁드립니다.
             </Li>
 
             {/* <img
