@@ -549,7 +549,8 @@ function Main({ setComponent }: Props) {
               ></i>
               탑승 장소 : 경기도 화성시 반월동 948
               <br />
-              삼성전자 NanoCity 화성캠퍼스 대형 주차장 (H1) → H3정문(경유) <br />
+              삼성전자 NanoCity 화성캠퍼스 대형 주차장 (H1) <br />
+              → H3정문(경유) <br />
               <i
                 className="fa fa-phone"
                 aria-hidden="true"
