@@ -4,7 +4,7 @@ export const INFORMATION = {
       title: '신랑',
       name: '김성식',
       phoneNumber: '01099244184',
-      bank: '신한',
+      bank: '신한은행',
       accountNumber: '110385113101',
     },
     {
