@@ -225,7 +225,7 @@ function Main({ setComponent }: Props) {
             </Parent>
             <span
               style={{
-                fontFamily: 'MaruBuriBold',
+                fontFamily: 'GowunDodum-Bold',
                 fontSize: '19px',
                 marginLeft: '10px',
                 color: '#3b3b3b',
@@ -246,7 +246,7 @@ function Main({ setComponent }: Props) {
             </Parent>
             <span
               style={{
-                fontFamily: 'MaruBuriBold',
+                fontFamily: 'GowunDodum-Bold',
                 fontSize: '19px',
                 marginLeft: '10px',
                 color: '#3b3b3b',
@@ -877,7 +877,7 @@ const InterviewImage = styled.div`
 `;
 
 const TitleImageTitle = styled.div`
-  font-family: Cafe24Behappy, MaruBuriBold;
+  font-family: Cafe24Behappy, GowunDodum-Bold;
   color: #ffffff;
   font-size: min(16vw, 85px);
   position: absolute;
@@ -1026,7 +1026,7 @@ const TitleDescription = styled(Description)`
 `;
 
 const Title = styled.p`
-  font-family: MaruBuriBold;
+  font-family: GowunDodum-Bold;
   font-size: 23.5px;
   font-weight: 500;
   color: #4d4d4d;
@@ -1042,7 +1042,7 @@ const Title = styled.p`
 `;
 
 const EnglishSubTitle = styled.p`
-  font-family: MaruburiLight;
+  font-family: GowunDodum-Light;
   font-size: 13px;
   color: #b2b2b2;
   letter-spacing: 3px;
