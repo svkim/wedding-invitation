@@ -12,20 +12,18 @@
 }
 
 @font-face {
-  font-family: 'MaruBuri';
-  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
-  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix)
-      format('embedded-opentype'),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2)
-      format('woff2'),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff)
-      format('woff'),
-    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf)
-      format('truetype');
+  font-family: 'GowunDodum-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'MaruBuriSemiBold';
+  font-family: 'GowunDodum-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  /* font-family: 'MaruBuriSemiBold';
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.eot);
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.eot?#iefix)
       format('embedded-opentype'),
@@ -34,11 +32,15 @@
     url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff)
       format('woff'),
     url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.ttf)
-      format('truetype');
+      format('truetype'); */
 }
 
 @font-face {
-  font-family: 'MaruBuriBold';
+  font-family: 'GowunDodum-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  /* font-family: 'MaruBuriBold';
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot);
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot?#iefix)
       format('embedded-opentype'),
@@ -47,11 +49,16 @@
     url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff)
       format('woff'),
     url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.ttf)
-      format('truetype');
+      format('truetype'); */
 }
 
 @font-face {
-  font-family: 'MaruBuriLight';
+  font-family: 'GowunDodum-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+
+  /* font-family: 'MaruBuriLight';
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.eot);
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.eot?#iefix)
       format('embedded-opentype'),
@@ -60,11 +67,16 @@
     url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff)
       format('woff'),
     url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.ttf)
-      format('truetype');
+      format('truetype'); */
 }
 
 @font-face {
-  font-family: 'MaruBuriExtraLight';
+  font-family: 'GowunDodum-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+
+  /* font-family: 'MaruBuriExtraLight';
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.eot);
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.eot?#iefix)
       format('embedded-opentype'),
@@ -73,7 +85,7 @@
     url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff)
       format('woff'),
     url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.ttf)
-      format('truetype');
+      format('truetype'); */
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
