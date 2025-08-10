@@ -148,11 +148,11 @@ function Main({ setComponent }: Props) {
     <Wrappper>
       <ContentWrapper>
         <ProgressiveImg placeholderSrc={MainPic} src={High} />
-        <TitleImageTitle>
+        {/* <TitleImageTitle>
           We're Getting
           <br />
           Married!
-        </TitleImageTitle>
+        </TitleImageTitle> */}
         <DescriptionWrapper style={{ padding: '32px 20px' }}>
           <TopName>
             김성식
