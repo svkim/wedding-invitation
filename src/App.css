@@ -4,7 +4,8 @@
 } */
 
 html, body {
-  touch-action: pan-x pan-y; /* 스크롤은 가능, 핀치줌은 차단 */
+  touch-action: pan-x pan-y !important;
+  overscroll-behavior: none !important;
 }
 
 @font-face {
