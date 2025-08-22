@@ -45,7 +45,7 @@ const PhotoGallery = () => {
 
 
 
-  
+
 
 
   const [isMoreView, setIsMoreView] = useState(false);
@@ -54,10 +54,11 @@ const PhotoGallery = () => {
     objectFit: 'cover',
     width: 'min(32vw, 190px)',
     height: 'min(32vw, 190px)',
+    pointerEvents: 'none',
   };
 
   return (
-    <div ref={containerRef} style={{ touchAction: "none" }}>
+    <>
       <Gallery
         options={{
           zoom: false,
@@ -113,7 +114,8 @@ const PhotoGallery = () => {
           사진 더보기 <img src={ShowMoreButton} />
         </MoreButton>
       )}
-    </div>
+
+    </>
   );
 };
 
