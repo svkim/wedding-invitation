@@ -11,21 +11,17 @@ export const jsConfetti = new JSConfetti();
 
 function App() {
 
-
   useEffect(() => {
-    // 핀치 줌 막기
-    const handleTouchMove = (e) => {
-      if (e.scale !== 1) {
-        e.preventDefault();
-      }
-      if (e.touches.length > 1) {
+    // 핀치 줌 방지
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 1 || (e as any).scale !== 1) {
         e.preventDefault();
       }
     };
 
-    // 더블탭 줌 막기
+    // 더블탭 줌 방지
     let lastTouchEnd = 0;
-    const handleTouchEnd = (e) => {
+    const handleTouchEnd = (e: TouchEvent) => {
       const now = Date.now();
       if (now - lastTouchEnd <= 300) {
         e.preventDefault();
