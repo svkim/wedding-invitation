@@ -8,6 +8,18 @@ html, body {
   overscroll-behavior: none !important;
 }
 
+.pswp {
+  user-drag: none !important;;
+  transform: scale(1) !important;;
+  -webkit-user-drag: none !important;;
+  pointer-events: none !important;;  /* 필요 시 클릭도 차단 */
+}
+.pswp__bg {
+  user-drag: none !important;;
+  transform: scale(1) !important;;
+  -webkit-user-drag: none !important;;
+  pointer-events: none !important;;  /* 필요 시 클릭도 차단 */
+}
 .pswp__img {
   user-drag: none !important;;
   transform: scale(1) !important;;
