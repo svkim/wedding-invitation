@@ -8,6 +8,13 @@ html, body {
   overscroll-behavior: none !important;
 }
 
+.pswp__img {
+  user-drag: none !important;;
+  transform: scale(1) !important;;
+  -webkit-user-drag: none !important;;
+  pointer-events: none !important;;  /* 필요 시 클릭도 차단 */
+}
+
 @font-face {
   font-family: 'Cafe24Behappy';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Behappy.woff2')
