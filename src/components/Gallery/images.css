@@ -4,12 +4,8 @@ body {
 }
 
 img {
+    user-drag: none;
     transform: scale(1);
     -webkit-user-drag: none;
     /* pointer-events: none;  필요 시 클릭도 차단 */
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    overflow-x: ;
-    overflow-y: ;
-    
 }
