@@ -12,7 +12,6 @@ const PhotoGallery = () => {
     objectFit: 'cover',
     width: 'min(32vw, 190px)',
     height: 'min(32vw, 190px)',
-    pointer-events: none,
   };
 
   return (
