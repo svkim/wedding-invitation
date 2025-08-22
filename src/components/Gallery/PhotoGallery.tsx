@@ -7,37 +7,37 @@ import styled from 'styled-components';
 import ShowMoreButton from '../../../public/images/showMore.png';
 
 const PhotoGallery = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  // const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
+  // useEffect(() => {
+  //   const el = containerRef.current;
+  //   if (!el) return;
 
-    // 핀치 줌 방지
-    const handleTouchMove = (e: TouchEvent) => {
-      if (e.touches.length > 1 || (e as any).scale !== 1) {
-        e.preventDefault();
-      }
-    };
+  //   // 핀치 줌 방지
+  //   const handleTouchMove = (e: TouchEvent) => {
+  //     if (e.touches.length > 1 || (e as any).scale !== 1) {
+  //       e.preventDefault();
+  //     }
+  //   };
 
-    // 더블탭 줌 방지
-    let lastTouchEnd = 0;
-    const handleTouchEnd = (e: TouchEvent) => {
-      const now = Date.now();
-      if (now - lastTouchEnd <= 300) {
-        e.preventDefault();
-      }
-      lastTouchEnd = now;
-    };
+  //   // 더블탭 줌 방지
+  //   let lastTouchEnd = 0;
+  //   const handleTouchEnd = (e: TouchEvent) => {
+  //     const now = Date.now();
+  //     if (now - lastTouchEnd <= 300) {
+  //       e.preventDefault();
+  //     }
+  //     lastTouchEnd = now;
+  //   };
 
-    el.addEventListener("touchmove", handleTouchMove, { passive: false });
-    el.addEventListener("touchend", handleTouchEnd, false);
+  //   el.addEventListener("touchmove", handleTouchMove, { passive: false });
+  //   el.addEventListener("touchend", handleTouchEnd, false);
 
-    return () => {
-      el.removeEventListener("touchmove", handleTouchMove);
-      el.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, []);
+  //   return () => {
+  //     el.removeEventListener("touchmove", handleTouchMove);
+  //     el.removeEventListener("touchend", handleTouchEnd);
+  //   };
+  // }, []);
 
 
 
