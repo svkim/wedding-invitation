@@ -7,7 +7,12 @@ import styled from 'styled-components';
 import ShowMoreButton from '../../../public/images/showMore.png';
 
 const PhotoGallery = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
     // 핀치 줌 방지
     const handleTouchMove = (e: TouchEvent) => {
       if (e.touches.length > 1 || (e as any).scale !== 1) {
@@ -25,14 +30,22 @@ const PhotoGallery = () => {
       lastTouchEnd = now;
     };
 
-    document.addEventListener("touchmove", handleTouchMove, { passive: false });
-    document.addEventListener("touchend", handleTouchEnd, false);
+    el.addEventListener("touchmove", handleTouchMove, { passive: false });
+    el.addEventListener("touchend", handleTouchEnd, false);
 
     return () => {
-      document.removeEventListener("touchmove", handleTouchMove);
-      document.removeEventListener("touchend", handleTouchEnd);
+      el.removeEventListener("touchmove", handleTouchMove);
+      el.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
+
+
+
+
+
+
+
+  
 
 
   const [isMoreView, setIsMoreView] = useState(false);
@@ -44,7 +57,7 @@ const PhotoGallery = () => {
   };
 
   return (
-    <>
+    <div ref={containerRef} style={{ touchAction: "none" }}>
       <Gallery
         options={{
           zoom: false,
@@ -100,7 +113,7 @@ const PhotoGallery = () => {
           사진 더보기 <img src={ShowMoreButton} />
         </MoreButton>
       )}
-    </>
+    </div>
   );
 };
 
