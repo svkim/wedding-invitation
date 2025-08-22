@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Main from './components/Main';
 import Modal from './components/Modal';
 import { useState } from 'react';
+import React, { useEffect } from "react";
 import { NavermapsProvider } from 'react-naver-maps';
 import JSConfetti from 'js-confetti';
 import { Analytics } from '@vercel/analytics/react';
