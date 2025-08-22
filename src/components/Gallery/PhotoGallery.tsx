@@ -1,11 +1,40 @@
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import 'photoswipe/style.css';
 import images from './Images.ts';
+import React, { useEffect } from "react";
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
 import ShowMoreButton from '../../../public/images/showMore.png';
 
 const PhotoGallery = () => {
+  useEffect(() => {
+    // 핀치 줌 방지
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 1 || (e as any).scale !== 1) {
+        e.preventDefault();
+      }
+    };
+
+    // 더블탭 줌 방지
+    let lastTouchEnd = 0;
+    const handleTouchEnd = (e: TouchEvent) => {
+      const now = Date.now();
+      if (now - lastTouchEnd <= 300) {
+        e.preventDefault();
+      }
+      lastTouchEnd = now;
+    };
+
+    document.addEventListener("touchmove", handleTouchMove, { passive: false });
+    document.addEventListener("touchend", handleTouchEnd, false);
+
+    return () => {
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, []);
+
+
   const [isMoreView, setIsMoreView] = useState(false);
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
