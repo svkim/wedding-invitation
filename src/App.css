@@ -24,7 +24,7 @@ html, body {
   user-select: none !important;          /* 선택 방지 */
 }
 .pswp__img {
-  touch-action: pan-x pan-y
+  touch-action: pan-x pan-y !important;
   user-drag: none !important;
   transform: scale(1) !important;
   -webkit-user-drag: none !important;
