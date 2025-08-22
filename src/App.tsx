@@ -14,28 +14,28 @@ function App() {
 
   useEffect(() => {
     // 핀치 줌 방지
-    const handleTouchMove = (e: TouchEvent) => {
-      if (e.touches.length > 1 || (e as any).scale !== 1) {
-        e.preventDefault();
-      }
-    };
-
-    // 더블탭 줌 방지
-    // let lastTouchEnd = 0;
-    // const handleTouchEnd = (e: TouchEvent) => {
-    //   const now = Date.now();
-    //   if (now - lastTouchEnd <= 300) {
+    // const handleTouchMove = (e: TouchEvent) => {
+    //   if (e.touches.length > 1 || (e as any).scale !== 1) {
     //     e.preventDefault();
     //   }
-    //   lastTouchEnd = now;
     // };
 
-    document.addEventListener("touchmove", handleTouchMove, { passive: false });
-    //document.addEventListener("touchend", handleTouchEnd, false);
+    // 더블탭 줌 방지
+    let lastTouchEnd = 0;
+    const handleTouchEnd = (e: TouchEvent) => {
+      const now = Date.now();
+      if (now - lastTouchEnd <= 300) {
+        e.preventDefault();
+      }
+      lastTouchEnd = now;
+    };
+
+    // document.addEventListener("touchmove", handleTouchMove, { passive: false });
+    document.addEventListener("touchend", handleTouchEnd, false);
 
     return () => {
-      document.removeEventListener("touchmove", handleTouchMove);
-      //document.removeEventListener("touchend", handleTouchEnd);
+      // document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
 
