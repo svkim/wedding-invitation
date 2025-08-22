@@ -3,9 +3,9 @@ body {
     touch-action: manipulation;
 }
 
-img {
+.pswp__img {
     user-drag: none;
     transform: scale(1);
     -webkit-user-drag: none;
-    /* pointer-events: none;  필요 시 클릭도 차단 */
+    pointer-events: none;  /* 필요 시 클릭도 차단 */
 }
