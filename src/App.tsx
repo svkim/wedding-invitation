@@ -14,11 +14,12 @@ function App() {
 
   useEffect(() => {
     // 핀치 줌 방지
-    // const handleTouchMove = (e: TouchEvent) => {
-    //   if (e.touches.length > 1 || (e as any).scale !== 1) {
-    //     e.preventDefault();
-    //   }
-    // };
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 1) {
+        e.preventDefault(); // 핀치 줌만 차단
+      }
+    };
+
 
     // 더블탭 줌 방지
     let lastTouchEnd = 0;
@@ -30,11 +31,11 @@ function App() {
       lastTouchEnd = now;
     };
 
-    // document.addEventListener("touchmove", handleTouchMove, { passive: false });
+    document.addEventListener("touchmove", handleTouchMove, { passive: false });
     document.addEventListener("touchend", handleTouchEnd, false);
 
     return () => {
-      // document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
