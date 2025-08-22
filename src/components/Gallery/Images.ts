@@ -1,3 +1,5 @@
+import './images.css'
+
 import image01 from '../../../public/images/image01.jpg';
 import image02 from '../../../public/images/image02.jpg';
 import image03 from '../../../public/images/image03.jpg';
