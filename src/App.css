@@ -8,29 +8,31 @@ html, body {
   overscroll-behavior: none !important;
 }
 
+/* 
 .pswp {
+  슬라이드는 안되는데 확대가 된다.
   touch-action: pan-x pan-y !important;
   user-drag: none !important;
   transform: scale(1) !important;
   -webkit-user-drag: none !important;
 
-  /* pointer-events: none !important;   필요 시 클릭도 차단 */
+  pointer-events: none !important;   필요 시 클릭도 차단
 }
 .pswp__bg {
   user-drag: none !important;
   transform: scale(1) !important;
   -webkit-user-drag: none !important;
   pointer-events: none !important;
-  user-select: none !important;          /* 선택 방지 */
+  user-select: none !important;       
 }
 .pswp__img {
   touch-action: pan-x pan-y !important;
   user-drag: none !important;
   transform: scale(1) !important;
   -webkit-user-drag: none !important;
-  user-select: none !important;        /* 선택 방지 */
-  /*pointer-events: none !important;;   필요 시 클릭도 차단 */
-}
+  user-select: none !important;       
+  /*pointer-events: none !important;;  
+} */
 
 @font-face {
   font-family: 'Cafe24Behappy';
