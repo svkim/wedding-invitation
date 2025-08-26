@@ -326,13 +326,13 @@ const images = [
     width: 600,
     height: 900,
   },
-  // {
-  //   alt: 'image33',
-  //   source: image33,
-  //   thumbnail: image33Thumb,
-  //   width: 600,
-  //   height: 900,
-  // },
+  {
+    alt: 'image33',
+    source: image33,
+    thumbnail: image33Thumb,
+    width: 600,
+    height: 900,
+  },
   // {
   //   alt: 'image34',
   //   source: image34,
