@@ -591,20 +591,20 @@ function Main({ setComponent }: Props) {
           <DescriptionItem>
             <HR style={{ width: '100%', marginBottom: '6px' }} />
 
-            <InterviewImageWrapper>
-              <InterviewImage
+            <InterviewImageWrapper2>
+              <InterviewImage2
                 style={{
                   opacity: isboy ? 0 : 1,
                   backgroundImage: `url(${Hall})`,
                 }}
               />
-              <InterviewImage
+              <InterviewImage2
                 style={{
                   opacity: isboy ? 1 : 0,
                   backgroundImage: `url(${Hall1})`,
                 }}
               />
-            </InterviewImageWrapper>
+            </InterviewImageWrapper2>
             
             {/* <img
               src={Hall}
@@ -884,6 +884,24 @@ const InterviewImageWrapper = styled.div`
 `;
 
 const InterviewImage = styled.div`
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 2s;
+`;
+
+const InterviewImageWrapper2 = styled.div`
+  position: relative;
+  width: 600px;
+  height: 338px;
+  margin: 0 auto;
+`;
+
+const InterviewImage2 = styled.div`
   position: absolute;
   top: 0;
   border-radius: 20px;
