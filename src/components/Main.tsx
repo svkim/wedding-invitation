@@ -24,6 +24,7 @@ import SunFlower2 from '../../public/images/sunflower2.png';
 import SunFlower3 from '../../public/images/sunflower3.png';
 import image45 from '../../public/images/image45.jpg';
 import Hall from '../../public/images/food2.jpg';
+import Hall1 from '../../public/images/food.jpg';
 import Hall2 from '../../public/images/hall2.jpg';
 import Cursor from '../../public/images/cursor.png';
 import PhoneModal from './PhoneModal';
@@ -589,11 +590,27 @@ function Main({ setComponent }: Props) {
           {/* <Slider /> */}
           <DescriptionItem>
             <HR style={{ width: '100%', marginBottom: '6px' }} />
-            <img
+
+            <InterviewImageWrapper>
+              <InterviewImage
+                style={{
+                  opacity: isboy ? 0 : 1,
+                  backgroundImage: `url(${Hall})`,
+                }}
+              />
+              <InterviewImage
+                style={{
+                  opacity: isboy ? 1 : 0,
+                  backgroundImage: `url(${Hall1})`,
+                }}
+              />
+            </InterviewImageWrapper>
+            
+            {/* <img
               src={Hall}
               loading="lazy"
               style={{ marginBottom: '18px', width: '100%' }}
-            />
+            /> */}
             <DescriptionLi>
               <DescriptionMarker>𒊹</DescriptionMarker>예식장 1층에 ATM기가
               있으니 참고 부탁드립니다.
