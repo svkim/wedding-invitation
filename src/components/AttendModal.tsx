@@ -221,7 +221,7 @@ const AttendModal = ({ setComponent }: Props) => {
                   fontSize: '13.7px',
                 }}
               >
-                (예산 ↔ 서울)
+                (화성 ↔ 서울)
               </span>
               <InputContentLabel
                 htmlFor="companionCount"
