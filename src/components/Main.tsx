@@ -493,6 +493,18 @@ function Main({ setComponent }: Props) {
               - &nbsp;공항버스 6013
             </Li>
           </NaviWrapper>
+          <NaviWrapper>
+            <NaviTitle>고속버스 안내</NaviTitle>
+            <Li>
+              <Marker>𒊹</Marker> 동서울종합터미널 하차
+            </Li>
+            <Li style={{ marginBottom: '12px' }}>
+              - &nbsp;(지하철) 강변역 → 건대입구역 하차
+            </Li>
+            <Li style={{ marginBottom: '12px' }}>
+              - &nbsp;(버스) 광진05 버스 탑승 → 건국대학교앞 하차
+            </Li>
+          </NaviWrapper>
           <NaviWrapper
             style={{
               margin: '40px 0 0 0',
@@ -625,7 +637,7 @@ function Main({ setComponent }: Props) {
 
             <DescriptionLi>
               <DescriptionMarker>𒊹</DescriptionMarker>
-              전체메뉴의 80% 이상이 즉석 메뉴로 구성된 뷔페로, 생맥주와 소주 등
+              140여 가지 메뉴로 구성된 뷔페로, 생맥주와 소주 등
               주류와 음료가 무제한이니 편하게 즐겨주시면 감사하겠습니다.
             </DescriptionLi>
           </DescriptionItem>
