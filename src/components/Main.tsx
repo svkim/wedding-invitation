@@ -896,8 +896,8 @@ const InterviewImage = styled.div`
 
 const InterviewImageWrapper2 = styled.div`
   position: relative;
-  width: 600px;
-  height: 338px;
+  width: min(calc(100vw - 44px), 500px);
+  height: min(calc(56vw - 44px), 280px);
   margin: 0 auto;
 `;
 
