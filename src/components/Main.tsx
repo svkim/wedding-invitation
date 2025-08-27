@@ -70,7 +70,7 @@ function Main({ setComponent }: Props) {
     const intervalId = setInterval(() => {
       setIsBoy((prev) => !prev);
       setIsGirl((prev) => !prev);
-    }, 2000);
+    }, 3000);
 
     return () => {
       clearInterval(intervalId);
