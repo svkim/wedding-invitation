@@ -500,9 +500,7 @@ function Main({ setComponent }: Props) {
               <Marker>𒊹</Marker> 동서울종합터미널 하차
             </Li>
             <Li style={{ marginBottom: '12px' }}>
-              - &nbsp;(지하철) 강변역 → 건대입구역 하차
-            </Li>
-            <Li style={{ marginBottom: '12px' }}>
+              - &nbsp;(지하철) 강변역 → 건대입구역 하차<br />
               - &nbsp;(버스) 광진05 버스 탑승 → 건국대학교앞 하차
             </Li>
           </NaviWrapper>
