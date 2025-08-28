@@ -20,7 +20,7 @@ const Map = () => {
       <NaverMap
         defaultCenter={new navermaps.LatLng(lat, lon)}
         defaultZoom={16}
-        draggable={true}
+        draggable={false}
         pinchZoom={true}
         zoomControl={true}
         scrollWheel={false}
