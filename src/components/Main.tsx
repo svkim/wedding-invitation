@@ -419,7 +419,8 @@ function Main({ setComponent }: Props) {
           <img
             src={CalendarPic}
             alt="캘린더"
-            style={{ maxWidth: '385px', marginTop: '35px' }}
+            style={{ maxWidth: '90vw', marginTop: '35px' }}
+            // style={{ maxWidth: '385px', marginTop: '35px' }}
           />
         </DescriptionWrapper>
         <DescriptionWrapper>
