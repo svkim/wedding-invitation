@@ -154,7 +154,7 @@ function Main({ setComponent }: Props) {
           <br />
           Married!
         </TitleImageTitle> */}
-        <DescriptionWrapper style={{ padding: '32px 20px' }}>
+        {/* <DescriptionWrapper style={{ padding: '32px 20px' }}>
           <TopName>
             김성식
             <Flower
@@ -168,10 +168,10 @@ function Main({ setComponent }: Props) {
             2025. 11. 01. 토요일 PM 12:00
             <br /> 서울 KU컨벤션웨딩홀
           </TitleDescription>
-        </DescriptionWrapper>
+        </DescriptionWrapper> */}
         <DescriptionWrapper
           style={{
-            backgroundColor: '#f6f6f6',
+            backgroundColor: '#ffffff',
             gap: '32px',
             position: 'relative',
             paddingTop: '65px',
@@ -277,7 +277,7 @@ function Main({ setComponent }: Props) {
         </DescriptionWrapper>
         <DescriptionWrapper
           style={{
-            backgroundColor: '#efefef',
+            backgroundColor: '#f6f6f6',
             gap: '36px',
             position: 'relative',
           }}
