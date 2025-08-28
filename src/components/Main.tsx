@@ -577,7 +577,7 @@ function Main({ setComponent }: Props) {
                   transform: 'rotate(98deg)',
                 }}
               ></i>
-              <strong>관련 문의</strong> : 신랑측 연락처로 부탁드립니다.
+              <strong>관련 문의</strong><br />신랑측 연락처로 부탁드립니다.
             </Li>
 
             {/* <img
@@ -910,8 +910,7 @@ const InterviewImageWrapper2 = styled.div`
   position: relative;
   width: min(calc(100vw - 44px), 500px);
   height: min(calc(56vw - 44px), 280px);
-  margin: 0 auto;
-  margin-bottm: 20px;
+  margin-bottm: 30px;
 `;
 
 const InterviewImage2 = styled.div`
