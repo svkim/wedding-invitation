@@ -548,7 +548,7 @@ function Main({ setComponent }: Props) {
                   color: '#444444',
                 }}
               ></i>
-              <strong>출발 시간</strong> </br>
+              <strong>출발 시간</strong><br />
               2025. 11. 01. (토) 오전 10시 10분
               <br />
               <i
@@ -561,7 +561,7 @@ function Main({ setComponent }: Props) {
                   color: '#444444',
                 }}
               ></i>
-              <strong>탑승 장소</strong></br>
+              <strong>탑승 장소</strong><br />
               경기도 화성시 반월동 948
               <br />
               삼성전자 NanoCity 화성캠퍼스 대형 주차장 (H1) <br />
@@ -603,8 +603,6 @@ function Main({ setComponent }: Props) {
 
           {/* <Slider /> */}
           <DescriptionItem>
-            <HR style={{ width: '100%', marginBottom: '6px' }} />
-
             <InterviewImageWrapper2>
               <InterviewImage2
                 style={{
@@ -645,9 +643,9 @@ function Main({ setComponent }: Props) {
             </DescriptionLi>
           </DescriptionItem>
 
-          <EnglishSubTitle style={{ marginTop: '68px' }}>
+          {/* <EnglishSubTitle style={{ marginTop: '68px' }}>
             RECEPTION INFO
-          </EnglishSubTitle>
+          </EnglishSubTitle> */}
           {/* <Title style={{ margin: '0 0 24px' }}>
             지방 피로연 (앞잔치) 안내
           </Title>
@@ -913,6 +911,7 @@ const InterviewImageWrapper2 = styled.div`
   width: min(calc(100vw - 44px), 500px);
   height: min(calc(56vw - 44px), 280px);
   margin: 0 auto;
+  margin-bottm: 20px;
 `;
 
 const InterviewImage2 = styled.div`
