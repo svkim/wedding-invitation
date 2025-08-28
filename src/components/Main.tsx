@@ -549,7 +549,7 @@ function Main({ setComponent }: Props) {
                 }}
               ></i>
               <strong>출발 시간</strong><br />
-              2025. 11. 01. (토) 오전 10시 10분
+              &nbsp;&nbsp;2025. 11. 01. (토) 오전 10시 10분
               <br />
               <i
                 className="fa fa-map-marker-alt"
@@ -562,10 +562,10 @@ function Main({ setComponent }: Props) {
                 }}
               ></i>
               <strong>탑승 장소</strong><br />
-              경기도 화성시 반월동 948
+              &nbsp;&nbsp;경기도 화성시 반월동 948
               <br />
-              삼성전자 NanoCity 화성캠퍼스 대형 주차장 (H1) <br />
-              → H3정문(경유) <br />
+              &nbsp;&nbsp;삼성전자 NanoCity 화성캠퍼스 대형 주차장 (H1) <br />
+              &nbsp;&nbsp;→ H3정문(경유) <br />
               <i
                 className="fa fa-phone"
                 aria-hidden="true"
@@ -577,7 +577,7 @@ function Main({ setComponent }: Props) {
                   transform: 'rotate(98deg)',
                 }}
               ></i>
-              <strong>관련 문의</strong><br />신랑측 연락처로 부탁드립니다.
+              <strong>관련 문의</strong><br />&nbsp;&nbsp;신랑측 연락처로 부탁드립니다.
             </Li>
 
             {/* <img
