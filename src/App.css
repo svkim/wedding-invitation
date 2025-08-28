@@ -34,11 +34,13 @@ html, body {
   /*pointer-events: none !important;;  
 } */
 
+/* 
+이걸해도 꾹 눌렀을 때 다른이름으로 저장이됨..
 img {
-  -webkit-touch-callout: none; /* iOS Safari: 꾹 눌렀을 때 메뉴 방지 */
-  -webkit-user-select: none !important;    /* 선택 불가 */
-  user-select: none !important;           /* 표준 */
-}
+  -webkit-touch-callout: none;  iOS Safari: 꾹 눌렀을 때 메뉴 방지 
+  -webkit-user-select: none !important;    선택 불가 
+  user-select: none !important;           표준
+} */
 
 @font-face {
   font-family: 'Cafe24Behappy';
