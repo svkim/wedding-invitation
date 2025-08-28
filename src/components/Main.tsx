@@ -433,6 +433,8 @@ function Main({ setComponent }: Props) {
           style={{
             backgroundColor: '#f6f6f6',
             position: 'relative',
+            paddingLeft: '20px',
+            paddingRight: '20px',
           }}
           ref={refEl}
         >
