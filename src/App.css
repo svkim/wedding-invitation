@@ -36,8 +36,8 @@ html, body {
 
 img {
   -webkit-touch-callout: none; /* iOS Safari: 꾹 눌렀을 때 메뉴 방지 */
-  -webkit-user-select: none;   /* 선택 불가 */
-  user-select: none;           /* 표준 */
+  -webkit-user-select: none !important;    /* 선택 불가 */
+  user-select: none !important;           /* 표준 */
 }
 
 @font-face {
