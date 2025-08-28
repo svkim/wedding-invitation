@@ -433,8 +433,8 @@ function Main({ setComponent }: Props) {
           style={{
             backgroundColor: '#f6f6f6',
             position: 'relative',
-            paddingLeft: '20px',
-            paddingRight: '20px',
+            paddingLeft: '25px',
+            paddingRight: '25px',
           }}
           ref={refEl}
         >
@@ -548,7 +548,8 @@ function Main({ setComponent }: Props) {
                   color: '#444444',
                 }}
               ></i>
-              <strong>출발 시간</strong> : 2025. 11. 01. (토) 오전 10시 10분
+              <strong>출발 시간</strong> </br>
+              2025. 11. 01. (토) 오전 10시 10분
               <br />
               <i
                 className="fa fa-map-marker-alt"
@@ -560,7 +561,8 @@ function Main({ setComponent }: Props) {
                   color: '#444444',
                 }}
               ></i>
-              <strong>탑승 장소</strong> : 경기도 화성시 반월동 948
+              <strong>탑승 장소</strong></br>
+              경기도 화성시 반월동 948
               <br />
               삼성전자 NanoCity 화성캠퍼스 대형 주차장 (H1) <br />
               → H3정문(경유) <br />
