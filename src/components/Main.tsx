@@ -487,7 +487,7 @@ function Main({ setComponent }: Props) {
               <Marker>𒊹</Marker> 건국대학교앞 혹은 건대입구역 하차
             </Li>
             <Li style={{ marginBottom: '12px' }}>
-              - &nbsp;240, 721, 2222, 2224, 3217, 3220, 4212, 광진05
+              - &nbsp;240, 721, 2222, 2224, 3217, 3220, <br />&nbsp;&nbsp; 4212, 광진05
             </Li>
             <Li>
               <Marker>𒊹</Marker> 광진구의회 하차
