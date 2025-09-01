@@ -669,8 +669,8 @@ function Main({ setComponent }: Props) {
               <DescriptionMarker>𒊹</DescriptionMarker>
               140여 가지 메뉴로 구성된 뷔페로, 생맥주와 소주 등
               주류와 음료가 무제한이니 편하게 즐겨주시면 감사하겠습니다.
-            </DescriptionLi>
-          </DescriptionItem> */}
+            </DescriptionLi> */}
+          </DescriptionItem>
 
           {/* <EnglishSubTitle style={{ marginTop: '68px' }}>
             RECEPTION INFO
