@@ -28,6 +28,7 @@ import Hall1 from '../../public/images/food.jpg';
 import Hall2 from '../../public/images/hall2.jpg';
 import Cursor from '../../public/images/cursor.png';
 import Bus from '../../public/images/direct/bus.png';
+import Restaurant from '../../public/images/restaurant.png';
 
 import PhoneModal from './PhoneModal';
 import Map from '../Map';
@@ -35,6 +36,8 @@ import LikeButton from './LikeButton';
 import AttendModal from './AttendModal';
 import { INFORMATION } from '../value';
 import BusMap from '../../public/images/busMap.png';
+
+
 
 interface Props {
   setComponent: React.Dispatch<React.SetStateAction<React.ReactNode>>;
@@ -639,7 +642,17 @@ function Main({ setComponent }: Props) {
               loading="lazy"
               style={{ marginBottom: '18px', width: '100%' }}
             /> */}
-            <DescriptionLi>
+
+            <img
+              src={Restaurant}
+              style={{
+                width: '100%',
+                height: '100%',
+                margin: 0,
+                padding: 0,
+                display: 'block' }}
+            />
+            {/* <DescriptionLi>
               <DescriptionMarker>𒊹</DescriptionMarker>예식장 1층에 ATM기가
               있으니 참고 부탁드립니다.
             </DescriptionLi>
@@ -657,7 +670,7 @@ function Main({ setComponent }: Props) {
               140여 가지 메뉴로 구성된 뷔페로, 생맥주와 소주 등
               주류와 음료가 무제한이니 편하게 즐겨주시면 감사하겠습니다.
             </DescriptionLi>
-          </DescriptionItem>
+          </DescriptionItem> */}
 
           {/* <EnglishSubTitle style={{ marginTop: '68px' }}>
             RECEPTION INFO
