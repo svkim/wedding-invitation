@@ -906,7 +906,7 @@ const InterviewWrapper = styled.div`
 
 const Interview = styled.div`
   width: 100%;
-  font-size: 15.4px;
+  font-size: 16.4px;
   color: #555555;
   line-height: 1.8;
 
