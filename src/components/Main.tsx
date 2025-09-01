@@ -27,6 +27,8 @@ import Hall from '../../public/images/food2.jpg';
 import Hall1 from '../../public/images/food.jpg';
 import Hall2 from '../../public/images/hall2.jpg';
 import Cursor from '../../public/images/cursor.png';
+import Bus from '../../public/images/direct/bus.png';
+
 import PhoneModal from './PhoneModal';
 import Map from '../Map';
 import LikeButton from './LikeButton';
@@ -532,7 +534,16 @@ function Main({ setComponent }: Props) {
               하객분들의 편의를 위해 <br />
               화성↔서울 간 전세버스를 준비하였습니다.
             </Li>
-            <Li
+
+            {/* oliver486 */}
+            <img
+              src={Bus}
+              style={{ margin: 0, padding: 0, display: 'block' }}
+            />
+              
+            
+
+            {/* <Li
               style={{
                 textAlign: 'left',
                 lineHeight: 1.7,
@@ -578,7 +589,7 @@ function Main({ setComponent }: Props) {
                 }}
               ></i>
               <strong>관련 문의</strong><br />&nbsp;&nbsp;신랑측 연락처로 부탁드립니다.
-            </Li>
+            </Li> */}
 
             {/* <img
               src={BusMap}
