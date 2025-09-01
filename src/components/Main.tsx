@@ -477,7 +477,7 @@ function Main({ setComponent }: Props) {
             <Li>
               <Marker>𒊹</Marker>건국대학교 주차장에 2시간 무료 주차가능합니다.
             </Li>
-            <Li> (건너편 수의대 주차장이 제일 가깝습니다.) </Li>
+            <Li> (건너편 수의과대학 주차장이 예식장과 제일 가깝습니다.) </Li>
           </NaviWrapper>
           <NaviWrapper>
             <NaviTitle>지하철 안내</NaviTitle>
