@@ -475,9 +475,9 @@ function Main({ setComponent }: Props) {
               <Marker>𒊹</Marker>내비게이션으로 "KU컨벤션웨딩홀" 검색해주세요.
             </Li>
             <Li>
-              <Marker>𒊹</Marker>무료 주차는 2시간 가능합니다.
+              <Marker>𒊹</Marker>건국대학교 주차장에 2시간 무료 주차가능합니다.
             </Li>
-            <Li> - &nbsp;건국대학교 주차장, 무료주차 2시간 가능</Li>
+            <Li> (건너편 수의대 주차장이 제일 가깝습니다.) </Li>
           </NaviWrapper>
           <NaviWrapper>
             <NaviTitle>지하철 안내</NaviTitle>
