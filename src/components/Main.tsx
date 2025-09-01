@@ -536,14 +536,14 @@ function Main({ setComponent }: Props) {
             </Li>
 
             {/* oliver486 */}
-            <img
+            {/* <img
               src={Bus}
               style={{ margin: 0, padding: 0, display: 'block' }}
-            />
+            /> */}
               
             
 
-            {/* <Li
+            <Li
               style={{
                 textAlign: 'left',
                 lineHeight: 1.7,
@@ -589,7 +589,7 @@ function Main({ setComponent }: Props) {
                 }}
               ></i>
               <strong>관련 문의</strong><br />&nbsp;&nbsp;신랑측 연락처로 부탁드립니다.
-            </Li> */}
+            </Li>
 
             {/* <img
               src={BusMap}
