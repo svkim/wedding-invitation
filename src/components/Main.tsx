@@ -248,7 +248,8 @@ function Main({ setComponent }: Props) {
                 position: 'relative',
               }}
             >
-              김희연 &nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;
+              허영재 &nbsp;•&nbsp; 김희연
+              &nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;
             </Parent>
             <span
               style={{
@@ -264,7 +265,7 @@ function Main({ setComponent }: Props) {
             </span>
           </Description>
           <HR />
-          <Button
+          {/* <Button
             onClick={() =>
               setComponent(<PhoneModal setComponent={setComponent} />)
             }
@@ -278,7 +279,7 @@ function Main({ setComponent }: Props) {
               }}
             ></i>
             전화로 축하 인사하기
-          </Button>
+          </Button> */}
         </DescriptionWrapper>
         <DescriptionWrapper
           style={{
