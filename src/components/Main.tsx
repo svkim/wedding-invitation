@@ -28,7 +28,7 @@ import Hall1 from '../../public/images/food.jpg';
 import Hall2 from '../../public/images/hall2.jpg';
 import Cursor from '../../public/images/cursor.png';
 import Bus from '../../public/images/direct/bus.png';
-import Restaurant from '../../public/images/direct/restaurant.png';
+import Restaurant from '../../public/images/direct/restaurant.jpg';
 
 import PhoneModal from './PhoneModal';
 import Map from '../Map';
