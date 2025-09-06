@@ -619,7 +619,7 @@ function Main({ setComponent }: Props) {
         </DescriptionWrapper>
         <DescriptionWrapper>
           <EnglishSubTitle>WEDDING DINING INFO</EnglishSubTitle>
-          <Title style={{ margin: '0 0 24px' }}>예식 · 식사 안내</Title>
+          <Title style={{ margin: '0 0 24px' }}>식사 안내</Title>
 
           {/* <Slider /> */}
           <DescriptionItem>
