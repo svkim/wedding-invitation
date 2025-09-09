@@ -11,8 +11,8 @@ export const INFORMATION = {
       title: '혼주',
       name: '김성환',
       phoneNumber: '',
-      bank: '우리은행',
-      accountNumber: '01000000000',
+      bank: '농협은행',
+      accountNumber: '1114-12-201260',
     },
     {
       title: '혼주',
