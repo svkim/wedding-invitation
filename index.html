@@ -50,7 +50,8 @@
     debugger;
     var end = +new Date(); 
     if(isNaN(start) || isNaN(end) || end - start > allow) {
-      // 개발자 도구가 open 된것을 감지했을때 실행할 코드 삽입
+      alert('개발자 도구가 감지되었습니다!');
+      document.location.href="https://2025-11-01.vercel.app/"
     }
   }
   if(window.attachEvent) {
