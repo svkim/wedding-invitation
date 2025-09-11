@@ -47,27 +47,22 @@ document.addEventListener('keydown', function(e) {
     // F12 키 차단
     if (e.key === 'F12') {
         e.preventDefault();
-        alert('개발자 도구(F12)는 사용할 수 없습니다.');
     }
     // Ctrl + Shift + I (검사 도구) 차단
     if (e.ctrlKey && e.shiftKey && e.key === 'I') {
         e.preventDefault();
-        alert('개발자 도구는 사용할 수 없습니다.');
     }
     // Ctrl + Shift + C (요소 검사) 차단
     if (e.ctrlKey && e.shiftKey && e.key === 'C') {
         e.preventDefault();
-        alert('개발자 도구는 사용할 수 없습니다.');
     }
     // Ctrl + U (소스 보기) 차단
     if (e.ctrlKey && e.key === 'u') {
         e.preventDefault();
-        alert('소스 보기는 사용할 수 없습니다.');
     }
     // Ctrl + S (저장) 차단
     if (e.ctrlKey && e.key === 's') {
         e.preventDefault();
-        alert('저장은 사용할 수 없습니다.');
     }
 });
 </script>
