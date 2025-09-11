@@ -65,6 +65,27 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 });
+
+(function() {
+    function detectDevTool(allow) {
+        if (isNaN(+allow)) allow = 100; // 허용 시간 (ms)
+        var start = +new Date();
+        debugger; // 개발자 도구가 열려 있으면 여기서 멈춤
+        var end = +new Date();
+        if (isNaN(start) || isNaN(end) || end - start > allow) {
+            // 도구가 열려 있음 감지 시 실행
+            alert('개발자 도구가 감지되었습니다! 사용을 중지하세요.');
+            // 또는 window.location.href = 'https://example.com'; // 다른 페이지로 이동
+        }
+    }
+    // 이벤트 리스너 등록
+    window.addEventListener('resize', detectDevTool);
+    window.addEventListener('mousemove', detectDevTool);
+    window.addEventListener('focus', detectDevTool);
+    window.addEventListener('blur', detectDevTool);
+    // 페이지 로드 시 실행
+    detectDevTool();
+})();
 </script>
 
   </body>
