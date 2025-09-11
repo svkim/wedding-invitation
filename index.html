@@ -43,35 +43,33 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script>
-!function() {
-  function detectDevTool(allow) {
-    if(isNaN(+allow)) allow = 100;
-    var start = +new Date(); 
-    debugger;
-    var end = +new Date(); 
-    if(isNaN(start) || isNaN(end) || end - start > allow) {
-      alert('개발자 도구가 감지되었습니다!');
-      document.location.href="https://2025-11-01.vercel.app/"
+document.addEventListener('keydown', function(e) {
+    // F12 키 차단
+    if (e.key === 'F12') {
+        e.preventDefault();
+        alert('개발자 도구(F12)는 사용할 수 없습니다.');
     }
-  }
-  if(window.attachEvent) {
-    if (document.readyState === "complete" || document.readyState === "interactive") {
-        detectDevTool();
-      window.attachEvent('onresize', detectDevTool);
-      window.attachEvent('onmousemove', detectDevTool);
-      window.attachEvent('onfocus', detectDevTool);
-      window.attachEvent('onblur', detectDevTool);
-    } else {
-        setTimeout(argument.callee, 0);
+    // Ctrl + Shift + I (검사 도구) 차단
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+        alert('개발자 도구는 사용할 수 없습니다.');
     }
-  } else {
-    window.addEventListener('load', detectDevTool);
-    window.addEventListener('resize', detectDevTool);
-    window.addEventListener('mousemove', detectDevTool);
-    window.addEventListener('focus', detectDevTool);
-    window.addEventListener('blur', detectDevTool);
-  }
-}();
+    // Ctrl + Shift + C (요소 검사) 차단
+    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+        e.preventDefault();
+        alert('개발자 도구는 사용할 수 없습니다.');
+    }
+    // Ctrl + U (소스 보기) 차단
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        alert('소스 보기는 사용할 수 없습니다.');
+    }
+    // Ctrl + S (저장) 차단
+    if (e.ctrlKey && e.key === 's') {
+        e.preventDefault();
+        alert('저장은 사용할 수 없습니다.');
+    }
+});
 </script>
 
   </body>
