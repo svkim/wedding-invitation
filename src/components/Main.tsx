@@ -248,7 +248,7 @@ function Main({ setComponent }: Props) {
                 position: 'relative',
               }}
             >
-              허영재 &nbsp;•&nbsp; 김희연
+              김희연
               &nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;딸&nbsp;&nbsp;&nbsp;
             </Parent>
             <span
