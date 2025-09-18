@@ -354,13 +354,13 @@ const images = [
     width: 600,
     height: 900,
   },
-  {
-    alt: 'image37',
-    source: image37,
-    thumbnail: image37Thumb,
-    width: 600,
-    height: 900,
-  },
+  // {
+  //   alt: 'image37',
+  //   source: image37,
+  //   thumbnail: image37Thumb,
+  //   width: 600,
+  //   height: 900,
+  // },
   // {
   //   alt: 'image38',
   //   source: image38,
