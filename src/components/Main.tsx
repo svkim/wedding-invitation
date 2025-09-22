@@ -487,14 +487,16 @@ function Main({ setComponent }: Props) {
             </MapIconItem>
           </MapIconsWrapper>
           <NaviWrapper style={{ paddingTop: '30px' }}>
-            <NaviTitle>자가용 & 주차 안내</NaviTitle>
+            <NaviTitle>주차장 안내</NaviTitle>
             <Li style={{ marginBottom: '4px' }}>
-              <Marker>𒊹</Marker>내비게이션으로 "KU컨벤션웨딩홀" 검색해주세요.
+              <Marker>𒊹</Marker> 건국대학교 주차장 이용 (2시간 무료)
             </Li>
             <Li>
-              <Marker>𒊹</Marker>건국대학교 주차장에 2시간 무료 주차가능합니다.
+              <Marker>-</Marker> <Bold>"KU컨벤션웨딩홀"</Bold> 검색 후 주차요원의 안내를 <br />&nbsp;&nbsp;받으세요
             </Li>
-            <Li> (건너편 수의과대학 주차장이 예식장과 제일 가깝습니다.) </Li>
+            <Li>
+              <Marker>-</Marker> 또는 <Bold>"건국대학교 서울캠퍼스수의과대학"</Bold> 검색 후 <br />&nbsp;&nbsp;주차장 이용
+            </Li>
           </NaviWrapper>
           <NaviWrapper>
             <NaviTitle>지하철 안내</NaviTitle>
@@ -1292,6 +1294,27 @@ const NaviTitle = styled.div`
 const Li = styled.li`
   list-style: none;
   font-family: Pretendard;
+  font-size: 17.5px;
+  line-height: 1.8;
+  white-space: nowrap;
+
+  @media only screen and (max-width: 445px) {
+    font-size: 17px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 16.2px;
+  }
+
+  @media only screen and (max-width: 340px) {
+    font-size: 15.2px;
+  }
+`;
+
+const Bold = styled.span`
+  list-style: none;
+  font-family: Pretendard;
+  font-weight: bold;
   font-size: 17.5px;
   line-height: 1.8;
   white-space: nowrap;
