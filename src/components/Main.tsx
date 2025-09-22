@@ -125,12 +125,28 @@ function Main({ setComponent }: Props) {
   };
 
   const onClickLink = async () => {
-    try {
-      await navigator.clipboard.writeText('https://2025-11-01.vercel.app/');
-      alert(`청첩장 링크가 복사되었습니다.`);
-    } catch (err) {
-      console.error(err);
-    }
+
+  // // Kakao SDK 초기화
+  // if (typeof window !== 'undefined' && window.Kakao && !window.Kakao.isInitialized()) {
+  //   window.Kakao.init('9e29f89832481fc3053095873a9a4994'); // 발급받은 JavaScript 키
+  //   console.log('Kakao SDK initialized');
+  // }
+    
+  window.Kakao.Share.sendCustom({
+    templateId: 124391,
+    templateArgs: {
+      title: '제목 영역입니다.',
+      description: '설명 영역입니다.',
+    },
+  });
+
+
+    // try {
+    //   await navigator.clipboard.writeText('https://2025-11-01.vercel.app/');
+    //   alert(`청첩장 링크가 복사되었습니다.`);
+    // } catch (err) {
+    //   console.error(err);
+    // }
   };
 
   const onClickMapIcon = (platform: 'NAVER' | 'KAKAO' | 'TMAP') => {
@@ -802,19 +818,42 @@ function Main({ setComponent }: Props) {
           >
             <i className="fa fa-calendar-check" aria-hidden="true"></i>
             참석여부 전달하기
+
           </button>
+
+
+          {/* <a id="kakaotalk-sharing-btn" href="javascript:;"
+            style={{ width: '25%', content: '23423' }}>
+            {' '}
+            <i className="fa fa-link" aria-hidden="true"></i>
+            공유하기
+          </a> */}
+
           <button
             style={{ width: '25%', content: '23423' }}
             onClick={onClickLink}
           >
             {' '}
             <i className="fa fa-link" aria-hidden="true"></i>
-            링크 복사
+            공유하기
           </button>
+
+
+
+          {/* <button
+            style={{ width: '25%', content: '23423' }}
+            onClick={onClickLink}
+          >
+            {' '}
+            <i className="fa fa-link" aria-hidden="true"></i>
+            공유하기
+          </button> */}
           {/* <button style={{ width: '25%' }}>
             {' '}
-            <i className="fa fa-comment" aria-hidden="true"></i>
+            
+            <a id="kakaotalk-sharing-btn" href="javascript:;">
             카톡 공유
+            </a>
           </button> */}
           <button
             style={{ width: '25%' }}
